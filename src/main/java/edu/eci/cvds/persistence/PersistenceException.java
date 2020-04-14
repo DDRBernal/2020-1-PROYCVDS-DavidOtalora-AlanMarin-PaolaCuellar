@@ -1,4 +1,4 @@
-package edu.eci.cvds.persitence;
+package edu.eci.cvds.persistence;
 
 
 

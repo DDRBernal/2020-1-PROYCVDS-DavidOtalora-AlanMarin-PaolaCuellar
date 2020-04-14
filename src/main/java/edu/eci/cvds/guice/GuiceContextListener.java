@@ -39,7 +39,7 @@ public class GuiceContextListener implements ServletContextListener {
 //                bind(ServiciosAlquiler.class).to(ServiciosAlquilerItemsImpl.class);
 //            }
 //        });
-//
+
 //        servletContextEvent.getServletContext().setAttribute(Injector.class.getName(), injector);
     }
 }
