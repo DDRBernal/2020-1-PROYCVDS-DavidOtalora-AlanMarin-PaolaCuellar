@@ -3,4 +3,4 @@
 
 # Proyecto 2020-1-ECI-Banco de proyectos
 
-[![CircleCI](https://circleci.com/gh/DDRBernal/2020-1-PROYCVDS-DavidOtalora-AlanMarin)
+[![CircleCI](https://circleci.com/gh/DDRBernal/2020-1-PROYCVDS-DavidOtalora-AlanMarin.svg?style=svg)](https://circleci.com/gh/DDRBernal)
