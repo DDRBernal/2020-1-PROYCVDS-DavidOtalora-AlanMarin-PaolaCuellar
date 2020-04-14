@@ -1,7 +1,9 @@
 package edu.eci.cvds.entities;
 
 
-public class Usuario {
+import java.io.Serializable;
+
+public class Usuario implements Serializable {
     private String nombre;
     private int documento;
     private String contrasena;

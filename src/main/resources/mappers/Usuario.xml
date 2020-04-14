@@ -19,7 +19,7 @@ and open the template in the editor.
             usuario
     </select>
     
-     <insert id="insertUsuario" parameterType="edu.eci.cvds.entities.Usuario">
+     <insert id="insertarUsuario" parameterType="edu.eci.cvds.entities.Usuario">
         insert into usuario(nombre,documento,contrasena,tipoUsuario,email) values (#{usuario.nombre},#{usuario.documento},#{usuario.contrasena},#{usuario.tipoUsuario},#{usuario.email})
     </insert>
     
