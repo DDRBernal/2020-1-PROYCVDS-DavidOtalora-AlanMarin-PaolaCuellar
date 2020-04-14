@@ -1,6 +1,7 @@
 CREATE TABLE IF NOT EXISTS USUARIO (
-  documento BIGINT(20) NOT NULL,
   nombre VARCHAR(50) NOT NULL,
+  documento BIGINT(20) NOT NULL,
+  contrasena VARCHAR(20) NOT NULL,
   tipoUsuario VARCHAR(20) NOT NULL,
   email VARCHAR(150) NOT NULL; 
   )
