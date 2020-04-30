@@ -8,6 +8,7 @@
     </settings>-->
     <typeAliases>
         <typeAlias type="edu.eci.cvds.entities.Usuario" alias="Usuario"/>
+        <typeAlias type="edu.eci.cvds.entities.Iniciativa" alias="Iniciativa"/>
     </typeAliases>	
 
     <environments default="development">
@@ -24,6 +25,7 @@
         
     <mappers>
         <mapper resource="mappers/Usuario.xml"></mapper>
+        <mapper resource="mappers/Iniciativa.xml"></mapper>
     </mappers> 
         
         

@@ -15,7 +15,7 @@
         <!--<welcome-file>faces/inicio.xhtml</welcome-file>-->
     <!--</welcome-file-list>-->
   <!--<listener>  -->
-      <!--<listener-class>      edu.eci.cvds.guice.GuiceContextListener                    	 </listener-class>-->
+      <!--<listener-class>edu.eci.cvds.guice.GuiceContextListener</listener-class>-->
   <!--</listener>-->
 
 <!--</web-app>-->
@@ -38,4 +38,7 @@
         <!-- <welcome-file>faces/inicio.xhtml</welcome-file> -->
         <welcome-file>faces/inicio.html</welcome-file>
     </welcome-file-list>
+    <listener> 
+        <listener-class>edu.eci.cvds.guice.GuiceContextListener</listener-class>
+    </listener>
 </web-app>

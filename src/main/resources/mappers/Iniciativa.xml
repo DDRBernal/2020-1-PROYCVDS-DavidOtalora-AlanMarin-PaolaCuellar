@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="edu.eci.cvds.persistence.mybatisimpl.mappers.IniciativaMapper">
+
+    <select id="getIniciativas" resultMap="IniciativaResult">
+        SELECT
+            *
+        FROM
+            Iniciativa
+    </select>
+
+    <select id="getInfoIniciativa" parameterType="String" resultMap="IniciativaResult">
+        SELECT
+            *
+        FROM
+            Iniciativa
+        WHERE #{nombre} = contrasena
+    </select>
+    
+    <insert id="insertarIniciativa" parameterType="map">
+        
+    </insert>
+
+    <update id="modificarIniciativa">
+    
+    </update>
+    
+    <resultMap type='Iniciativa' id='IniciativaResult'>
+        <result property='descripcion' column='descripcion'/>
+        <result property='votos' column='votos'/>
+        <result property='fecha' column='fecha'/>
+        <result property="nombre_proponente" column="nombre_proponente"/>
+        <result property="areas" column="areas"/>
+        <result property="dependencia" column="dependencia"/>
+        <result property="palabras_clave" column="palabras_clave"/>
+        <collection property="comentario" ofType="edu.eci.cvds.entities.Comentario" javaType="list">
+            <result column="comentario" />
+        </collection>
+    </resultMap>
+
+</mapper>
