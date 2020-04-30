@@ -1,5 +1,8 @@
 package edu.eci.cvds.test;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 import com.google.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
@@ -30,16 +33,14 @@ public class ServicesBancoProyectoTest {
     }
 
     @Test
-    public void emptyDB() {
-        for(int i = 0; i < 100; i += 10) {
-            boolean r = false;
-            try {
-                Usuario usuario = servicesBancoProyecto.consultarUsuario(nombre);
-            } catch(ServicesBancoProyectoException e) {
-                r = true;
-            }
-            // Valida que el usuario no fue encontrado;
-            Assert.assertTrue(r);
+    public void consultarUsuario(){
+        try {
+            Usuario usuario = servicesBancoProyecto.consultarUsuario("Paola");
+            nombre = usuario.getNombre();
+            assertTrue(true);
+
+        } catch (ServicesBancoProyectoException ex) {
+            assertTrue(false);
         }
     }
 }
