@@ -4,57 +4,71 @@ package edu.eci.cvds.entities;
 import java.io.Serializable;
 
 public class Usuario implements Serializable {
-    private String nombre;
+    private String userName;
     private int documento;
-    private String contrasena;
+    private String nombre;
+    private String apellido;
+    private String ocupacion;
+    private String clave;
     private String tipoUsuario;
     private String email;
 
-    public Usuario(String nombre, int documento, String contrasena, String tipoUsuario, String email){
-        this.nombre=nombre;
-        this.documento=documento;
-        this.contrasena=contrasena;
-        this.tipoUsuario=tipoUsuario;
-        this.email=email;
+    public Usuario(String userName, int documento, String nombre, String apellido, String ocupacion, String clave, String tipoUsuario, String email) {
+        this.userName = userName;
+        this.documento = documento;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.ocupacion = ocupacion;
+        this.clave = clave;
+        this.tipoUsuario = tipoUsuario;
+        this.email = email;
     }
 
-    public String getNombre() {
-        return nombre;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public void setOcupacion(String ocupacion) {
+        this.ocupacion = ocupacion;
+    }
+
+    public void setTipoUsuario(String tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
+    }
+
+    public String getUserName() {
+        return this.userName;
     }
 
     public int getDocumento() {
-        return documento;
+        return this.documento;
     }
 
-    public String getContrasena() {
-        return contrasena;
+    public String getNombre() {
+        return this.nombre;
+    }
+
+    public String getApellido() {
+        return this.apellido;
+    }
+
+    public String getOcupacion() {
+        return this.ocupacion;
+    }
+
+    public String getClave() {
+        return this.clave;
     }
 
     public String getTipoUsuario() {
-        return tipoUsuario;
+        return this.tipoUsuario;
     }
 
     public String getEmail() {
-        return email;
-    }
-
-    public void setNombre(String nombre){
-        this.nombre=nombre;
-    }
-
-    public void setDocumento(int documento){
-        this.documento=documento;
-    }
-
-    public void setContrasena(String contrasena){
-        this.contrasena=contrasena;
-    }
-
-    public void setTipoUsuario(String tipoUsuario){
-        this.tipoUsuario=tipoUsuario;
-    }
-
-    public void setEmail(String email){
-        this.email=email;
+        return this.email;
     }
 }

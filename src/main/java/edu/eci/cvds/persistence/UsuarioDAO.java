@@ -1,18 +1,18 @@
 package edu.eci.cvds.persistence;
 
 
+import edu.eci.cvds.entities.Iniciativa;
 import edu.eci.cvds.entities.Usuario;
-
 import java.util.List;
 
 public interface UsuarioDAO {
+    Usuario consultarUsuario(String userName) throws PersistenceException;
 
-    void insertarUsuario(Usuario usr) throws PersistenceException;
+    List<Usuario> consultarUsuariosPublico(String userNameLike) throws PersistenceException;
 
-    List<Usuario> getUsuarios()throws PersistenceException;
+    boolean logIn(String userName, String clave) throws PersistenceException;
 
-    Usuario consultarUsuario(String contrasena) throws PersistenceException;
+    void insertarUsuario(Usuario usuario) throws PersistenceException;
 
-    void setUsuario(String nombre, int documento, String contrasena, String tipoUsuario, String email) throws PersistenceException;
-
+    List<Iniciativa> consultarIniciativasRelacionadas(String userName) throws PersistenceException;
 }

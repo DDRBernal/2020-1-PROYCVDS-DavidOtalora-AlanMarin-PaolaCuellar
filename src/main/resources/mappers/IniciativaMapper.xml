@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="edu.eci.cvds.persistence.mybatisimpl.mappers.IniciativaMapper">
+
+    <select id="consultarIniciativa" resultMap="IniciativaResult">
+        SELECT
+        *
+        FROM
+        Iniciativa
+        WHERE nombreIniciativa = #{nombreIniciativa}
+    </select>
+
+    <select id="consultarPorArea" resultMap="IniciativaResult">
+        SELECT
+        *
+        FROM
+        Iniciativa
+        WHERE area = #{area}
+    </select>
+
+    <select id="consultarPorEstado" resultMap="IniciativaResult">
+        SELECT
+        *
+        FROM
+        Iniciativa
+        WHERE estado = #{estado}
+    </select>
+
+    <update id="modificarIniciativaEstado" parameterType="map">
+        update
+        iniciativa
+        set estado = #{estado}
+        WHERE nombreIniciativa = #{iniciativa.nombreIniciativa} AND proponente = #{iniciativa.proponente}
+    </update>
+
+    <insert id="crearIniciativa" parameterType="map">
+        insert into
+        iniciativa
+        values
+        (#{iniciativa.nombreIniciativa},#{iniciativa.fecha},#{iniciativa.estado},#{iniciativa.proponente},#{iniciativa.area},#{iniciativa.dependencia},#{iniciativa.descripcion})
+    </insert>
+
+    <resultMap type='Iniciativa' id='IniciativaResult'>
+        <result property='nombreIniciativa' column='nombreIniciativa'/>
+        <result property='fecha' column='fecha'/>
+        <result property='estado' column='estado'/>
+        <result property='proponente' column='proponente'/>
+        <result property="area" column="area"/>
+        <result property="dependencia" column="dependencia"/>
+        <result property="descripcion" column="descripcion"/>
+
+    </resultMap>
+    
+</mapper>

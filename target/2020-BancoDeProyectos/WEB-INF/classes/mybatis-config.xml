@@ -8,6 +8,9 @@
     </settings>-->
     <typeAliases>
         <typeAlias type="edu.eci.cvds.entities.Usuario" alias="Usuario"/>
+        <typeAlias type="edu.eci.cvds.entities.Comentario" alias="Comentario"/>
+        <typeAlias type="edu.eci.cvds.entities.PalabraClave" alias="PalabraClave"/>
+        <typeAlias type="edu.eci.cvds.entities.Iniciativa" alias="Iniciativa"/>
     </typeAliases>	
 
     <environments default="development">
@@ -24,6 +27,9 @@
         
     <mappers>
         <mapper resource="mappers/UsuarioMapper.xml"></mapper>
+        <mapper resource="mappers/ComentarioMapper.xml"></mapper>
+        <mapper resource="mappers/PalabraClaveMapper.xml"></mapper>
+        <mapper resource="mappers/IniciativaMapper.xml"></mapper>
     </mappers> 
         
         

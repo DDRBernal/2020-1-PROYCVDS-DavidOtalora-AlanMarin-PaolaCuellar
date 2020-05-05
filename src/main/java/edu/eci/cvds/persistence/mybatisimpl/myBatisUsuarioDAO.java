@@ -1,50 +1,56 @@
 package edu.eci.cvds.persistence.mybatisimpl;
 
-import edu.eci.cvds.entities.Usuario;
-import edu.eci.cvds.persistence.UsuarioDAO;
-import edu.eci.cvds.persistence.PersistenceException;
-import edu.eci.cvds.persistence.mybatisimpl.mappers.UsuarioMapper;
 import com.google.inject.Inject;
-
+import edu.eci.cvds.entities.Iniciativa;
+import edu.eci.cvds.entities.Usuario;
+import edu.eci.cvds.persistence.PersistenceException;
+import edu.eci.cvds.persistence.UsuarioDAO;
+import edu.eci.cvds.persistence.mybatisimpl.mappers.UsuarioMapper;
 import java.util.List;
 
-public class myBatisUsuarioDAO implements UsuarioDAO {
+public class MyBatisUsuarioDAO implements UsuarioDAO {
     @Inject
     private UsuarioMapper usuarioMapper;
 
-    @Override
-    public void insertarUsuario(Usuario usr) throws PersistenceException {
+
+    public Usuario consultarUsuario(String userName) throws PersistenceException {
         try {
-            usuarioMapper.insertarUsuario(usr);
-        }catch (Exception e){
-            throw new PersistenceException("No se logro insertar usuario");
+            return this.usuarioMapper.consultarUsuario(userName);
+        } catch (Exception var3) {
+            throw new PersistenceException("Usuario inexistente");
         }
     }
 
-    @Override
-    public List<Usuario> getUsuarios() throws PersistenceException {
+    public List<Usuario> consultarUsuariosPublico(String userNameLike) throws PersistenceException {
         try {
-            return usuarioMapper.getUsuarios();
-        }catch (Exception e){
-            throw new PersistenceException("No hay usuarios para mostrar");
+            return this.usuarioMapper.consultarUsuariosPublico(userNameLike);
+        } catch (Exception var3) {
+            throw new PersistenceException("No existen usuarios similares");
         }
     }
 
-    @Override
-    public Usuario consultarUsuario(String contrasena) throws PersistenceException {
+    public boolean logIn(String userName, String clave) throws PersistenceException {
         try {
-            return usuarioMapper.consultarUsuario(contrasena);
-        }catch (Exception e){
-            throw new PersistenceException("No se logro consultar usuario");
+            Usuario user = this.usuarioMapper.logIn(userName, clave);
+            return user.getNombre() == userName && user.getClave() == clave;
+        } catch (Exception var4) {
+            throw new PersistenceException("Ingreso incorrecto");
         }
     }
 
-    @Override
-    public void setUsuario(String nombre, int documento, String contrasena, String tipoUsuario, String email) throws PersistenceException {
+    public void insertarUsuario(Usuario usuario) throws PersistenceException {
         try {
-            usuarioMapper.setUsuario(nombre,documento,contrasena,tipoUsuario,email);
-        }catch (Exception e){
-            throw new PersistenceException("No se logro insertar usuario");
+            this.usuarioMapper.insertarUsuario(usuario);
+        } catch (Exception var3) {
+            throw new PersistenceException("Ingreso de datos incorrecto");
+        }
+    }
+
+    public List<Iniciativa> consultarIniciativasRelacionadas(String userName) throws PersistenceException {
+        try {
+            return this.usuarioMapper.consultarIniciativasRelacionadas(userName);
+        } catch (Exception var3) {
+            throw new PersistenceException("Usuario inexistente");
         }
     }
 }
