@@ -8,6 +8,7 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface IniciativaMapper {
+
     void crearIniciativa(@Param("iniciativa") Iniciativa var1);
 
     Iniciativa consultarIniciativa(@Param("nombreIniciativa") String nombreIniciativa);

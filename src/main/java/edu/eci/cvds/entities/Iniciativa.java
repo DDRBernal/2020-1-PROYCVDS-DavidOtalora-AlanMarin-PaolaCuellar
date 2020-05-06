@@ -1,10 +1,9 @@
 package edu.eci.cvds.entities;
 
-import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-public class Iniciativa implements Serializable {
+public class Iniciativa {
     private String nombreIniciativa;
     private Date fecha;
     private String estado;
@@ -14,9 +13,9 @@ public class Iniciativa implements Serializable {
     private String descripcion;
     private List<PalabraClave> palabras_clave;
     private List<Comentario> comentarios;
-    private int votos;
 
-    public Iniciativa(String nombreIniciativa, Date fecha, String estado, Usuario proponente, String area, String dependencia, String descripcion, List<PalabraClave> palabras_clave, List<Comentario> comentarios, int votos) {
+
+    public Iniciativa(String nombreIniciativa, Date fecha, String estado, Usuario proponente, String area, String dependencia, String descripcion, List<PalabraClave> palabras_clave, List<Comentario> comentarios) {
         this.nombreIniciativa = nombreIniciativa;
         this.fecha = fecha;
         this.estado = estado;
@@ -26,7 +25,6 @@ public class Iniciativa implements Serializable {
         this.descripcion = descripcion;
         this.palabras_clave = palabras_clave;
         this.comentarios = comentarios;
-        this.votos = votos;
     }
 
     public void setNombreIniciativa(String nombreIniciativa) {
@@ -65,9 +63,6 @@ public class Iniciativa implements Serializable {
         this.comentarios = comentarios;
     }
 
-    public void setVotos(int votos) {
-        this.votos = votos;
-    }
 
     public String getNombreIniciativa() {
         return this.nombreIniciativa;
@@ -106,6 +101,6 @@ public class Iniciativa implements Serializable {
     }
 
     public int getVotos() {
-        return this.votos;
-    }
+        return 0;
+    }//plantear votos
 }

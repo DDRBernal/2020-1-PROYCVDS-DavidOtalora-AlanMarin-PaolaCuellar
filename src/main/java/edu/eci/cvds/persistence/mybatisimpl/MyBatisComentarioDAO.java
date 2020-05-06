@@ -7,9 +7,11 @@ import edu.eci.cvds.entities.Usuario;
 import edu.eci.cvds.persistence.ComentarioDAO;
 import edu.eci.cvds.persistence.PersistenceException;
 import edu.eci.cvds.persistence.mybatisimpl.mappers.ComentarioMapper;
+
 import java.util.List;
 
 public class MyBatisComentarioDAO implements ComentarioDAO {
+
     @Inject
     private ComentarioMapper comentarioMapper;
 

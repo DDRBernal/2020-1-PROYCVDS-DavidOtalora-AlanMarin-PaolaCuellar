@@ -4,12 +4,15 @@ import com.google.inject.Inject;
 import edu.eci.cvds.entities.Iniciativa;
 import edu.eci.cvds.entities.PalabraClave;
 import edu.eci.cvds.entities.Usuario;
+import edu.eci.cvds.persistence.ComentarioDAO;
 import edu.eci.cvds.persistence.IniciativaDAO;
 import edu.eci.cvds.persistence.PersistenceException;
 import edu.eci.cvds.persistence.mybatisimpl.mappers.IniciativaMapper;
+
 import java.util.List;
 
 public class MyBatisIniciativaDAO implements IniciativaDAO {
+
     @Inject
     private IniciativaMapper iniciativaMapper;
 

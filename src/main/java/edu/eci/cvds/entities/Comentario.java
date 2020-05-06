@@ -1,9 +1,8 @@
 package edu.eci.cvds.entities;
 
-import java.io.Serializable;
-import java.util.Date;
+import java.sql.Date;
 
-public class Comentario implements Serializable {
+public class Comentario {
     private Date fecha;
     private Usuario autor;
     private String contenido;

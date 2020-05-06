@@ -4,32 +4,33 @@ import edu.eci.cvds.entities.Comentario;
 import edu.eci.cvds.entities.Iniciativa;
 import edu.eci.cvds.entities.PalabraClave;
 import edu.eci.cvds.entities.Usuario;
+
 import java.util.List;
 
 public interface ServicesIniciativa {
-    void crearIniciativa(Iniciativa var1);
+    void crearIniciativa(Iniciativa iniciativa);
 
-    Iniciativa consultarIniciativa(String var1);
+    Iniciativa consultarIniciativa(String nombreIniciativa);
 
-    List<Iniciativa> consultarPorPalabra(PalabraClave var1);
+    List<Iniciativa> consultarPorPalabra(PalabraClave palabraClave);
 
-    List<Iniciativa> consultarPorArea(String var1);
+    List<Iniciativa> consultarPorArea(String area);
 
-    List<Iniciativa> consultarPorEstado(String var1);
+    List<Iniciativa> consultarPorEstado(String estado);
 
     void modificarIniciativaPropietario(Iniciativa var1, String var2, String var3, String var4);
 
-    void agregarPalabrasclave(String var1, Iniciativa var2);
+    void agregarPalabrasclave(String palabra, Iniciativa iniciativa);
 
-    void eliminarPalabrasclave(String var1, Iniciativa var2);
+    void eliminarPalabrasclave(String palabra, Iniciativa iniciativa);
 
-    void modificarIniciativaEstado(Iniciativa var1, String var2);
+    void modificarIniciativaEstado(Iniciativa iniciativa, String estado);
 
-    void votarPorIniciativa(Usuario var1, Iniciativa var2);
+    void votarPorIniciativa(Usuario usuario, Iniciativa iniciativa);
 
-    void comentarUnaIniciativa(Comentario var1);
+    void comentarUnaIniciativa(Comentario comentario);
 
-    void eliminarComentario(Usuario var1, Iniciativa var2);
+    void eliminarComentario(Usuario autor, Iniciativa iniciativa);
 
-    List<Comentario> consultarComentarios(Iniciativa var1);
+    List<Comentario> consultarComentarios(Iniciativa iniciativa);
 }

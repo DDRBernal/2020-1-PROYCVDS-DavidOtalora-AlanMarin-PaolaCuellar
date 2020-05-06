@@ -1,9 +1,8 @@
-package edu.eci.cvds.services.impl;
+package edu.eci.cvds.services.Impl;
 
 import com.google.inject.Inject;
 import edu.eci.cvds.entities.Iniciativa;
 import edu.eci.cvds.entities.Usuario;
-import edu.eci.cvds.persistence.PersistenceException;
 import edu.eci.cvds.persistence.UsuarioDAO;
 import edu.eci.cvds.services.ServicesUsuario;
 

@@ -1,10 +1,6 @@
 package edu.eci.cvds.entities;
 
-import java.io.Serializable;
-
-import java.io.Serializable;
-
-public class Voto implements Serializable {
+public class Voto {
     private Usuario votante;
     private Iniciativa nombreIniciativa;
 

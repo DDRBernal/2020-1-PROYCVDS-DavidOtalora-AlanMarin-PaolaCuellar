@@ -1,4 +1,4 @@
-package edu.eci.cvds.services.impl;
+package edu.eci.cvds.services.Impl;
 
 import com.google.inject.Inject;
 import edu.eci.cvds.entities.Comentario;
@@ -9,13 +9,18 @@ import edu.eci.cvds.persistence.ComentarioDAO;
 import edu.eci.cvds.persistence.IniciativaDAO;
 import edu.eci.cvds.persistence.PalabraClaveDAO;
 import edu.eci.cvds.services.ServicesIniciativa;
+import edu.eci.cvds.services.ServicesUsuario;
+
 import java.util.List;
 
 public class ServicesIniciativaImpl implements ServicesIniciativa {
+
     @Inject
     private IniciativaDAO iniciativaDAO;
+
     @Inject
     private PalabraClaveDAO palabraClaveDAO;
+
     @Inject
     private ComentarioDAO comentarioDAO;
 
@@ -24,7 +29,7 @@ public class ServicesIniciativaImpl implements ServicesIniciativa {
 
     public void crearIniciativa(Iniciativa iniciativa) {
         try {
-            this.iniciativaDAO.crearIniciativa(iniciativa);
+            iniciativaDAO.crearIniciativa(iniciativa);
         } catch (Exception var3) {
         }
 
@@ -32,7 +37,7 @@ public class ServicesIniciativaImpl implements ServicesIniciativa {
 
     public Iniciativa consultarIniciativa(String nombreIniciativa) {
         try {
-            return this.iniciativaDAO.consultarIniciativa(nombreIniciativa);
+            return iniciativaDAO.consultarIniciativa(nombreIniciativa);
         } catch (Exception var3) {
             return null;
         }
@@ -40,7 +45,7 @@ public class ServicesIniciativaImpl implements ServicesIniciativa {
 
     public List<Iniciativa> consultarPorPalabra(PalabraClave palabraClave) {
         try {
-            return this.iniciativaDAO.consultarPorPalabra(palabraClave);
+            return iniciativaDAO.consultarPorPalabra(palabraClave);
         } catch (Exception var3) {
             return null;
         }
@@ -48,7 +53,7 @@ public class ServicesIniciativaImpl implements ServicesIniciativa {
 
     public List<Iniciativa> consultarPorArea(String area) {
         try {
-            return this.iniciativaDAO.consultarPorArea(area);
+            return iniciativaDAO.consultarPorArea(area);
         } catch (Exception var3) {
             return null;
         }
@@ -56,7 +61,7 @@ public class ServicesIniciativaImpl implements ServicesIniciativa {
 
     public List<Iniciativa> consultarPorEstado(String estado) {
         try {
-            return this.iniciativaDAO.consultarPorEstado(estado);
+            return iniciativaDAO.consultarPorEstado(estado);
         } catch (Exception var3) {
             return null;
         }
@@ -64,7 +69,7 @@ public class ServicesIniciativaImpl implements ServicesIniciativa {
 
     public void modificarIniciativaPropietario(Iniciativa iniciativa, String area, String dependencia, String descripcion) {
         try {
-            this.iniciativaDAO.modificarIniciativaPropietario(iniciativa, area, dependencia, descripcion);
+             iniciativaDAO.modificarIniciativaPropietario(iniciativa, area, dependencia, descripcion);
         } catch (Exception var6) {
         }
 
@@ -72,7 +77,7 @@ public class ServicesIniciativaImpl implements ServicesIniciativa {
 
     public void agregarPalabrasclave(String palabraClave, Iniciativa iniciativa) {
         try {
-            this.palabraClaveDAO.agregarPalabrasclave(palabraClave, iniciativa.getNombreIniciativa(), iniciativa.getProponente().getUserName());
+             palabraClaveDAO.agregarPalabrasclave(palabraClave, iniciativa.getNombreIniciativa(), iniciativa.getProponente().getUserName());
         } catch (Exception var4) {
         }
 
@@ -80,7 +85,7 @@ public class ServicesIniciativaImpl implements ServicesIniciativa {
 
     public void eliminarPalabrasclave(String palabraClave, Iniciativa iniciativa) {
         try {
-            this.palabraClaveDAO.eliminarPalabrasclave(palabraClave, iniciativa.getNombreIniciativa(), iniciativa.getProponente().getUserName());
+             palabraClaveDAO.eliminarPalabrasclave(palabraClave, iniciativa.getNombreIniciativa(), iniciativa.getProponente().getUserName());
         } catch (Exception var4) {
         }
 
@@ -88,7 +93,7 @@ public class ServicesIniciativaImpl implements ServicesIniciativa {
 
     public void modificarIniciativaEstado(Iniciativa iniciativa, String estado) {
         try {
-            this.iniciativaDAO.modificarIniciativaEstado(iniciativa, estado);
+             iniciativaDAO.modificarIniciativaEstado(iniciativa, estado);
         } catch (Exception var4) {
         }
 
@@ -96,7 +101,7 @@ public class ServicesIniciativaImpl implements ServicesIniciativa {
 
     public void votarPorIniciativa(Usuario usuario, Iniciativa iniciativa) {
         try {
-            this.iniciativaDAO.votarPorIniciativa(usuario, iniciativa);
+             iniciativaDAO.votarPorIniciativa(usuario, iniciativa);
         } catch (Exception var4) {
         }
 
@@ -104,7 +109,7 @@ public class ServicesIniciativaImpl implements ServicesIniciativa {
 
     public void comentarUnaIniciativa(Comentario comentario) {
         try {
-            this.comentarioDAO.comentarUnaIniciativa(comentario);
+             comentarioDAO.comentarUnaIniciativa(comentario);
         } catch (Exception var3) {
         }
 
@@ -112,7 +117,7 @@ public class ServicesIniciativaImpl implements ServicesIniciativa {
 
     public void eliminarComentario(Usuario autor, Iniciativa iniciativa) {
         try {
-            this.comentarioDAO.eliminarComentario(autor, iniciativa);
+             comentarioDAO.eliminarComentario(autor, iniciativa);
         } catch (Exception var4) {
         }
 
@@ -120,7 +125,7 @@ public class ServicesIniciativaImpl implements ServicesIniciativa {
 
     public List<Comentario> consultarComentarios(Iniciativa iniciativa) {
         try {
-            return this.comentarioDAO.consultarComentarios(iniciativa);
+            return  comentarioDAO.consultarComentarios(iniciativa);
         } catch (Exception var3) {
             return null;
         }

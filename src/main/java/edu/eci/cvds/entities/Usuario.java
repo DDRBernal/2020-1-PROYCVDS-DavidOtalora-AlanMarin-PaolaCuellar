@@ -1,9 +1,6 @@
 package edu.eci.cvds.entities;
 
-
-import java.io.Serializable;
-
-public class Usuario implements Serializable {
+public class Usuario {
     private String userName;
     private int documento;
     private String nombre;
@@ -13,7 +10,7 @@ public class Usuario implements Serializable {
     private String tipoUsuario;
     private String email;
 
-    public Usuario(String userName, int documento, String nombre, String apellido, String ocupacion, String clave, String tipoUsuario, String email) {
+    public Usuario(String userName, int documento, String nombre, String apellido, String ocupacion, String clave, String tipoUsuario, String email){
         this.userName = userName;
         this.documento = documento;
         this.nombre = nombre;
@@ -23,6 +20,7 @@ public class Usuario implements Serializable {
         this.tipoUsuario = tipoUsuario;
         this.email = email;
     }
+
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -71,4 +69,5 @@ public class Usuario implements Serializable {
     public String getEmail() {
         return this.email;
     }
+
 }
