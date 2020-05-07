@@ -2,19 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a77ea12-4a34-4f90-a5f0-a5b41004b420" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/MyBatisUsuarioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/myBatisUsuarioDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/MAIN.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/MAIN.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/persistence/mybatisimpl/MyBatisComentarioDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/persistence/mybatisimpl/MyBatisComentarioDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/persistence/mybatisimpl/MyBatisIniciativaDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/persistence/mybatisimpl/MyBatisIniciativaDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/persistence/mybatisimpl/MyBatisPalabraClaveDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/persistence/mybatisimpl/MyBatisPalabraClaveDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/persistence/mybatisimpl/MyBatisUsuarioDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/persistence/mybatisimpl/MyBatisUsuarioDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/services/impl/ServicesIniciativaImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/services/impl/ServicesIniciativaImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/services/impl/ServicesUsuarioImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/services/impl/ServicesUsuarioImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/MAIN.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/entities/Comentario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/entities/Iniciativa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/entities/PalabraClave.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/entities/Usuario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/entities/Voto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/guice/GuiceContextListener$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/guice/GuiceContextListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/persistence/PersistenceException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/persistence/UsuarioDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/persistence/mybatisimpl/MyBatisUsuarioDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/persistence/mybatisimpl/mappers/UsuarioMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/services/ServicesBancoProyectoFactory$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/services/ServicesBancoProyectoFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/services/ServicesUsuario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/services/impl/ServicesUsuarioImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/mappers/UsuarioMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/lib/aopalliance-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/lib/gson-2.8.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/lib/guava-16.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/lib/guice-4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/lib/h2-1.4.191.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/lib/hamcrest-core-1.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/lib/javax.inject-1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/lib/jsf-api-2.2.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/lib/jsf-impl-2.2.20.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/lib/junit-4.12.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/lib/mybatis-3.4.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/lib/mybatis-guice-3.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/lib/mysql-connector-java-5.1.44.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/lib/postgresql-42.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/lib/primefaces-7.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,11 +65,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/eci/cvds/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="15" column="57" lean-forward="true" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+              <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9350">
+              <caret line="550" column="51" selection-start-line="550" selection-start-column="51" selection-end-line="550" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -57,6 +108,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>carlos1</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -66,6 +122,8 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/mappers/MyBatisUsuarioDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/MyBatisUsuarioDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/eci/cvds/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
       </list>
     </option>
   </component>
@@ -228,10 +286,10 @@
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Run" order="6" weight="0.3290938" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.32838285" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.24587458" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.19894099" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.19894099" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info id="UI Designer" order="3" />
@@ -285,7 +343,27 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/eci/cvds/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="15" column="57" lean-forward="true" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+          <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/changelog.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9350">
+          <caret line="550" column="51" selection-start-line="550" selection-start-column="51" selection-end-line="550" selection-end-column="51" />
         </state>
       </provider>
     </entry>
