@@ -2,221 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a77ea12-4a34-4f90-a5f0-a5b41004b420" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/MyBatisUsuarioDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_16_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_guice_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_191.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_faces_jsf_api_2_2_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_faces_jsf_impl_2_2_20.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_6_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_api_8_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_web_api_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_44.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_guice_3_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_primefaces_primefaces_7_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2020-BancoDeProyectos.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/MAIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/bean/RegistroBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/entities/Area.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/entities/Area.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/entities/Comentario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/entities/Comentario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/entities/Iniciativa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/entities/Iniciativa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/entities/PalabraClave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/entities/PalabraClave.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/entities/TipoUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/entities/TipoUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/entities/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/entities/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/entities/Voto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/entities/Voto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/guice/GuiceContextListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/guice/GuiceContextListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/ComentarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/ComentarioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/IniciativaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/IniciativaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/PersistenceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/PersistenceException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/UsuarioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/MyBatisComentarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/MyBatisComentarioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/MyBatisIniciativaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/MyBatisIniciativaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/MyBatisPalabraClaveDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/MyBatisPalabraClaveDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/mappers/ComentarioMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/mappers/ComentarioMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/mappers/IniciativaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/mappers/IniciativaMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/mappers/PalabraClaveMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/mappers/PalabraClaveMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/mappers/UsuarioMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/mappers/UsuarioMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/myBatisUsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/myBatisUsuarioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/services/ServicesBancoProyectoException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/services/ServicesBancoProyectoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/services/ServicesBancoProyectoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/services/ServicesIniciativa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/services/ServicesIniciativa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/services/impl/ServicesIniciativaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/services/impl/ServicesIniciativaImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/services/impl/ServicesUsuarioImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/services/impl/ServicesUsuarioImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ComentarioMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/ComentarioMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/IniciativaMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/IniciativaMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/PalabraClaveMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/PalabraClaveMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Inicio.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/chefs-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/event-birthday.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/event-custom.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/gallery/gallery-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/gallery/gallery-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/gallery/gallery-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/gallery/gallery-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/gallery/gallery-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/gallery/gallery-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/gallery/gallery-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/gallery/gallery-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/gallery/prueba.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/ganadores.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/ganadores2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/ganadores3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/idea.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/ini-1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/ini-2.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/ini-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/ini-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/ini-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/proponentes/Carlos.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/proponentes/carlos1.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/proponentes/chefs-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/proponentes/chefs-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/proponentes/chefs-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/proponentes/luis.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/proponentes/maria.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/quienes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/slide/entrada.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/slide/entrada2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/slide/entrada3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/testimonials-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/testimonials/testimonials-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/testimonials/testimonials-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/testimonials/testimonials-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/testimonials/testimonials-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/testimonials/testimonials-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/animate.css/animate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/animate.css/animate.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/bootstrap/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/bootstrap/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/bootstrap/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/bootstrap/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/boxicons/css/animations.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/boxicons/css/boxicons.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/boxicons/css/boxicons.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/boxicons/css/transformations.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/boxicons/fonts/boxicons.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/boxicons/fonts/boxicons.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/boxicons/fonts/boxicons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/boxicons/fonts/boxicons.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/boxicons/fonts/boxicons.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/icofont/fonts/icofont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/icofont/fonts/icofont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/icofont/icofont.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/isotope-layout/isotope.pkgd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/isotope-layout/isotope.pkgd.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/jquery-sticky/jquery.sticky.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/jquery.easing/jquery.easing.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/jquery/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/jquery/jquery.min.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/owl.carousel/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/owl.carousel/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/owl.carousel/assets/ajax-loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/owl.carousel/assets/owl.carousel.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/owl.carousel/assets/owl.carousel.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/owl.carousel/assets/owl.theme.default.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/owl.carousel/assets/owl.theme.default.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/owl.carousel/assets/owl.theme.green.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/owl.carousel/assets/owl.theme.green.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/owl.carousel/assets/owl.video.play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/owl.carousel/owl.carousel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/owl.carousel/owl.carousel.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/php-email-form/validate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/venobox/venobox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/venobox/venobox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/venobox/venobox.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/vendor/venobox/venobox.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/changelog.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/forms/Readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/forms/Registrarse.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/forms/contact.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/2020-BancoDeProyectos.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/Inicio.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/MAIN.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/MAIN.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/bean/RegistroBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/entities/Comentario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/entities/Comentario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/entities/Iniciativa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/entities/Iniciativa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/entities/PalabraClave.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/entities/PalabraClave.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/entities/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/entities/Usuario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/entities/Voto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/entities/Voto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/guice/GuiceContextListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/guice/GuiceContextListener$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/guice/GuiceContextListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/guice/GuiceContextListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/persistence/PersistenceException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/persistence/PersistenceException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/persistence/mybatisimpl/MyBatisUsuarioDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/persistence/mybatisimpl/MyBatisUsuarioDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/services/ServicesBancoProyectoException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/services/ServicesBancoProyectoFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/services/ServicesBancoProyectoFactory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/services/ServicesBancoProyectoFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/services/ServicesBancoProyectoFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/services/impl/ServicesUsuarioImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/edu/eci/cvds/services/impl/ServicesUsuarioImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/classes/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/2020-BancoDeProyectos/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2020-BancoDeProyectos/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/2020-BancoDeProyectos/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/myBatisUsuarioDAO.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/MAIN.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/MAIN.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/bean/RegistroBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/entities/Comentario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/entities/Comentario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/entities/Iniciativa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/entities/Iniciativa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/entities/PalabraClave.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/entities/PalabraClave.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/entities/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/entities/Usuario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/entities/Voto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/entities/Voto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/guice/GuiceContextListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/guice/GuiceContextListener$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/guice/GuiceContextListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/guice/GuiceContextListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/persistence/PersistenceException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/persistence/PersistenceException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/persistence/mybatisimpl/MyBatisComentarioDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/persistence/mybatisimpl/MyBatisComentarioDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/persistence/mybatisimpl/MyBatisIniciativaDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/persistence/mybatisimpl/MyBatisIniciativaDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/persistence/mybatisimpl/MyBatisPalabraClaveDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/persistence/mybatisimpl/MyBatisPalabraClaveDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/persistence/mybatisimpl/MyBatisUsuarioDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/persistence/mybatisimpl/MyBatisUsuarioDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/persistence/mybatisimpl/mappers/IniciativaMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/persistence/mybatisimpl/mappers/IniciativaMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/services/ServicesBancoProyectoException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/services/ServicesBancoProyectoFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/services/ServicesBancoProyectoFactory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/services/ServicesBancoProyectoFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/services/ServicesBancoProyectoFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/services/impl/ServicesIniciativaImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/services/impl/ServicesIniciativaImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/services/impl/ServicesUsuarioImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/services/impl/ServicesUsuarioImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/ComentarioMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/ComentarioMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/IniciativaMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/IniciativaMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/PalabraClaveMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/PalabraClaveMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -224,6 +25,28 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="_2020=1-BancoDeProyectos" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="MyBatisUsuarioDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/MyBatisUsuarioDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/eci/cvds/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="15" column="57" lean-forward="true" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -237,7 +60,83 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/mappers/MyBatisUsuarioDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/MyBatisUsuarioDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/eci/cvds/Main.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="149" />
+    <option name="width" value="694" />
+    <option name="height" value="735" />
+  </component>
   <component name="ProjectId" id="1bVeYEcRkirfwNHGJRWKDP377Qu" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="2020-1-PROYCVDS-DavidOtalora-AlanMarin-PaolaCuellar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2020-1-PROYCVDS-DavidOtalora-AlanMarin-PaolaCuellar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2020-1-PROYCVDS-DavidOtalora-AlanMarin-PaolaCuellar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2020-1-PROYCVDS-DavidOtalora-AlanMarin-PaolaCuellar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2020-1-PROYCVDS-DavidOtalora-AlanMarin-PaolaCuellar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2020-1-PROYCVDS-DavidOtalora-AlanMarin-PaolaCuellar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2020-1-PROYCVDS-DavidOtalora-AlanMarin-PaolaCuellar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2020-1-PROYCVDS-DavidOtalora-AlanMarin-PaolaCuellar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2020-1-PROYCVDS-DavidOtalora-AlanMarin-PaolaCuellar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2020-1-PROYCVDS-DavidOtalora-AlanMarin-PaolaCuellar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cvds" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2020-1-PROYCVDS-DavidOtalora-AlanMarin-PaolaCuellar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2020-1-PROYCVDS-DavidOtalora-AlanMarin-PaolaCuellar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2020-1-PROYCVDS-DavidOtalora-AlanMarin-PaolaCuellar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2020-1-PROYCVDS-DavidOtalora-AlanMarin-PaolaCuellar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -269,9 +168,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.eci.cvds.Main" />
@@ -282,9 +178,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="kk" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.eci.cvds.kk" />
@@ -295,10 +188,12 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.MAIN" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.kk" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -320,15 +215,79 @@
     </task>
     <servers />
   </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="bottom" id="Messages" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="1" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.3290938" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.32838285" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="0" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.19894099" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
+      <window_info id="UI Designer" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="2" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="5" />
+    </layout>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/MyBatisUsuarioDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="21" column="58" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/eci/cvds/persistence/mybatisimpl/MyBatisUsuarioDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/eci/cvds/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="15" column="57" lean-forward="true" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

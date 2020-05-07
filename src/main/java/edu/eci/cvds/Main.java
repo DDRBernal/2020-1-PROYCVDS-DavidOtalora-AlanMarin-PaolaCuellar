@@ -12,9 +12,10 @@ import java.sql.Date;
 public class Main {
 
     public static void main(String[] args) {
-        Usuario usuario = new Usuario("a",0,"a","a","a","a","a","a");
-        Comentario comentario = new Comentario(Date.valueOf("2015-03-31"),usuario,"","","");
+//        Usuario usuario = new Usuario("a",0,"a","a","a","a","a","a");
+//        Comentario comentario = new Comentario(Date.valueOf("2015-03-31"),usuario,"","","");
 
         ServicesUsuario servicesUsuario = ServicesBancoProyectoFactory.getInstance().getServicesBancoProyecto();
+        System.out.println(servicesUsuario.consultarUsuario("admin").getUserName());
     }
 }
