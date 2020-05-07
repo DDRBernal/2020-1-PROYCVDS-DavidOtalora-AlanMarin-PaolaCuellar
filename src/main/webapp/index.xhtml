@@ -1,31 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<h:head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
   <title>Banco de Ideas ECI</title>
-  <meta content="" name="descriptison">
-  <meta content="" name="keywords">
+  <meta content="" name="descriptison"/>
+  <meta content="" name="keywords"/>
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/favicon.png" rel="icon"/>
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i" rel="stylesheet"/>
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet"/>
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet"/>
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet"/>
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet"/>
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet"/>
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet"/>
 
   <!-- =======================================================
   * Template Name: Delicious - v2.0.0
@@ -33,9 +37,9 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-</head>
+</h:head>
 
-<body>
+<h:body>
 
   <!-- ======= Top Bar ======= -->
   <section id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
@@ -55,6 +59,7 @@
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
+      <h:form>
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="index.html">Inicio</a></li>
@@ -66,9 +71,10 @@
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
 
-          <li class="Registrarse text-center"><a href="#Registrarse">Registrarse</a></li>
+          <li class="active"><h:commandLink action="index2?faces-redirect = true" >Log in</h:commandLink></li>
         </ul>
       </nav><!-- .nav-menu -->
+      </h:form>
 
     </div>
   </header><!-- End Header -->
@@ -112,7 +118,7 @@
 
           <!-- Slide 3 -->
           <div class="carousel-item" style="background: url(assets/img/slide/entrada3.jpg);">
-            <div class="carousel-background"><img src="assets/img/slide/entrada-3.jpg" alt=""></div>
+            <div class="carousel-background"><img src="assets/img/slide/entrada-3.jpg" alt=""/></div>
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animated fadeInDown">Vota por una iniciativa</h2>
@@ -218,7 +224,7 @@
         <!--</div>-->
 
       <!--</div>-->
-    </section><!-- End Whu Us Section -->
+    <!--</section>&lt;!&ndash; End Whu Us Section &ndash;&gt;-->
 
 
 
@@ -261,7 +267,7 @@
                     <p>Esta protesis fue creada para todas las personas, desde las de menos recursos hasta las con mejores recursos. El objetivo es ayudar a las personas que perdieron una extremidad o bien, sólo perdieron su función de forma parcial. De hecho, su mecanismo sería compatible con otros brazos robóticos al funcionar como actuador, esto en caso de que sólo se requiera la mano y no todo el brazo.</p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/ini-1.jpeg" alt="" class="img-fluid">
+                    <img src="assets/img/ini-1.jpeg" alt="" class="img-fluid"/>
                   </div>
                 </div>
               </div>
@@ -273,7 +279,7 @@
                     <p>Su diseño no solo genera autonomía e impulsa la inserción social de las personas dependientes, sino que ayuda en los procesos de rehabilitación de las mismas.</p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/ini-2.jpg" alt="" class="img-fluid">
+                    <img src="assets/img/ini-2.jpg" alt="" class="img-fluid"/>
                   </div>
                 </div>
               </div>
@@ -285,7 +291,7 @@
                     <p>Su diseño simple pero eficiente permite caminar varios kilometros a la persona con tan solo una bateria, su manejo y mantenimiento es sencillo y ademas el costo de realizacion es muy bajo</p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/ini-3.jpg" alt="" class="img-fluid">
+                    <img src="assets/img/ini-3.jpg" alt="" class="img-fluid"/>
                   </div>
                 </div>
               </div>
@@ -297,7 +303,7 @@
                     <p>Por otro lado, la versión para exteriores puede ser montada en postes y cuenta con un sistema inteligente que aprovecha al máximo la energía solar para almacenarla en las baterías en días nublados o soleados.</p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/ini-4.jpg" alt="" class="img-fluid">
+                    <img src="assets/img/ini-4.jpg" alt="" class="img-fluid"/>
                   </div>
                 </div>
               </div>
@@ -309,7 +315,7 @@
                     <p>Puede ser utilizado bien sea adherido a un bastón, en la solapa de la camisa o incluso en una gorra. HandEyes ayuda al usuario a crear mapas mentales de su entorno mediante la generación de sonidos que permiten a las personas desarrollar y utilizar sus capacidades de eco localización.</p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/ini-5.jpg" alt="" class="img-fluid">
+                    <img src="assets/img/ini-5.jpg" alt="" class="img-fluid"/>
                   </div>
                 </div>
               </div>
@@ -332,7 +338,7 @@
 
           <div class="row event-item">
             <div class="col-lg-6">
-              <img src="assets/img/ganadores.jpg" class="img-fluid" alt="">
+              <img src="assets/img/ganadores.jpg" class="img-fluid" alt=""/>
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 content">
               <h3>2017</h3>
@@ -355,7 +361,7 @@
 
           <div class="row event-item">
             <div class="col-lg-6">
-              <img src="assets/img/ganadores2.jpg" class="img-fluid" alt="">
+              <img src="assets/img/ganadores2.jpg" class="img-fluid" alt=""/>
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 content">
               <h3>2018</h3>
@@ -378,7 +384,7 @@
 
           <div class="row event-item">
             <div class="col-lg-6">
-              <img src="assets/img/ganadores3.jpg" class="img-fluid" alt="">
+              <img src="assets/img/ganadores3.jpg" class="img-fluid" alt=""/>
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 content">
               <h3>2019</h3>
@@ -413,44 +419,53 @@
           <p>Ingresa los siguientes datos para poderte registrar en nuestra pagina donde tendras la oportunidad de dar a conocer tu iniciativa o apoyar por otras!.</p>
         </div>
 
-        <form action="forms/Registrarse.php" method="post" role="form" class="php-email-form">
-          <div class="form-row">
-            <div class="col-lg-4 col-md-6 form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-              <div class="validate"></div>
-            </div>
-            <div class="col-lg-4 col-md-6 form-group">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
-              <div class="validate"></div>
-            </div>
-            <div class="col-lg-4 col-md-6 form-group">
-              <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-              <div class="validate"></div>
-            </div>
-            <div class="col-lg-4 col-md-6 form-group">
-              <input type="text" name="date" class="form-control" id="date" placeholder="Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-              <div class="validate"></div>
-            </div>
-            <div class="col-lg-4 col-md-6 form-group">
-              <input type="text" class="form-control" name="time" id="time" placeholder="Time" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-              <div class="validate"></div>
-            </div>
-            <div class="col-lg-4 col-md-6 form-group">
-              <input type="number" class="form-control" name="people" id="people" placeholder="# of people" data-rule="minlen:1" data-msg="Please enter at least 1 chars">
-              <div class="validate"></div>
-            </div>
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
-            <div class="validate"></div>
-          </div>
+        <!--<form action="forms/Registrarse.php" method="post" role="form" class="php-email-form">-->
+          <!--<div class="form-row">-->
+            <!--<div class="col-lg-4 col-md-6 form-group">-->
+              <!--<input type="text"  name="name" class="form-control" id="userName" placeholder="Nombre de usuario" data-rule="minlen:4" data-msg="Please enter at least 4 chars"/>-->
+              <!--<div class="validate"></div>-->
+            <!--</div>-->
+            <!--<div class="col-lg-4 col-md-6 form-group">-->
+              <!--<input type="email" class="form-control" name="email" id="email" placeholder="Tu Email" data-rule="email" data-msg="Please enter a valid email">-->
+              <!--<div class="validate"></div>-->
+            <!--</div>-->
+            <!--<div class="col-lg-4 col-md-6 form-group">-->
+              <!--<input type="text" class="form-control" name="documento" id="documento" placeholder="Tu documento" data-rule="minlen:4" data-msg="Please enter at least 4 chars">-->
+              <!--<div class="validate"></div>-->
+            <!--</div>-->
+            <!--<div class="col-lg-4 col-md-6 form-group">-->
+              <!--<input type="text" name="date" class="form-control" id="nombre" placeholder="nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars">-->
+              <!--<div class="validate"></div>-->
+            <!--</div>-->
+            <!--<div class="col-lg-4 col-md-6 form-group">-->
+              <!--<input type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellidos" data-rule="minlen:4" data-msg="Please enter at least 4 chars">-->
+              <!--<div class="validate"></div>-->
+            <!--</div>-->
+            <!--<div class="col-lg-4 col-md-6 form-group">-->
+              <!--<input type="text" class="form-control" name="ocupacion" id="ocupacion" placeholder="Ocupacion" data-rule="minlen:1" data-msg="Please enter at least 1 chars">-->
+              <!--<div class="validate"></div>-->
+            <!--</div>-->
+            <!--<div class="col-lg-4 col-md-6 form-group">-->
+              <!--<input type="text" class="form-control" name="clave" id="clave" placeholder="clave" data-rule="minlen:1" data-msg="Please enter at least 1 chars">-->
+              <!--<div class="validate"></div>-->
+            <!--</div>-->
+
+            <!--<div class="col-lg-4 col-md-6 form-group">-->
+              <!--<input type="text" class="form-control" name="confimar_clave" id="confimar_clave" placeholder="Confirmar clave" data-rule="minlen:1" data-msg="Please enter at least 1 chars">-->
+              <!--<div class="validate"></div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="form-group">-->
+            <!--<textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>-->
+            <!--<div class="validate"></div>-->
+          <!--</div>-->
           <!--<div class="mb-3">-->
             <!--<div class="loading">Loading</div>-->
             <!--<div class="error-message"></div>-->
             <!--<div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>-->
           <!--</div>-->
-          <div class="text-center"><button type="submit">Send Message</button></div>
-        </form>
+          <div class="text-center"><button type="submit">Registrarse!</button></div>
+        <!--</form>-->
 
       </div>
     </section><!-- End Book A Table Section -->
@@ -469,7 +484,7 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
               <a href="assets/img/gallery/gallery-1.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+                <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid"/>
               </a>
             </div>
           </div>
@@ -477,7 +492,7 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
               <a href="assets/img/gallery/gallery-2.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+                <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid"/>
               </a>
             </div>
           </div>
@@ -485,7 +500,7 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
               <a href="assets/img/gallery/gallery-3.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+                <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid"/>
               </a>
             </div>
           </div>
@@ -493,7 +508,7 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
               <a href="assets/img/gallery/gallery-4.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+                <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid"/>
               </a>
             </div>
           </div>
@@ -501,7 +516,7 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
               <a href="assets/img/gallery/gallery-5.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+                <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid"/>
               </a>
             </div>
           </div>
@@ -509,7 +524,7 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
               <a href="assets/img/gallery/gallery-6.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+                <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid"/>
               </a>
             </div>
           </div>
@@ -517,7 +532,7 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
               <a href="assets/img/gallery/gallery-7.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+                <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid"/>
               </a>
             </div>
           </div>
@@ -525,7 +540,7 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
               <a href="assets/img/gallery/gallery-8.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+                <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid"/>
               </a>
             </div>
           </div>
@@ -548,7 +563,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="member">
-              <div class="pic"><img src="assets/img/carlos1.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/carlos1.jpg" class="img-fluid" alt=""/></div>
               <div class="member-info">
                 <h4>Carlos Andres Cifuentes</h4>
                 <span>PhD en Ingeniería Eléctrica</span>
@@ -564,7 +579,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="member">
-              <div class="pic"><img src="assets/img/proponentes/luis.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/proponentes/luis.jpg" class="img-fluid" alt=""/></div>
               <div class="member-info">
                 <h4>Luis Eduardo Rodriguez</h4>
                 <span>PhD en Ingeniería Biomédica</span>
@@ -580,7 +595,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="member">
-              <div class="pic"><img src="assets/img/proponentes/maria.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/proponentes/maria.jpg" class="img-fluid" alt=""/></div>
               <div class="member-info">
                 <h4>Maria Paula Acero</h4>
                 <span>MSc Ingeniería Médica</span>
@@ -606,7 +621,7 @@
         <div class="owl-carousel testimonials-carousel">
 
           <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+            <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt=""/>
             <h3>Saul Goodman</h3>
             <h4>Ingeniero electrico</h4>
             <div class="stars">
@@ -624,7 +639,7 @@
           </div>
 
           <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+            <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt=""/>
             <h3>Sara Wilsson</h3>
             <h4>Diseñadora</h4>
             <div class="stars">
@@ -642,7 +657,7 @@
           </div>
 
           <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+            <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt=""/>
             <h3>Jena Karlis</h3>
             <h4>Economista</h4>
             <div class="stars">
@@ -660,7 +675,7 @@
           </div>
 
           <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+            <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt=""/>
             <h3>Matt Brandon</h3>
             <h4>Administrador de empresas</h4>
             <div class="stars">
@@ -678,7 +693,7 @@
           </div>
 
           <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+            <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt=""/>
             <h3>John Larson</h3>
             <h4>Estudiante</h4>
             <div class="stars">
@@ -711,7 +726,7 @@
       </div>
 
       <div class="map">
-        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.9260020351694!2d-74.04479988523742!3d4.7827152965266535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f85e32ae0ca4b%3A0x5edd4c74e8f7220c!2sColombian%20School%20of%20Engineering%20Julio%20Garavito!5e0!3m2!1sfr!2sco!4v1587587945783!5m2!1sfr!2sco" frameborder="0" allowfullscreen></iframe>
+        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.9260020351694!2d-74.04479988523742!3d4.7827152965266535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f85e32ae0ca4b%3A0x5edd4c74e8f7220c!2sColombian%20School%20of%20Engineering%20Julio%20Garavito!5e0!3m2!1sfr!2sco!4v1587587945783!5m2!1sfr!2sco" frameborder="0"></iframe>
         <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.9260020351694!2d-74.04479988523742!3d4.7827152965266535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f85e32ae0ca4b%3A0x5edd4c74e8f7220c!2sColombian%20School%20of%20Engineering%20Julio%20Garavito!5e0!3m2!1sfr!2sco!4v1587587945783!5m2!1sfr!2sco" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>-->
       </div>
 
@@ -722,25 +737,25 @@
             <div class="col-lg-3 col-md-6 info">
               <i class="icofont-google-map"></i>
               <h4>Ubicacion:</h4>
-              <p>AK.45 No.205-59 (Autopista Norte)<br>Bogota, Colombia</p>
+              <p>AK.45 No.205-59 (Autopista Norte)<br/>Bogota, Colombia</p>
             </div>
 
             <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
               <i class="icofont-clock-time icofont-rotate-90"></i>
               <h4>Horarios atencion:</h4>
-              <p>Lunes a Sabados:<br>7:00 AM - 19:00 PM</p>
+              <p>Lunes a Sabados:<br/>7:00 AM - 19:00 PM</p>
             </div>
 
             <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
               <i class="icofont-envelope"></i>
               <h4>Email:</h4>
-              <p>bancoECI@escuelaing.edu.co<br>informacionECI@escuelaing.edu.co</p>
+              <p>bancoECI@escuelaing.edu.co<br/>informacionECI@escuelaing.edu.co</p>
             </div>
 
             <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
               <i class="icofont-phone"></i>
               <h4>Call Center:</h4>
-              <p>+57(1) 668 3622<br></p>
+              <p>+57(1) 668 3622<br/></p>
             </div>
           </div>
         </div>
@@ -790,7 +805,7 @@
         <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
       <div class="copyright">
-        &copy; Copyright <strong><span>Banco de Proyectos ECI</span></strong>. All Rights Reserved
+        Copyright <strong><span>Banco de Proyectos ECI</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
@@ -802,7 +817,7 @@
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+  <a href="#" class="back-to-top"/><i class="icofont-simple-up"></i>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
@@ -817,6 +832,6 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-</body>
+</h:body>
 
 </html>

@@ -34,7 +34,7 @@ public class MyBatisUsuarioDAO implements UsuarioDAO {
     public boolean logIn(String userName, String clave) throws PersistenceException {
         try {
             Usuario user =  usuarioMapper.logIn(userName, clave);
-            boolean boleean = (user.getUserName()==userName && user.getClave()==clave);
+            boolean boleean = (user.getUserName().equals(userName) && user.getClave().equals(clave));
             return boleean;
         } catch (Exception var4) {
             throw new PersistenceException("Ingreso incorrecto");

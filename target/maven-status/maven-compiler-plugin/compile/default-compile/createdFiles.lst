@@ -1,4 +1,5 @@
 edu\eci\cvds\persistence\mybatisimpl\MyBatisComentarioDAO.class
+edu\eci\cvds\bean\Prueba.class
 edu\eci\cvds\persistence\mybatisimpl\mappers\PalabraClaveMapper.class
 edu\eci\cvds\entities\PalabraClave.class
 edu\eci\cvds\guice\GuiceContextListener$1.class

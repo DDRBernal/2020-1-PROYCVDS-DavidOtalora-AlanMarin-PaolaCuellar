@@ -43,7 +43,11 @@ public class ServicesBancoProyectoFactory {
         return instance;
     }
 
-    public ServicesUsuario getServicesBancoProyecto() {
+    public ServicesUsuario getServicesUsuario() {
         return injector.getInstance(ServicesUsuario.class);
+    }
+
+    public ServicesIniciativa getServicesIniciativa() {
+        return injector.getInstance(ServicesIniciativa.class);
     }
 }
