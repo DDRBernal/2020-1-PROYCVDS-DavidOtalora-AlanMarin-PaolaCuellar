@@ -1,6 +1,6 @@
 [![CircleCI](https://circleci.com/gh/DDRBernal/2020-1-PROYCVDS-DavidOtalora-AlanMarin-PaolaCuellar.svg?style=svg)](https://app.circleci.com/pipelines/github/DDRBernal/2020-1-PROYCVDS-DavidOtalora-AlanMarin-PaolaCuellar)
 
-### Escuela Colombiana de Ingeniería
+### Escuela Colombiana de Ingeniería Julio Garavito
 ### Ciclos de Vida del desarrollo de Software – CVDS
 
 ## Proyecto 2020-1-ECI-Banco de proyectos
