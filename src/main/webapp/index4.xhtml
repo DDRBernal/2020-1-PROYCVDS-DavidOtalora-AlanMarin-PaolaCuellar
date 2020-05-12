@@ -66,7 +66,7 @@
 
         <nav class="nav-menu d-none d-lg-block">
           <ul>
-            <li class="active"><h:commandLink action="index?faces-redirect = true" >Inicio</h:commandLink></li>
+            <li class="active"><h:commandLink action="index3?faces-redirect = true" >Inicio</h:commandLink></li>
             <li class="Registrarse text-center"><a href="#Registrarse">Registrarse</a></li>
           </ul>
         </nav><!-- .nav-menu1 -->
@@ -76,34 +76,61 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero">
+  <section id="hero" style="margin-top: 30em;" >
     <div class="hero-container">
+      <div class="container">
+        <div class="iniciaTable">
+          <br/><br/><br/>
+          <ul>
+            <li><p:outputLabel>Nombre iniciativa:</p:outputLabel></li>
+            <li><p:outputLabel>Creacion:</p:outputLabel></li>
+            <li><p:outputLabel>Estado:</p:outputLabel></li>
+            <li><p:outputLabel>Area:</p:outputLabel></li>
+            <li><p:outputLabel>Descripcion:</p:outputLabel></li>
+            <li><p:outputLabel>Votos:</p:outputLabel></li>
+          </ul>
+        </div>
+
+        <div class="section-title444">
+          <h1>Iniciativa<span></span></h1>
+        </div>
+      </div>
       <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
 
         <!--<ol class="carousel-indicators" id="hero-carousel-indicators"></ol>-->
 
         <!--<div class="carousel-inner" role="listbox">-->
 
-
-        <section id="Registrarse" class="Registrarse">
+        <section id="Registrarse" >
           <div class="container">
-
-            <div class="section-title444">
-              <h1>Agregar comentario<span></span></h1>
-            </div>
 
 
 
             <h:form id="Registrolo4"> <!--Registrolo2-->
-
+<!--              <h1 style="position: absolute; top: 300px;color: white">Comentarios<span></span></h1>-->
 
 
               <div class="imagen_user">
-                <img src="assets/img/iconUser.png" style="width:35px;height:35px;" ></img>
-                <label >User:</label>
-                <label >UserName comment: </label>
+                <h1 style="color: white">Comentarios<span></span></h1>
+                <br/>
+                <img src="assets/img/iconUser.png" style="width:35px;height:35px;" />
+                <label >User:</label><br/>
+                <label >comment: </label>
+                <textarea id="textBox1" name="textBox1" rows="4" cols="28" style="background-color:#232323; position: absolute; top: 70px;right: -350px;width: 372px; height: 66px;"/>
+              </div>
+<!--              <textarea id="textBox1" name="textBox1" rows="4" cols="28" style="background-color:#232323;position: absolute; top: 370px;right: 750px; width: 372px; height: 66px;"/>-->
+
+              <div class="botones">
+                <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                  <br/><br/>
+                  <p:inputText type="submit" id="submit1" name="submit1" value="Comentar" styleClass="botonComentar1"/>
+                  <p:inputText type="button" id="button1" name="button1" value="Cancelar" styleClass="botonComentar"/>
+                </div>
               </div>
 
+            </h:form>
+
+            <h:form >
               <div class="imagen_user2">
                 <img src="assets/img/iconUser.png" style="width:35px;height:35px;" ></img>
                 <label >Alan Yesid Mendez</label>
@@ -145,42 +172,10 @@
             </h:form>
 
 
-            <div class="comentario1">
-              <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
                 <!--<label >Agregar comentario</label>-->
                 <!--<textarea rows="3" cols="5" class="form-control" id="Escribe un comentario" name="Escribe un comentario" placeholder="Escribe un comentario" aria-describedby="messageHelp"></textarea>-->
                 <!--<span id="messageHelp" class="form-text text-muted" style="display: none;">Please enter a message.</span>-->
                 <!--<p></p>-->
-                <textarea id="textBox1" name="textBox1" rows="4" cols="28" style="background-color:#232323;" style="margin: 0px; width: 372px; height: 66px;"></textarea>
-              </div>
-            </div>
-
-            <div class="botones">
-              <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                <!--<label >Agregar comentario</label>-->
-                <!--<textarea rows="3" cols="5" class="form-control" id="Escribe un comentario" name="Escribe un comentario" placeholder="Escribe un comentario" aria-describedby="messageHelp"></textarea>-->
-                <!--<span id="messageHelp" class="form-text text-muted" style="display: none;">Please enter a message.</span>-->
-                <!--<p></p>-->
-                <input type="submit" id="submit1" name="submit1" value="Comentar" class="botonComentar1"  />
-                <input type="button" id="button1" name="button1" value="Cancelar" class="botonComentar"/>
-              </div>
-            </div>
-
-            <div class="comentario2">
-              <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                <!--<label >Agregar comentario</label>-->
-                <!--<textarea rows="3" cols="5" class="form-control" id="Escribe un comentario" name="Escribe un comentario" placeholder="Escribe un comentario" aria-describedby="messageHelp"></textarea>-->
-                <!--<span id="messageHelp" class="form-text text-muted" style="display: none;">Please enter a message.</span>-->
-                <!--<p></p>-->
-                <textarea id="textBox2" name="textBox2" rows="4" cols="48" style="background-color:#232323;" style="margin: 0px; width: 372px; height: 66px;"></textarea>
-              </div>
-            </div>
-
-
-
             <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
             <!--&lt;!&ndash;<textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>&ndash;&gt;-->
             <!--&lt;!&ndash;<div class="validate"></div>&ndash;&gt;-->
@@ -212,14 +207,6 @@
     </div>
 
   </section><!-- End Hero -->
-
-
-
-
-
-
-
-
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 

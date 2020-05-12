@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="2020-BancoDeProyectos" />
         <module name="_2020=1-BancoDeProyectos" />
+        <module name="2020-BancoDeProyectos" />
       </profile>
     </annotationProcessing>
   </component>

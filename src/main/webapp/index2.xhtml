@@ -3,7 +3,8 @@
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui"
-      xmlns:f="http://java.sun.com/jsf/core">
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
 
 <h:head>
   <meta charset="utf-8"/>
@@ -40,7 +41,7 @@
 </h:head>
 
 <h:body
-   class="carousel-item active" style="background-image: url(assets/img/slide/entrada4.jpg);">
+        class="carousel-item active" style="background-image: url(assets/img/slide/entrada4.jpg);">
 
 
 
@@ -57,20 +58,18 @@
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
       <h:form>
-      <div class="logo mr-auto">
-        <h1 class="text-light"><h:commandLink action="index?faces-redirect = true"><span>Banco ideas ECI</span></h:commandLink></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index2.xhtml"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-      </div>
+        <div class="logo mr-auto">
+          <h1 class="text-light"><h:commandLink action="index?faces-redirect = true"><span>Banco ideas ECI</span></h:commandLink></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index2.xhtml"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
 
+          <ul>
+            <li class="active"><h:commandLink action="index?faces-redirect = true" style="position: absolute;top: 20px;right: 1100px;">Inicio</h:commandLink></li>
+            <li class="Registrarse text-center"><h:commandLink action="index?faces-redirect = true" style="position: absolute;top: 20px;right: 1000px;" href="#Registrarse">Registrarse</h:commandLink></li>
 
-      <nav class="nav-menu1 d-none d-lg-block">
-        <ul>
-          <li class="active"><h:commandLink action="index?faces-redirect = true" >Inicio</h:commandLink></li>
-          <li class="Registrarse text-center"><a href="#Registrarse">Registrarse</a></li>
-
-        </ul>
-      </nav><!-- .nav-menu1 -->
+          </ul>
+        <!-- .nav-menu1 -->
       </h:form>
 
     </div>
@@ -111,10 +110,14 @@
 
               <div class="form-row222">
                 <div class="col-lg-4 col-md-6 form-group1">
-                  <p:outputLabel id="eFe"  value="#{prue.logIn(userName.value,clave.value)}"/>
+                  <c:if test="0 eq 1}">
+                    <p:outputLabel value="Usuario o clave incorrectos"/>
+                  </c:if>
+                  <h:outputText value="#{param['id']}" />
                   <div class="validate1"></div>
                 </div>
               </div>
+
 
               <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
               <!--&lt;!&ndash;<textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>&ndash;&gt;-->
@@ -126,18 +129,20 @@
               <!--&lt;!&ndash;<div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>&ndash;&gt;-->
               <!--&lt;!&ndash;</div>&ndash;&gt;-->
 
-              <div class="text-center11"><p:commandButton type="submit" update="Registrolol" value="Iniciar Sesion"></p:commandButton></div>
+              <div class="text-center11">
+                <h:commandLink   action="#{controller.logIn(userName.value,clave.value)}" value="Iniciar Sesion" style="font-size:larger"/>
+              </div>
             </h:form>
 
             <!--<h:form id="Registro">-->
-              <!--<br></br>-->
-              <!--<br></br>-->
-              <!--<br></br>-->
-              <!--<br></br>-->
-              <!--<br></br>-->
-              <!--<p:outputLabel value="Consultar Cliente: "/>-->
-              <!--<p:inputText  type= "long" name="name" id="contrasena" class="form-control" placeholder="contrasena" data-rule="minlen:4" data-msg="Por favor ingrese una contrasena" binding="#{clid}">-->
-              <!--</p:inputText>-->
+            <!--<br></br>-->
+            <!--<br></br>-->
+            <!--<br></br>-->
+            <!--<br></br>-->
+            <!--<br></br>-->
+            <!--<p:outputLabel value="Consultar Cliente: "/>-->
+            <!--<p:inputText  type= "long" name="name" id="contrasena" class="form-control" placeholder="contrasena" data-rule="minlen:4" data-msg="Por favor ingrese una contrasena" binding="#{clid}">-->
+            <!--</p:inputText>-->
 
             <!--</h:form>-->
 
@@ -145,11 +150,11 @@
         </section>
         <!-- Slide 1 -->
 
-        </div>
-
-
-
       </div>
+
+
+
+    </div>
 
   </section><!-- End Hero -->
 

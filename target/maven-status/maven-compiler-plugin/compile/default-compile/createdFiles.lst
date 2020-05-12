@@ -1,3 +1,5 @@
+edu\eci\cvds\bean\AccountController.class
+edu\eci\cvds\bean\SeleccionBusqueda.class
 edu\eci\cvds\persistence\mybatisimpl\MyBatisComentarioDAO.class
 edu\eci\cvds\bean\Prueba.class
 edu\eci\cvds\persistence\mybatisimpl\mappers\PalabraClaveMapper.class

@@ -76,26 +76,26 @@
 
   <section style="margin-top: 9em;">
     <h:form id="lol">
-      <p:dataTable id="le" value="#{busqueda.consultaIniciativa()}" var="p" paginator="true" rows="3"
+      <p:dataTable id="le" value="#{busqueda.consultaUsuario()}" var="p" paginator="true" rows="3"
                    paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {NextPageLink} {LastPageLink} " style="text-align:center;padding:4px 10px;border-bottom:0px none;">
-        <p:column headerText="Iniciativa">
-          <h:outputText value="#{p.nombreIniciativa}"/>
+        <p:column headerText="User Name">
+          <h:outputText value="#{p.userName}"/>
         </p:column>
-        <p:column headerText="Estado">
-          <h:outputText value="#{p.estado}"/>
+        <p:column headerText="Documento">
+          <h:outputText value="#{p.documento}"/>
         </p:column>
-        <p:column headerText="Area">
-          <h:outputText value="#{p.area}"/>
+        <p:column headerText="Tipo Ususario">
+          <p:commandLink value="#{p.getTipoUsuario()}" />
         </p:column>
-        <p:column headerText="Proponente">
-          <p:commandLink value="#{p.proponente.getUserName()}" />
+        <p:column headerText="Email">
+          <p:commandLink value="#{p.email}" />
         </p:column>
       </p:dataTable>
 
-      <br/><br/><br/><br/><br/>
-      <p:inputText value="nombre" binding="#{nom}"/>
-      <p:commandButton update="lol" action="#{prue.addkol(nom.value)}" value="agregar"/>
-      <p:commandButton update="lol" action="#{prue.clean()}" value="clear"/>
+<!--      <br/><br/><br/><br/><br/>-->
+<!--      <p:inputText value="nombre" binding="#{nom}"/>-->
+<!--      <p:commandButton update="lol" action="#{prue.addkol(nom.value)}" value="agregar"/>-->
+<!--      <p:commandButton update="lol" action="#{prue.clean()}" value="clear"/>-->
     </h:form>
   </section>
 

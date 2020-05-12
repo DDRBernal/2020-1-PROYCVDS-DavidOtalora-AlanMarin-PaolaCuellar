@@ -54,7 +54,9 @@
     <div class="container d-flex align-items-center">
 
       <div class="logo mr-auto">
-        <h1 class="text-light"><a href="index.html"><span>Banco ideas ECI</span></a></h1>
+        <h1 class="text-light"><a href="index.html">
+          <span>Banco ideas ECI</span></a>
+        </h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -70,8 +72,8 @@
           <li><a href="#proponentes">Proponentes</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
-
-          <li class="active"><h:commandLink action="index5?faces-redirect = true" >Log in</h:commandLink></li>
+          <li class="active"><h:commandLink action="index2?faces-redirect = true" >Log in</h:commandLink></li>
+          <li><a href="#Registrarse">Registrate</a></li>
         </ul>
       </nav><!-- .nav-menu -->
       </h:form>
@@ -418,54 +420,50 @@
           <h2>Registrarse<span></span></h2>
           <p>Ingresa los siguientes datos para poderte registrar en nuestra pagina donde tendras la oportunidad de dar a conocer tu iniciativa o apoyar por otras!.</p>
         </div>
+        <h:form >
+          <div class="form-row">
 
-        <!--<form action="forms/Registrarse.php" method="post" role="form" class="php-email-form">-->
-          <!--<div class="form-row">-->
-            <!--<div class="col-lg-4 col-md-6 form-group">-->
-              <!--<input type="text"  name="name" class="form-control" id="userName" placeholder="Nombre de usuario" data-rule="minlen:4" data-msg="Please enter at least 4 chars"/>-->
-              <!--<div class="validate"></div>-->
-            <!--</div>-->
-            <!--<div class="col-lg-4 col-md-6 form-group">-->
-              <!--<input type="email" class="form-control" name="email" id="email" placeholder="Tu Email" data-rule="email" data-msg="Please enter a valid email">-->
-              <!--<div class="validate"></div>-->
-            <!--</div>-->
-            <!--<div class="col-lg-4 col-md-6 form-group">-->
-              <!--<input type="text" class="form-control" name="documento" id="documento" placeholder="Tu documento" data-rule="minlen:4" data-msg="Please enter at least 4 chars">-->
-              <!--<div class="validate"></div>-->
-            <!--</div>-->
-            <!--<div class="col-lg-4 col-md-6 form-group">-->
-              <!--<input type="text" name="date" class="form-control" id="nombre" placeholder="nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars">-->
-              <!--<div class="validate"></div>-->
-            <!--</div>-->
-            <!--<div class="col-lg-4 col-md-6 form-group">-->
-              <!--<input type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellidos" data-rule="minlen:4" data-msg="Please enter at least 4 chars">-->
-              <!--<div class="validate"></div>-->
-            <!--</div>-->
-            <!--<div class="col-lg-4 col-md-6 form-group">-->
-              <!--<input type="text" class="form-control" name="ocupacion" id="ocupacion" placeholder="Ocupacion" data-rule="minlen:1" data-msg="Please enter at least 1 chars">-->
-              <!--<div class="validate"></div>-->
-            <!--</div>-->
-            <!--<div class="col-lg-4 col-md-6 form-group">-->
-              <!--<input type="text" class="form-control" name="clave" id="clave" placeholder="clave" data-rule="minlen:1" data-msg="Please enter at least 1 chars">-->
-              <!--<div class="validate"></div>-->
-            <!--</div>-->
+            <div class="col-lg-4 col-md-6 form-group">
+              <p:inputText name="name" class="form-control" id="userName" placeholder="Nombre de usuario" data-rule="minlen:4" data-msg="Please enter at least 4 chars" binding="#{userName}"/>
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group">
+              <p:inputText  class="form-control" name="email" id="email" placeholder="Tu Email" data-rule="email" data-msg="Please enter a valid email" binding="#{email}"/>
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group">
+              <p:inputText class="form-control" name="documento" id="documento" placeholder="Tu documento" data-rule="minlen:4" data-msg="Please enter at least 4 chars" binding="#{documento}" />
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group">
+              <p:inputText  name="date" class="form-control" id="nombre" placeholder="nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" binding="#{nombre}"/>
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group">
+              <p:inputText  class="form-control" name="apellido" id="apellido" placeholder="Apellidos" data-rule="minlen:4" data-msg="Please enter at least 4 chars" binding="#{apellido}"/>
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group">
+              <p:inputText  class="form-control" name="ocupacion" id="ocupacion" placeholder="Ocupacion" data-rule="minlen:1" data-msg="Please enter at least 1 chars" binding="#{ocupacion}"/>
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group">
+              <p:inputText  class="form-control" name="tipoUsuario" id="tipoUsuario" placeholder="Tipo Usuario" data-rule="minlen:1" data-msg="Please enter at least 1 chars" binding="#{tipoUsuario}"/>
+              <div class="validate"></div>
+            </div>
 
-            <!--<div class="col-lg-4 col-md-6 form-group">-->
-              <!--<input type="text" class="form-control" name="confimar_clave" id="confimar_clave" placeholder="Confirmar clave" data-rule="minlen:1" data-msg="Please enter at least 1 chars">-->
-              <!--<div class="validate"></div>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="form-group">-->
-            <!--<textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>-->
-            <!--<div class="validate"></div>-->
-          <!--</div>-->
-          <!--<div class="mb-3">-->
-            <!--<div class="loading">Loading</div>-->
-            <!--<div class="error-message"></div>-->
-            <!--<div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>-->
-          <!--</div>-->
-          <div class="text-center"><button type="submit">Registrarse!</button></div>
-        <!--</form>-->
+            <div class="col-lg-4 col-md-6 form-group">
+              <p:inputText  class="form-control" name="clave" id="clave" placeholder="clave" data-rule="minlen:1" data-msg="Please enter at least 1 chars" binding="#{clave}"/>
+              <div class="validate"></div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 form-group">
+              <p:inputText  class="form-control" name="confimar_clave" id="confimar_clave" placeholder="Confirmar clave" data-rule="minlen:1" data-msg="Please enter at least 1 chars" binding="#{clave2}"/>
+              <div class="validate"></div>
+            </div>
+          </div>
+          <div class="text-center"><p:commandButton type="submit" value="Registrarse!" action="#{controller.regitro(userName.value, documento.value, nombre.value, apellido.value, ocupacion.value, clave.value,clave2.value, tipoUsuario.value, email.value)}" style="background-color: white"></p:commandButton></div>
+        </h:form>
 
       </div>
     </section><!-- End Book A Table Section -->

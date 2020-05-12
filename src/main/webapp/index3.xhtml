@@ -40,10 +40,7 @@
 </h:head>
 
 <h:body
-        class="carousel-item active" style="background-image: url(assets/img/slide/fondob.jpg);">
-
-
-
+        class="carousel-item active" style="background-image: url(assets/img/slide/piedras.jpg);">
 
   <!-- ======= Top Bar ======= -->
   <section id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
@@ -59,19 +56,16 @@
       <h:form>
         <div class="logo mr-auto">
           <h1 class="text-light"><h:commandLink action="index?faces-redirect = true"><span>Banco ideas ECI</span></h:commandLink></h1>
-          <!-- Uncomment below if you prefer to use an image logo -->
-          <!-- <a href="index2.xhtml"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
         </div>
 
-
-        <nav class="nav-menu1 d-none d-lg-block">
-          <ul>
-            <li class="active"><h:commandLink action="index?faces-redirect = true" >Inicio</h:commandLink></li>
-            <li class="Registrarse text-center"><a href="#Registrarse">Registrarse</a></li>
-
-          </ul>
-        </nav><!-- .nav-menu2 -->
+        <ul>
+          <li><h:commandLink action="index3?faces-redirect = true" style="position: absolute;top: 10px;right: 780px;"> Inicio</h:commandLink></li>
+          <li><h:commandLink action="index3?faces-redirect = true" style="position: absolute;top: 10px;right: 650px;">Mis Iniciativas</h:commandLink>></li>
+          <li><h:commandLink action="index3?faces-redirect = true" style="position: absolute;top: 10px;right: 500px;">Nueva Iniciativa</h:commandLink>></li>
+          <li><h:commandLink action="index?faces-redirect = true" style="position: absolute;top: 10px;right: 420px;">Log out</h:commandLink>></li>
+        </ul>
       </h:form>
+
 
     </div>
   </header><!-- End Header -->
@@ -91,101 +85,57 @@
 
             <div class="section-title222"> <!--section-title111-->
 
-              <h1>Buscador de Iniciativas<span></span></h1>
+              <h1>Bienvenido a <span style="color: #ffcc00">Banco Proyecto</span></h1>
             </div>
+            <h:form> <!--Registrolo2-->
 
-
-
-            <h:form id="Registrolo3"> <!--Registrolo2-->
+              <div class="userTable">
+                <br/><br/><br/><br/>
+                <br/><br/><br/><br/>
+                <p:outputLabel value="#{controller.getUser().getUserName()}"></p:outputLabel>
+                <br/>
+                <p:outputLabel value="#{controller.getUser().getDocumento()}"></p:outputLabel>
+                <br/>
+                <p:outputLabel value="#{controller.getUser().getNombre()} #{controller.getUser().getApellido()}"></p:outputLabel>
+                <br/>
+                <p:outputLabel value="#{controller.getUser().getTipoUsuario()}"></p:outputLabel>
+              </div>
 
               <div class="imagen_3">
-                <img src="assets/img/logoECI.png" style="width:100px;height:100px;"></img>
+                <img src="assets/img/logoECI.png" style="width:180px;height:180px;"></img>
               </div>
-              <div class="buscador_3"> <!--form-row000-->
-                <div class="col-lg-4 col-md-6 form-group2"> <!-- group2-->
-                  <p:inputText  name="name" class="form-control" id="Buscador" placeholder="Buscador" data-rule="minlen:4" data-msg="Please enter at least 4 chars" binding="#{contenido}"/>
-                  <div class="validate1"></div>
-                </div>
-              </div>
+              <!--                &lt;!&ndash; aqui va el username&ndash;&gt;-->
 
-              <!---->
-              <div class="nombre_usuario3"> <!--form-row000-->
-                <div class="col-lg-4 col-md-6 form-group2"> <!-- group2-->
-                  <p:inputText  name="name" class="form-control" id="userName" placeholder="Usuario" data-rule="minlen:4" data-msg="Please enter at least 4 chars" binding="#{userName}"/>
-                  <div class="validate1"></div>
-                </div>
-              </div>
+              <!--                <div class="username_table">&lt;!&ndash;form-row222&ndash;&gt;-->
+              <!--                  <div class="col-lg-4 col-md-6 form-group2">-->
+              <!--                    <h:outputLabel id="outUsername">Username</h:outputLabel>-->
+              <!--                    <div class="validate1"></div>-->
+              <!--                  </div>-->
+              <!--                </div>-->
 
-              <div class="palabra_clave_3"><!--form-row111-->
-                <div class="col-lg-4 col-md-6 form-group2">   <!--esto lo saque de la clase PalabraClave!!! -->
-                  <p:inputText  name="clave" class="form-control" id="palabra_clave" placeholder="Palabra" data-rule="minlen:4" data-msg="Por favor ingrese una contrasena" binding="#{palabra_clave}"/>
-                  <div class="validate1"></div>
-                </div>
-              </div>
+              <!--                &lt;!&ndash; aqui va el documento&ndash;&gt;-->
+              <!--                <div class="documento_table">&lt;!&ndash;form-row222&ndash;&gt;-->
+              <!--                  <div class="col-lg-4 col-md-6 form-group2">-->
+              <!--                    <h:outputLabel id="outDocumento">documento</h:outputLabel>-->
+              <!--                    <div class="validate1"></div>-->
+              <!--                  </div>-->
+              <!--                </div>-->
 
-              <div class="iniciativa_3">
-                <div class="col-lg-4 col-md-6 form-group2">   <!--esto lo saque de la clase PalabraClave!!! -->
-                  <p:inputText  name="clave" class="form-control" id="nombreIniciativa" placeholder="Nombre Iniciativa" data-rule="minlen:4" data-msg="Por favor ingrese una contrasena" binding="#{nombreIniciativa}"/>
-                  <div class="validate1"></div>
-                </div>
-              </div>
+              <!--                &lt;!&ndash; aqui va el nombreapellido&ndash;&gt;-->
+              <!--                <div class="nombreapellido_table">&lt;!&ndash;form-row222&ndash;&gt;-->
+              <!--                  <div class="col-lg-4 col-md-6 form-group2">-->
+              <!--                    <h:outputLabel id="outNombreApellido">nombreapellido</h:outputLabel>-->
+              <!--                    <div class="validate1"></div>-->
+              <!--                  </div>-->
+              <!--                </div>-->
 
-              <div class="area_3">
-                <div class="col-lg-4 col-md-6 form-group2">   <!--esto lo saque de la clase iniciativa!!! -->
-                  <p:inputText  name="clave" class="form-control" id="area" placeholder="Area" data-rule="minlen:4" data-msg="Por favor ingrese una contrasena" binding="#{area}"/>
-                  <div class="validate1"></div>
-                </div>
-              </div>
-
-              <div class="estado_3">
-                <div class="col-lg-4 col-md-6 form-group2">   <!--esto lo saque de la clase iniciativa!!! -->
-                  <p:inputText  name="clave" class="form-control" id="estado" placeholder="Estado" data-rule="minlen:4" data-msg="Por favor ingrese una contrasena" binding="#{estado}"/>
-                  <div class="validate1"></div>
-                </div>
-              </div>
-
-              <!--<div class="log_in">&lt;!&ndash;form-row222&ndash;&gt;-->
-                <!--<div class="col-lg-4 col-md-6 form-group2">-->
-                  <!--<p:outputLabel id="eFe"  value="#{prue.logIn(userName.value,clave.value)}"/>-->
-                  <!--<div class="validate1"></div>-->
-                <!--</div>-->
-              <!--</div>-->
-
-              <!--&lt;!&ndash; aqui va el username&ndash;&gt;-->
-              <!--<div class="username_table">&lt;!&ndash;form-row222&ndash;&gt;-->
-                <!--<div class="col-lg-4 col-md-6 form-group2">-->
-                  <!--<h:outputLabel id="">Username</h:outputLabel>-->
-                  <!--<p:outputLabel id="" value="#{prue.logIn(userName.value,clave.value)}"/>-->
-                  <!--<div class="validate1"></div>-->
-                <!--</div>-->
-              <!--</div>-->
-
-              <!--&lt;!&ndash; aqui va el documento&ndash;&gt;-->
-              <!--<div class="documento_table">&lt;!&ndash;form-row222&ndash;&gt;-->
-                <!--<div class="col-lg-4 col-md-6 form-group2">-->
-                  <!--<h:outputLabel id="">documento</h:outputLabel>-->
-                  <!--<p:outputLabel id="" value="#{prue.logIn(userName.value,clave.value)}"/>-->
-                  <!--<div class="validate1"></div>-->
-                <!--</div>-->
-              <!--</div>-->
-
-              <!--&lt;!&ndash; aqui va el nombreapellido&ndash;&gt;-->
-              <!--<div class="nombreapellido_table">&lt;!&ndash;form-row222&ndash;&gt;-->
-                <!--<div class="col-lg-4 col-md-6 form-group2">-->
-                  <!--<h:outputLabel id="">nombreapellido</h:outputLabel>-->
-                  <!--<p:outputLabel id="" value="#{prue.logIn(userName.value,clave.value)}"/>-->
-                  <!--<div class="validate1"></div>-->
-                <!--</div>-->
-              <!--</div>-->
-
-              <!--&lt;!&ndash; aqui va el tipousuario&ndash;&gt;-->
-              <!--<div class="tipousuario_table">&lt;!&ndash;form-row222&ndash;&gt;-->
-                <!--<div class="col-lg-4 col-md-6 form-group2">-->
-                  <!--<h:outputLabel id="">tipousuario</h:outputLabel>-->
-                  <!--<p:outputLabel id="" value="#{prue.logIn(userName.value,clave.value)}"/>-->
-                  <!--<div class="validate1"></div>-->
-                <!--</div>-->
-              <!--</div>-->
+              <!--                &lt;!&ndash; aqui va el tipousuario&ndash;&gt;-->
+              <!--                <div class="tipousuario_table">&lt;!&ndash;form-row222&ndash;&gt;-->
+              <!--                  <div class="col-lg-4 col-md-6 form-group2">-->
+              <!--                    <h:outputLabel id="outTipoUser">tipousuario</h:outputLabel>-->
+              <!--                    <div class="validate1"></div>-->
+              <!--                  </div>-->
+              <!--                </div>-->
 
               <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
               <!--&lt;!&ndash;<textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>&ndash;&gt;-->
@@ -197,8 +147,80 @@
               <!--&lt;!&ndash;<div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>&ndash;&gt;-->
               <!--&lt;!&ndash;</div>&ndash;&gt;-->
               <!--text-center11-->
-              <div class="text-center11"><p:commandButton type="submit" update="Registrolo3" value="Aceptar"></p:commandButton></div>
+              <!--              <div class="text-center11"><p:commandButton type="submit" update="Registrolo3" value="Aceptar"></p:commandButton></div>-->
             </h:form>
+            <h:form>
+              <div class="buscador_3"> <!--form-row000-->
+                <div class="col-lg-4 col-md-6 form-group2"> <!-- group2-->
+                  <p:inputText  name="Buscador" class="form-control" id="Buscador" placeholder="Buscador" data-rule="minlen:20" data-msg="Please enter at least 20 chars" binding="#{Buscador}"/>
+                  <br/>
+                  <br/>
+                  <p:outputLabel value="Buscar por:" style="color: #ffb03b;font-family: URW Chancery L, cursive;"/>
+
+                  <h:selectOneMenu value="#{busqueda.selec}" style="height:30px"  >
+                    <f:selectItem itemLabel="Nombre Iniciativa" itemValue="1"/>
+                    <f:selectItem itemLabel="Usuario" itemValue="2"/>
+                    <f:selectItem itemLabel="Palabra" itemValue="3"/>
+                    <f:selectItem itemLabel="Area" itemValue="4"/>
+                    <f:selectItem itemLabel="Estado" itemValue="5"/>
+                  </h:selectOneMenu>
+                  <br/>
+                  <div class="validate1"></div>
+                </div>
+              </div>
+              <p:commandButton value=" " styleClass="buscar-icon" action="#{busqueda.Busqueda(Buscador.value)}"></p:commandButton>
+              <!---->
+
+              <!--              <div class="palabra_clave_3">&lt;!&ndash;form-row111&ndash;&gt;-->
+              <!--                <div class="col-lg-4 col-md-6 form-group2">   &lt;!&ndash;esto lo saque de la clase PalabraClave!!! &ndash;&gt;-->
+              <!--                  <p:commandButton  update="Registrolo3" value="Nombre Iniciativa" styleClass="black-button"/>-->
+              <!--                  <div class="validate1"></div>-->
+              <!--                </div>-->
+              <!--              </div>-->
+
+              <!--              <div class="iniciativa_3">-->
+              <!--                <div class="col-lg-4 col-md-6 form-group2">   &lt;!&ndash;esto lo saque de la clase PalabraClave!!! &ndash;&gt;-->
+              <!--                  <p:commandButton  update="Registrolo3" value="Palabra" styleClass="blue-button"/>-->
+              <!--                  <div class="validate1"></div>-->
+              <!--                </div>-->
+              <!--              </div>-->
+
+              <!--              <div class="area_3">-->
+              <!--                <div class="col-lg-4 col-md-6 form-group2">   &lt;!&ndash;esto lo saque de la clase iniciativa!!!;-->
+              <!--                  <p:commandButton  update="Registrolo3" value="Area" styleClass="blue-button"/>-->
+              <!--                  <div class="validate1"></div>-->
+              <!--                </div>-->
+              <!--              </div>-->
+
+              <!--              <div class="estado_3">-->
+              <!--                <div class="col-lg-4 col-md-6 form-group2">   &lt;!&ndash;esto lo saque de la clase iniciativa!!! &ndash;&gt;-->
+              <!--                  <p:commandButton  update="Registrolo3" value="Estado" styleClass="blue-button"/>-->
+              <!--                  <div class="validate1"></div>-->
+              <!--                </div>-->
+              <!--              </div>-->
+            </h:form>
+
+            <h:form>
+              <p:commandButton value="" styleClass="area-button"/>
+              <p:commandButton value="" styleClass="estado-button"/>
+            </h:form>
+
+            <!--              <br/>-->
+            <!--              <br/>-->
+            <!--              <br/>-->
+            <!--              <br/>-->
+            <!--              <p:growl id="growl" life="2000" />-->
+
+            <!--              <p:commandButton value="Ajax Submit" id="ajax" update="growl" action="#{buttonView.buttonAction}" style="margin-right:20px;" styleClass="ui-priority-primary" />-->
+
+            <!--              <p:commandButton value="Non-Ajax Submit" id="nonAjax" action="#{buttonView.buttonAction}" style="margin-right:20px;" ajax="false" />-->
+
+            <!--              <p:commandButton value="With Icon" id="withIcon" action="#{buttonView.buttonAction}" update="growl" style="margin-right:20px;" image="background-image: url(assets/img/idea.png)" />-->
+
+            <!--              <p:commandButton action="#{buttonView.buttonAction}" id="iconOnly" update="growl" style="margin-right:20px;" icon="background-image: url(assets/img/kk.ico)" title="Icon Only" />-->
+
+            <!--              <p:commandButton value="Disabled" id="disabled" style="margin-right:20px;" disabled="true" />-->
+            <!--            </h:form>-->
 
             <!--<h:form id="Registro">-->
             <!--<br></br>-->
@@ -218,13 +240,9 @@
 
       </div>
 
-
-
     </div>
 
   </section><!-- End Hero -->
-
-
 
 
 

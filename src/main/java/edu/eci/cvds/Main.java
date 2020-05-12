@@ -16,6 +16,6 @@ public class Main {
 //        Comentario comentario = new Comentario(Date.valueOf("2015-03-31"),usuario,"","","");
 
         ServicesUsuario servicesUsuario = ServicesBancoProyectoFactory.getInstance().getServicesUsuario();
-        System.out.println(servicesUsuario.logIn("admin","PaolaAlanDavid"));
+        System.out.println(servicesUsuario.consultarUsuariosPublico("admin").size());
     }
 }

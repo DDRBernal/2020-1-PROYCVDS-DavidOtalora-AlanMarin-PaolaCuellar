@@ -1553,3 +1553,9 @@ section {
 #footer .credits {
   font-size: 13px;
 }
+/*--------------------------------------------------------------
+# Table
+--------------------------------------------------------------*/
+.ui-datatable-footer {
+   background: red !important;
+ }
