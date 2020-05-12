@@ -1,18 +1,27 @@
 package edu.eci.cvds.persistence.mybatisimpl.mappers;
 
 import edu.eci.cvds.entities.Iniciativa;
-import edu.eci.cvds.persistence.PersistenceException;
+import edu.eci.cvds.entities.PalabraClave;
+import edu.eci.cvds.entities.Usuario;
 import org.apache.ibatis.annotations.Param;
 
-import java.util.Date;
 import java.util.List;
 
 public interface IniciativaMapper {
-    void insertarIniciativa(@Param("nombre") String nombre,@Param("descripcion") String descripcion,@Param("votos") int votos,@Param("fecha") Date fecha,@Param("nombre_proponente") String nombre_proponente,@Param("areas") String areas,@Param("dependencia") String dependencia,@Param("palabras_clave") String palabras_clave) throws PersistenceException;
 
-    void modificarIniciativa(@Param("nombre") String nombre,@Param("descripcion") String descripcion) throws PersistenceException;
+    void crearIniciativa(@Param("iniciativa") Iniciativa var1);
 
-    List<Iniciativa> getIniciativas() throws PersistenceException;
+    Iniciativa consultarIniciativa(@Param("nombreIniciativa") String nombreIniciativa);
 
-    Iniciativa getInfoIniciativa(@Param("nombre") String nombre) throws PersistenceException;
+    List<Iniciativa> consultarPorPalabra(PalabraClave var1);
+
+    List<Iniciativa> consultarPorArea(@Param("area")String var1);
+
+    List<Iniciativa> consultarPorEstado(@Param("estado")String var1);
+
+    void modificarIniciativaPropietario(Iniciativa var1, String var2, String var3, String var4);
+
+    void modificarIniciativaEstado(@Param("iniciativa")Iniciativa var1, @Param("estado")String var2);
+
+    void votarPorIniciativa(Usuario var1, Iniciativa var2);
 }

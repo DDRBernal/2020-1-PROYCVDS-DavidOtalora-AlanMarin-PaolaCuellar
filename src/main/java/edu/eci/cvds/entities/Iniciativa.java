@@ -1,102 +1,106 @@
 package edu.eci.cvds.entities;
 
-import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-public class Iniciativa implements Serializable {
-    private String nombre;
-    private String descripcion;
-    private int votos;
+public class Iniciativa {
+    private String nombreIniciativa;
     private Date fecha;
-    private String nombre_proponente;
-    private String areas;
+    private String estado;
+    private Usuario proponente;
+    private String area;
     private String dependencia;
-    private String palabras_clave;
-    private List<Comentario> comentario;
+    private String descripcion;
+    private List<PalabraClave> palabras_clave;
+    private List<Comentario> comentarios;
 
-    public Iniciativa(String nombre,String descripcion,int votos,Date fecha,String nombre_proponente,String areas,String dependencia,String palabras_clave,List<Comentario> comentario){
-        this.nombre=nombre;
-        this.descripcion=descripcion;
-        this.votos=votos;
-        this.fecha=fecha;
-        this.nombre_proponente=nombre_proponente;
-        this.areas=areas;
-        this.dependencia=dependencia;
-        this.palabras_clave=palabras_clave;
-        this.comentario=comentario;
-    }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
+    public Iniciativa(String nombreIniciativa, Date fecha, String estado, Usuario proponente, String area, String dependencia, String descripcion, List<PalabraClave> palabras_clave, List<Comentario> comentarios) {
+        this.nombreIniciativa = nombreIniciativa;
+        this.fecha = fecha;
+        this.estado = estado;
+        this.proponente = proponente;
+        this.area = area;
+        this.dependencia = dependencia;
         this.descripcion = descripcion;
+        this.palabras_clave = palabras_clave;
+        this.comentarios = comentarios;
     }
 
-    public int getVotos() {
-        return votos;
-    }
-
-    public void setVotos(int votos) {
-        this.votos = votos;
-    }
-
-    public Date getFecha() {
-        return fecha;
+    public void setNombreIniciativa(String nombreIniciativa) {
+        this.nombreIniciativa = nombreIniciativa;
     }
 
     public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
 
-    public String getNombre_proponente() {
-        return nombre_proponente;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
-    public void setNombre_proponente(String nombre_proponente) {
-        this.nombre_proponente = nombre_proponente;
+    public void setProponente(Usuario proponente) {
+        this.proponente = proponente;
     }
 
-    public String getAreas() {
-        return areas;
-    }
-
-    public void setAreas(String areas) {
-        this.areas = areas;
-    }
-
-    public String getDependencia() {
-        return dependencia;
+    public void setArea(String area) {
+        this.area = area;
     }
 
     public void setDependencia(String dependencia) {
         this.dependencia = dependencia;
     }
 
-    public String getPalabras_clave() {
-        return palabras_clave;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
-    public void setPalabras_clave(String palabras_clave) {
+    public void setPalabras_clave(List<PalabraClave> palabras_clave) {
         this.palabras_clave = palabras_clave;
     }
 
-
-    public List<Comentario> getComentario() {
-        return comentario;
+    public void setComentarios(List<Comentario> comentarios) {
+        this.comentarios = comentarios;
     }
 
-    public void setComentario(List<Comentario> comentario) {
-        this.comentario = comentario;
+
+    public String getNombreIniciativa() {
+        return this.nombreIniciativa;
     }
+
+    public Date getFecha() {
+        return this.fecha;
+    }
+
+    public String getEstado() {
+        return this.estado;
+    }
+
+    public Usuario getProponente() {
+        return this.proponente;
+    }
+
+    public String getArea() {
+        return this.area;
+    }
+
+    public String getDependencia() {
+        return this.dependencia;
+    }
+
+    public String getDescripcion() {
+        return this.descripcion;
+    }
+
+    public List<PalabraClave> getPalabras_clave() {
+        return this.palabras_clave;
+    }
+
+    public List<Comentario> getComentarios() {
+        return this.comentarios;
+    }
+
+    public int getVotos() {
+        return 0;
+    }//plantear votos
 }

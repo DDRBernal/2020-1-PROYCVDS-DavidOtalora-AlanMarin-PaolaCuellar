@@ -1,52 +1,82 @@
 package edu.eci.cvds.persistence.mybatisimpl;
 
+import com.google.inject.Inject;
 import edu.eci.cvds.entities.Iniciativa;
+import edu.eci.cvds.entities.PalabraClave;
+import edu.eci.cvds.entities.Usuario;
+import edu.eci.cvds.persistence.ComentarioDAO;
 import edu.eci.cvds.persistence.IniciativaDAO;
 import edu.eci.cvds.persistence.PersistenceException;
-import com.google.inject.Inject;
 import edu.eci.cvds.persistence.mybatisimpl.mappers.IniciativaMapper;
 
-import java.util.Date;
 import java.util.List;
 
-public class myBatisIniciativaDAO implements IniciativaDAO {
+public class MyBatisIniciativaDAO implements IniciativaDAO {
 
     @Inject
     private IniciativaMapper iniciativaMapper;
 
-    @Override
-    public void insertarIniciativa(String nombre, String descripcion, int votos, Date fecha, String nombre_proponente, String areas, String dependencia, String palabras_clave) throws PersistenceException {
+    public void crearIniciativa(Iniciativa iniciativa) throws PersistenceException {
         try {
-            iniciativaMapper.insertarIniciativa(nombre,descripcion,votos,fecha,nombre_proponente,areas,dependencia,palabras_clave);
-        }catch (Exception e){
-
+            this.iniciativaMapper.crearIniciativa(iniciativa);
+        } catch (Exception e) {
+            throw new PersistenceException("Ingreso de datos incorrecto");
         }
     }
 
-    @Override
-    public void modificarIniciativa(String nombre, String descripcion) throws PersistenceException {
+    public Iniciativa consultarIniciativa(String nombreIniciativa) throws PersistenceException {
         try {
-            iniciativaMapper.modificarIniciativa(nombre,descripcion);
-        }catch (Exception e){
-
+            return this.iniciativaMapper.consultarIniciativa(nombreIniciativa);
+        } catch (Exception e) {
+            throw new PersistenceException("Iniciativa inexitente");
         }
     }
 
-    @Override
-    public List<Iniciativa> getIniciativas() throws PersistenceException {
+    public List<Iniciativa> consultarPorPalabra(PalabraClave palabraClave) throws PersistenceException {
         try {
-            return iniciativaMapper.getIniciativas();
-        }catch (Exception e){
-            return null;
+            return this.iniciativaMapper.consultarPorPalabra(palabraClave);
+        } catch (Exception e) {
+            throw new PersistenceException("No hay iniciativas relacionadas");
         }
     }
 
-    @Override
-    public Iniciativa getInfoIniciativa(String nombre) throws PersistenceException {
+    public List<Iniciativa> consultarPorArea(String area) throws PersistenceException {
         try {
-            return iniciativaMapper.getInfoIniciativa(nombre);
-        }catch (Exception e){
-            return null;
+            return this.iniciativaMapper.consultarPorArea(area);
+        } catch (Exception e) {
+            throw new PersistenceException("No hay iniciativas relacionadas");
+        }
+    }
+
+    public List<Iniciativa> consultarPorEstado(String estado) throws PersistenceException {
+        try {
+            return this.iniciativaMapper.consultarPorEstado(estado);
+        } catch (Exception e) {
+            throw new PersistenceException("No hay iniciativas relacionadas");
+        }
+    }
+
+    public void modificarIniciativaPropietario(Iniciativa iniciativa, String area, String dependencia, String descripcion) throws PersistenceException {
+        try {
+            this.iniciativaMapper.modificarIniciativaPropietario(iniciativa, area, dependencia, descripcion);
+        } catch (Exception e) {
+            throw new PersistenceException("Ingreso de datos incorrecto");
+        }
+    }
+
+    public void modificarIniciativaEstado(Iniciativa iniciativa, String estado) throws PersistenceException {
+        try {
+            this.iniciativaMapper.modificarIniciativaEstado(iniciativa, estado);
+        } catch (Exception e) {
+            throw new PersistenceException("Ingreso de datos incorrecto");
+        }
+    }
+
+    public void votarPorIniciativa(Usuario usuario, Iniciativa iniciativa) throws PersistenceException {
+        try {
+            this.iniciativaMapper.votarPorIniciativa(usuario, iniciativa);
+        } catch (Exception e) {
+            throw new PersistenceException("Ingreso de datos incorrecto");
         }
     }
 }

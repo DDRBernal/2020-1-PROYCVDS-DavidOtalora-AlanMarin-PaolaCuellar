@@ -8,8 +8,10 @@
     </settings>-->
     <typeAliases>
         <typeAlias type="edu.eci.cvds.entities.Usuario" alias="Usuario"/>
+        <typeAlias type="edu.eci.cvds.entities.Comentario" alias="Comentario"/>
+        <typeAlias type="edu.eci.cvds.entities.PalabraClave" alias="PalabraClave"/>
         <typeAlias type="edu.eci.cvds.entities.Iniciativa" alias="Iniciativa"/>
-    </typeAliases>	
+    </typeAliases>
 
     <environments default="development">
         <environment id="development">
@@ -18,14 +20,16 @@
                 <property name="driver" value="org.postgresql.Driver" />
                 <property name="url" value="jdbc:postgresql://ec2-54-147-209-121.compute-1.amazonaws.com:5432/d3ud59c3cjglgo?sslmode=require"/>
                 <property name="username" value="egpwuhiroryigy" />
-                <property name="password" value="25664ff8aa83598ca30242d722067e7e22c1916e26241cb4c27323d02f32424e" />
+                    <property name="password" value="25664ff8aa83598ca30242d722067e7e22c1916e26241cb4c27323d02f32424e" />
             </dataSource>
         </environment>
     </environments>
         
     <mappers>
-        <mapper resource="mappers/Usuario.xml"></mapper>
-        <mapper resource="mappers/Iniciativa.xml"></mapper>
+        <mapper resource="mappers/UsuarioMapper.xml"></mapper>
+        <mapper resource="mappers/ComentarioMapper.xml"></mapper>
+        <mapper resource="mappers/PalabraClaveMapper.xml"></mapper>
+        <mapper resource="mappers/IniciativaMapper.xml"></mapper>
     </mappers> 
         
         

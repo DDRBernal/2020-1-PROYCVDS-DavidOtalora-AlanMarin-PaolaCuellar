@@ -1,32 +1,52 @@
 CREATE TABLE IF NOT EXISTS USUARIO (
-  nombre VARCHAR(50) NOT NULL,
-  documento INT(20) PRIMARY KEY,
-  contrasena VARCHAR(20) NOT NULL,
-  tipoUsuario VARCHAR(20) NOT NULL,
+  userName VARCHAR(50) PRIMARY KEY,
+  documento INT unique,
+  nombre VARCHAR(20) NULL,
+  apellido VARCHAR(30) NULL,
+  ocupacion VARCHAR(20) NULL,
+  clave VARCHAR(20) NOT NULL,
+  tipoUsuario VARCHAR(30) NOT NULL,
   email VARCHAR(150) UNIQUE);
 
-CREATE TABLE IF NOT EXISTS COMENTARIO(
-  id  INT(20) PRIMARY KEY,
-  fecha DATE(20) NOT NULL,
-  autor VARCHAR(20) NOT NULL,
-  contenido VARCHAR(20) NOT NULL);
-
 CREATE TABLE IF NOT EXISTS INICIATIVA (
-  descripcion VARCHAR(50) NOT NULL,
-  votos INT(20) NOT NULL,
-  fecha DATE(20) NOT NULL,
-  nombre_proponente VARCHAR(20) NOT NULL,
-  areas VARCHAR(150) NOT NULL,
-  dependencia VARCHAR(20) NOT NULL,
-  palabras_clave VARCHAR(20) NOT NULL,
-  comentario VARCHAR(20), 
-  FOREIGN KEY (comentario) REFERENCES COMENTARIO (id));
+    nombreIniciativa VARCHAR(50) NOT NULL,
+    fecha DATE NOT NULL,
+    estado VARCHAR(2) NOT NULL,
+    proponente VARCHAR(50) NOT null,
+    area VARCHAR(150) NULL,
+    dependencia VARCHAR(20) NULL,
+    descripcion VARCHAR(200) NOT null,
+    PRIMARY KEY (nombreIniciativa,proponente),
+    CONSTRAINT fk_Ususario_proponente FOREIGN KEY (proponente) REFERENCES USUARIO(userName));
+
+CREATE TABLE IF NOT EXISTS PALABRACLAVE(
+  palabra_clave VARCHAR(20)NOT NULL,
+  nombreIniciativa VARCHAR(50) NOT NULL,
+  proponente VARCHAR(50) NOT null,
+  PRIMARY KEY (palabra_clave,nombreIniciativa),
+  CONSTRAINT fk_Iniciativa_nombreI FOREIGN KEY (nombreIniciativa,proponente) REFERENCES INICIATIVA (nombreIniciativa,proponente));
 
 
-     
+CREATE TABLE IF NOT EXISTS COMENTARIO(
+  id  INT PRIMARY KEY,
+  fecha DATE NOT NULL,
+  autor VARCHAR(50) NOT NULL,
+  contenido VARCHAR(200) NOT NULL,
+  nombreIniciativa VARCHAR(50) NOT NULL,
+  proponente VARCHAR(50) NOT null,
+  CONSTRAINT fk_Usuario_autor FOREIGN KEY (autor) REFERENCES USUARIO (userName),
+  CONSTRAINT fk_Iniciativa_nombreI FOREIGN KEY (nombreIniciativa,proponente) REFERENCES INICIATIVA (nombreIniciativa,proponente));
 
-insert into usuario (nombre,documento,contrasena,tipoUsuario,email) values ('Paola','2106888','1234','Administrador','paola.cuellar@mail.escuelaing.edu.co');
-insert into usuario (nombre,documento,contrasena,tipoUsuario,email) values ('David','2107329','admin','Administrador','david.otalora@mail.escuelaing.edu.co');
-insert into usuario (nombre,documento,contrasena,tipoUsuario,email) values ('Alan','2106756','admin','Administrador','alan.marin@mail.escuelaing.edu.co');
-insert into usuario (nombre,documento,contrasena,tipoUsuario,email) values ('Juan','2105432','sc23','Administrador','juan.sc@mail.escuelaing.edu.co');
-insert into usuario (nombre,documento,contrasena,tipoUsuario,email) values ('Nicolas','2114666','cg97','Administrador','nicolas.cg@mail.escuelaing.edu.co');
+CREATE TABLE IF NOT EXISTS VOTO(
+  votante VARCHAR(50) NOT NULL,
+  nombreIniciativa VARCHAR(50) NOT NULL,
+  proponente VARCHAR(50) NOT null,
+  PRIMARY KEY (votante,nombreIniciativa),
+  CONSTRAINT fk_Usuario_votante FOREIGN KEY (votante) REFERENCES USUARIO (userName),
+  CONSTRAINT fk_Iniciativa_nombreI FOREIGN KEY (nombreIniciativa,proponente) REFERENCES INICIATIVA (nombreIniciativa,proponente));
+
+
+--Ususario administrador:
+INSERT INTO USUARIO (userName,documento,nombre,apellido,ocupacion,clave,tipoUsuario,email) VALUES ("admin",0,"admin","admin","admin","PaolaAlanDavid","Admin","alan.marin@mail.escuelaing.edu.co");
+
+

@@ -1,49 +1,59 @@
 package edu.eci.cvds.entities;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Comentario {
-    private int id;
     private Date fecha;
-    private String autor;
+    private Usuario autor;
     private String contenido;
+    private String nombreIniciativa;
+    private String proponente;
 
-    public Comentario(int id, Date fecha, String autor, String contenido){
-        this.id = id;
+    public Comentario(Date fecha, Usuario autor, String contenido, String nombreIniciativa, String proponente) {
         this.fecha = fecha;
         this.autor = autor;
         this.contenido = contenido;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Date getFecha() {
-        return fecha;
+        this.nombreIniciativa = nombreIniciativa;
+        this.proponente = proponente;
     }
 
     public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
 
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
+    public void setAutor(Usuario autor) {
         this.autor = autor;
-    }
-
-    public String getContenido() {
-        return contenido;
     }
 
     public void setContenido(String contenido) {
         this.contenido = contenido;
+    }
+
+    public void setNombreIniciativa(String nombreIniciativa) {
+        this.nombreIniciativa = nombreIniciativa;
+    }
+
+    public void setProponente(String proponente) {
+        this.proponente = proponente;
+    }
+
+    public Date getFecha() {
+        return this.fecha;
+    }
+
+    public Usuario getAutor() {
+        return this.autor;
+    }
+
+    public String getContenido() {
+        return this.contenido;
+    }
+
+    public String getNombreIniciativa() {
+        return this.nombreIniciativa;
+    }
+
+    public String getProponente() {
+        return this.proponente;
     }
 }

@@ -1,5 +1,6 @@
 package edu.eci.cvds.persistence.mybatisimpl.mappers;
 
+import edu.eci.cvds.entities.Iniciativa;
 import edu.eci.cvds.entities.Usuario;
 import org.apache.ibatis.annotations.Param;
 
@@ -7,11 +8,13 @@ import java.util.List;
 
 public interface UsuarioMapper {
 
-    void insertarUsuario(@Param("usuario") Usuario usr);
+    Usuario consultarUsuario(@Param("userName") String var1);
 
-    List<Usuario> getUsuarios();
+    List<Usuario> consultarUsuariosPublico(@Param("userName") String var1);
 
-    Usuario consultarUsuario(@Param("contrasena") String constrasena);
+    Usuario logIn(@Param("userName") String var1, @Param("clave") String var2);
 
-    void setUsuario(@Param("nombre") String nombre,@Param("documento") int documento,@Param("contrasena") String contrasena,@Param("tipoUsuario") String tipoUsuario,@Param("email") String email);
+    void insertarUsuario(@Param("usuario") Usuario var1);
+
+    List<Iniciativa> consultarIniciativasRelacionadas(@Param("userName") String var1);
 }

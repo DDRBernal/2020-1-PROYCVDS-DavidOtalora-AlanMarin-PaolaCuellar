@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <title>Banco de Ideas ECI</title>
+  <meta content="" name="descriptison"/>
+  <meta content="" name="keywords"/>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon"/>
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i" rel="stylesheet"/>
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet"/>
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet"/>
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet"/>
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet"/>
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet"/>
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style3.css" rel="stylesheet"/>
+
+
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"> </link>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  <script>
+    $(document).ready( function () {
+        $('#le').DataTable();
+    } );
+  </script>
+
+
+</h:head>
+<h:body
+        class="carousel-item active" style="background-image: url(assets/img/slide/fondob.jpg);">
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+    <div class="container text-right">
+      <i class="icofont-phone"></i> PBX +57(1) 668 3600 Bogota - Colombia
+      <i class="icofont-clock-time icofont-rotate-180"></i> Lun-Sab: 7:00 AM - 19:00 PM
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+      <h:form>
+        <div class="logo mr-auto">
+          <h1 class="text-light"><p:commandLink action="index?faces-redirect = true"><span>Banco ideas ECI</span></p:commandLink></h1>
+        </div>
+        <ul>
+          <li><h:commandLink action="index3?faces-redirect = true" style="position: absolute;top: 10px;right: 780px;"> Inicio</h:commandLink></li>
+          <li><h:commandLink action="index3?faces-redirect = true" style="position: absolute;top: 10px;right: 650px;">Mis Iniciativas</h:commandLink></li>
+          <li><h:commandLink action="index3?faces-redirect = true" style="position: absolute;top: 10px;right: 500px;">Nueva Iniciativa</h:commandLink></li>
+          <li><h:commandLink action="index?faces-redirect = true" style="position: absolute;top: 10px;right: 420px;">Log out</h:commandLink></li>
+        </ul>
+
+      </h:form>
+
+    </div>
+  </header>
+
+  <section style="margin-top: 9em;">
+    <h:form id="lol">
+      <p:dataTable id="le" value="#{busqueda.consultaUsuario()}" var="p" paginator="true" rows="3"
+                   paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {NextPageLink} {LastPageLink} " style="text-align:center;padding:4px 10px;border-bottom:0px none;">
+        <p:column headerText="User Name">
+          <h:outputText value="#{p.userName}"/>
+        </p:column>
+        <p:column headerText="Documento">
+          <h:outputText value="#{p.documento}"/>
+        </p:column>
+        <p:column headerText="Tipo Ususario">
+          <p:commandLink value="#{p.getTipoUsuario()}" />
+        </p:column>
+        <p:column headerText="Email">
+          <p:commandLink value="#{p.email}" />
+        </p:column>
+      </p:dataTable>
+
+<!--      <br/><br/><br/><br/><br/>-->
+<!--      <p:inputText value="nombre" binding="#{nom}"/>-->
+<!--      <p:commandButton update="lol" action="#{prue.addkol(nom.value)}" value="agregar"/>-->
+<!--      <p:commandButton update="lol" action="#{prue.clean()}" value="clear"/>-->
+    </h:form>
+  </section>
+
+</h:body>
+
+</html>
+

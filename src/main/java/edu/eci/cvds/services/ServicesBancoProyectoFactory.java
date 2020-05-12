@@ -1,58 +1,53 @@
 package edu.eci.cvds.services;
 
-
+import com.google.inject.Guice;
 import com.google.inject.Injector;
+import com.google.inject.Module;
+import edu.eci.cvds.persistence.ComentarioDAO;
 import edu.eci.cvds.persistence.IniciativaDAO;
+import edu.eci.cvds.persistence.PalabraClaveDAO;
 import edu.eci.cvds.persistence.UsuarioDAO;
-import edu.eci.cvds.persistence.mybatisimpl.myBatisIniciativaDAO;
-import edu.eci.cvds.persistence.mybatisimpl.myBatisUsuarioDAO;
+import edu.eci.cvds.persistence.mybatisimpl.MyBatisComentarioDAO;
+import edu.eci.cvds.persistence.mybatisimpl.MyBatisIniciativaDAO;
+import edu.eci.cvds.persistence.mybatisimpl.MyBatisPalabraClaveDAO;
+import edu.eci.cvds.persistence.mybatisimpl.MyBatisUsuarioDAO;
+import edu.eci.cvds.services.Impl.ServicesIniciativaImpl;
+import edu.eci.cvds.services.Impl.ServicesUsuarioImpl;
 import org.mybatis.guice.XMLMyBatisModule;
-
-import static com.google.inject.Guice.createInjector;
-import java.util.Optional;
+import org.mybatis.guice.datasource.helper.JdbcHelper;
 
 public class ServicesBancoProyectoFactory {
 
     private static ServicesBancoProyectoFactory instance = new ServicesBancoProyectoFactory();
+    private static Injector injector;
+    private static Injector testInector;
 
-    private static Optional<Injector> optInjector;
-
-
-    private Injector myBatisInjector(String env, String pathResource) {
-        return createInjector(new XMLMyBatisModule() {
-            @Override
+    public ServicesBancoProyectoFactory() {
+        injector = Guice.createInjector(new XMLMyBatisModule() {
             protected void initialize() {
-                setEnvironmentId(env);
-                setClassPathResource(pathResource);
-                bind(UsuarioDAO.class).to(myBatisUsuarioDAO.class);
-                bind(IniciativaDAO.class).to(myBatisIniciativaDAO.class);
+                this.install(JdbcHelper.PostgreSQL);
+                setEnvironmentId("development");
+                this.setClassPathResource("mybatis-config.xml");
+
+                this.bind(ServicesUsuario.class).to(ServicesUsuarioImpl.class);
+                this.bind(ServicesIniciativa.class).to(ServicesIniciativaImpl.class);
+                this.bind(UsuarioDAO.class).to(MyBatisUsuarioDAO.class);
+                this.bind(ComentarioDAO.class).to(MyBatisComentarioDAO.class);
+                this.bind(PalabraClaveDAO.class).to(MyBatisPalabraClaveDAO.class);
+                this.bind(IniciativaDAO.class).to(MyBatisIniciativaDAO.class);
             }
         });
     }
 
-    public ServicesBancoProyectoFactory() {
-        optInjector = Optional.empty();
-    }
-
-    public ServicesBancoProyecto getServicesBancoProyecto(){
-        if (!optInjector.isPresent()) {
-            optInjector = Optional.of(myBatisInjector("development","mybatis-config.xml"));
-        }
-
-        return optInjector.get().getInstance(ServicesBancoProyecto.class);
-    }
-
-
-    public ServicesBancoProyecto getServicesBancoProyectoTesting(){
-        if (!optInjector.isPresent()) {
-            optInjector = Optional.of(myBatisInjector("test","mybatis-config-h2.xml"));
-        }
-
-        return optInjector.get().getInstance(ServicesBancoProyecto.class);
-    }
-
-
-    public static ServicesBancoProyectoFactory getInstance(){
+    public static ServicesBancoProyectoFactory getInstance() {
         return instance;
+    }
+
+    public ServicesUsuario getServicesUsuario() {
+        return injector.getInstance(ServicesUsuario.class);
+    }
+
+    public ServicesIniciativa getServicesIniciativa() {
+        return injector.getInstance(ServicesIniciativa.class);
     }
 }

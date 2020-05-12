@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="edu.eci.cvds.persistence.mybatisimpl.mappers.PalabraClaveMapper">
+
+
+    <insert id="agregarPalabrasclave" parameterType="map">
+        insert into
+        palabraclave
+        values
+        (#{palabra},#{nombreIniciativa},#{proponente})
+    </insert>
+
+    <delete id="eliminarPalabrasclave" parameterType="map">
+        delete from
+        palabraclave
+        where
+        palabraclave =#{palabra} and nombreIniciativa=#{nombreIniciativa} and proponente=#{proponente}
+    </delete>
+
+    <resultMap type='PalabraClave' id='PalabraClaveResult'>
+        <result property='palabra_clave' column='palabraclave'/>
+        <result property='nombreIniciativa' column='nombreIniciativa'/>
+        <result property='proponente' column='proponente'/>
+    </resultMap>
+    
+</mapper>
