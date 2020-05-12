@@ -11,8 +11,8 @@ import edu.eci.cvds.persistence.mybatisimpl.MyBatisComentarioDAO;
 import edu.eci.cvds.persistence.mybatisimpl.MyBatisIniciativaDAO;
 import edu.eci.cvds.persistence.mybatisimpl.MyBatisPalabraClaveDAO;
 import edu.eci.cvds.persistence.mybatisimpl.MyBatisUsuarioDAO;
-import edu.eci.cvds.services.Impl.ServicesIniciativaImpl;
-import edu.eci.cvds.services.Impl.ServicesUsuarioImpl;
+import edu.eci.cvds.services.impl.ServicesIniciativaImpl;
+import edu.eci.cvds.services.impl.ServicesUsuarioImpl;
 import org.mybatis.guice.XMLMyBatisModule;
 import org.mybatis.guice.datasource.helper.JdbcHelper;
 

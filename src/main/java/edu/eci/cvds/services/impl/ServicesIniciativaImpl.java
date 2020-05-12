@@ -1,4 +1,4 @@
-package edu.eci.cvds.services.Impl;
+package edu.eci.cvds.services.impl;
 
 import com.google.inject.Inject;
 import edu.eci.cvds.entities.Comentario;
