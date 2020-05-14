@@ -5,18 +5,23 @@ import edu.eci.cvds.entities.Iniciativa;
 import edu.eci.cvds.entities.PalabraClave;
 import edu.eci.cvds.entities.Usuario;
 
+import java.sql.Date;
 import java.util.List;
 
 public interface ServicesIniciativa {
-    void crearIniciativa(Iniciativa iniciativa);
+    void crearIniciativa(String nombreIniciativa, Date fecha, String estado, String proponente, String area, String dependencia, String descripcion);
 
     Iniciativa consultarIniciativa(String nombreIniciativa);
 
-    List<Iniciativa> consultarPorPalabra(PalabraClave palabraClave);
+    List<Iniciativa> consultarIniciativaPublico(String nombreIniciativa);
+
+    List<Iniciativa> consultarIniciativasRelacionadas(String userName, String filtro);
 
     List<Iniciativa> consultarPorArea(String area);
 
     List<Iniciativa> consultarPorEstado(String estado);
+
+    List<PalabraClave> consultarPlabras(String iniciativa);
 
     void modificarIniciativaPropietario(Iniciativa var1, String var2, String var3, String var4);
 
@@ -26,11 +31,11 @@ public interface ServicesIniciativa {
 
     void modificarIniciativaEstado(Iniciativa iniciativa, String estado);
 
-    void votarPorIniciativa(Usuario usuario, Iniciativa iniciativa);
+//    void votarPorIniciativa(Usuario usuario, Iniciativa iniciativa);
 
-    void comentarUnaIniciativa(Comentario comentario);
+    void comentarUnaIniciativa(Date fecha, String autor, String contenido, String nombreIniciativa, String proponente);
 
-    void eliminarComentario(Usuario autor, Iniciativa iniciativa);
+    void eliminarComentario(String autor, Iniciativa iniciativa);
 
-    List<Comentario> consultarComentarios(Iniciativa iniciativa);
+    List<Comentario> consultarComentarios(String iniciativa);
 }

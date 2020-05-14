@@ -63,10 +63,10 @@
           <h1 class="text-light"><p:commandLink action="index?faces-redirect = true"><span>Banco ideas ECI</span></p:commandLink></h1>
         </div>
         <ul>
-          <li><h:commandLink action="index3?faces-redirect = true" style="position: absolute;top: 10px;right: 780px;"> Inicio</h:commandLink></li>
-          <li><h:commandLink action="index3?faces-redirect = true" style="position: absolute;top: 10px;right: 650px;">Mis Iniciativas</h:commandLink></li>
-          <li><h:commandLink action="index3?faces-redirect = true" style="position: absolute;top: 10px;right: 500px;">Nueva Iniciativa</h:commandLink></li>
-          <li><h:commandLink action="index?faces-redirect = true" style="position: absolute;top: 10px;right: 420px;">Log out</h:commandLink></li>
+          <h:commandLink action="index3?faces-redirect = true" style="position: absolute;top: 10px;right: 780px;"> Inicio</h:commandLink>
+          <h:commandLink action="index31?faces-redirect = true" style="position: absolute;top: 10px;right: 650px;">Mis Iniciativas</h:commandLink>
+          <h:commandLink action="index6?faces-redirect = true" style="position: absolute;top: 10px;right: 500px;">Nueva Iniciativa</h:commandLink>>
+          <h:commandLink action="index?faces-redirect = true" style="position: absolute;top: 10px;right: 420px;">Log out</h:commandLink>
         </ul>
 
       </h:form>
@@ -76,10 +76,10 @@
 
   <section style="margin-top: 9em;">
     <h:form id="lol">
-      <p:dataTable id="le" value="#{busqueda.consultaIniciativa()}" var="p" paginator="true" rows="3"
+      <p:dataTable  value="#{busqueda.consultaIniciativa()}" var="p" paginator="true" rows="3"
                    paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {NextPageLink} {LastPageLink} " style="text-align:center;padding:4px 10px;border-bottom:0px none;">
         <p:column headerText="Iniciativa">
-          <h:outputText value="#{p.nombreIniciativa}"/>
+          <p:commandLink value="#{p.nombreIniciativa}" action="#{idea.setNombreIninciativa(p.nombreIniciativa)}"/>
         </p:column>
         <p:column headerText="Estado">
           <h:outputText value="#{p.estado}"/>
@@ -88,14 +88,11 @@
           <h:outputText value="#{p.area}"/>
         </p:column>
         <p:column headerText="Proponente">
-          <p:commandLink value="#{p.proponente.getUserName()}" />
+          <p:commandLink value="#{p.proponente}" action="#{user.setUserName(p.proponente)}"/>
         </p:column>
       </p:dataTable>
 
-      <br/><br/><br/><br/><br/>
-      <p:inputText value="nombre" binding="#{nom}"/>
-      <p:commandButton update="lol" action="#{prue.addkol(nom.value)}" value="agregar"/>
-      <p:commandButton update="lol" action="#{prue.clean()}" value="clear"/>
+
     </h:form>
   </section>
 

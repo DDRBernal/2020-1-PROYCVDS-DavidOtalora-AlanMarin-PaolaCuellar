@@ -50,4 +50,8 @@ public class ServicesBancoProyectoFactory {
     public ServicesIniciativa getServicesIniciativa() {
         return injector.getInstance(ServicesIniciativa.class);
     }
+
+    public IniciativaDAO getDAO() {
+        return injector.getInstance(IniciativaDAO.class);
+    }
 }

@@ -3,26 +3,25 @@ package edu.eci.cvds.entities;
 import java.sql.Date;
 
 public class Comentario {
+    private int id;
     private Date fecha;
-    private Usuario autor;
+    private String autor;
     private String contenido;
     private String nombreIniciativa;
     private String proponente;
 
-    public Comentario(Date fecha, Usuario autor, String contenido, String nombreIniciativa, String proponente) {
-        this.fecha = fecha;
-        this.autor = autor;
-        this.contenido = contenido;
-        this.nombreIniciativa = nombreIniciativa;
-        this.proponente = proponente;
-    }
+
 
     public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
 
-    public void setAutor(Usuario autor) {
+    public void setAutor(String autor) {
         this.autor = autor;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setContenido(String contenido) {
@@ -41,8 +40,8 @@ public class Comentario {
         return this.fecha;
     }
 
-    public Usuario getAutor() {
-        return this.autor;
+    public String getAutor() {
+        return autor;
     }
 
     public String getContenido() {
@@ -55,5 +54,9 @@ public class Comentario {
 
     public String getProponente() {
         return this.proponente;
+    }
+
+    public int getId() {
+        return id;
     }
 }

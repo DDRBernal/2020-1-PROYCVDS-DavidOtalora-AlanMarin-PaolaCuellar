@@ -16,5 +16,4 @@ public interface UsuarioMapper {
 
     void insertarUsuario(@Param("usuario") Usuario var1);
 
-    List<Iniciativa> consultarIniciativasRelacionadas(@Param("userName") String var1);
 }

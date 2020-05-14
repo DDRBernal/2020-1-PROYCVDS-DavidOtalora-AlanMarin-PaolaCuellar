@@ -48,12 +48,4 @@ public class ServicesUsuarioImpl implements ServicesUsuario {
         }
     }
 
-    @Override
-    public List<Iniciativa> consultarIniciativasRelacionadas(String userName) {
-        try {
-            return usuarioDAO.consultarIniciativasRelacionadas(userName);
-        } catch (Exception e) {
-            return null;
-        }
-    }
 }

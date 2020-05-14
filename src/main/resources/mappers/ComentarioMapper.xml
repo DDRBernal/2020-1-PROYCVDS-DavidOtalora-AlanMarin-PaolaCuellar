@@ -13,22 +13,17 @@ and open the template in the editor.
 
     <select id="consultarComentarios" resultMap="ComentarioResult">
         select
-        c.autor,
-        c.contenido,
-        c.fecha,
-        c.nombreiniciativa,
-        c.proponente,
-        us.apellido as autor_apellido,
-        us.clave as autor_clave,
-        us.documento as autor_documento,
-        us.email as autor_email,
-        us.nombre as autor_nombre,
-        us.ocupacion as autor_ocupacion,
-        us.tipousuario as autor_tipousuario,
-        us.username as autor_username
+        *
         from
-        comentario as c join usuario as us on (c.autor=us.username)
-        where c.nombreiniciativa=#{iniciativa.nombreIniciativa}
+        comentario
+        where nombreiniciativa = #{iniciativa}
+    </select>
+
+    <select id="consultarALL" resultMap="ComentarioResult">
+        select
+        *
+        from
+        comentario
     </select>
 
 
@@ -36,25 +31,23 @@ and open the template in the editor.
         insert into
         comentario
         values
-        (#{comentario.fecha},#{comentario.autor.userName},#{comentario.contenido},#{comentario.nombreIniciativa},#{comentario.proponente})
+        (#{id},#{fecha},#{autor},#{contenido},#{nombreIniciativa},#{proponente})
     </insert>
 
     <delete id="eliminarComentario" parameterType="map">
         delete from
         comentario
         where
-        autor = #{autor.userName} and nombreIniciativa = #{iniciativa.nombreIniciativa} and proponente = #{iniciativa.proponente}
+        autor = #{autor} and nombreIniciativa = #{iniciativa.nombreIniciativa} and proponente = #{iniciativa.proponente}
     </delete>
 
     <resultMap type='Comentario' id='ComentarioResult'>
         <result property='fecha' column='fecha'/>
         <result property='estado' column='estado'/>
+        <result property="autor" column="autor"/>
         <result property="contenido" column="contenido"/>
         <result property='nombreIniciativa' column='nombreIniciativa'/>
         <result property='proponente' column='proponente'/>
-        <association
-                resultMap="edu.eci.cvds.persistence.mybatisimpl.mappers.UsuarioMapper.UsuarioResult"
-                property="autor" columnPrefix="autor_" javaType="Usuario"/>
     </resultMap>
     
 </mapper>

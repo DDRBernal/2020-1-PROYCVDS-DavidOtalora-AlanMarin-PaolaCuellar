@@ -64,29 +64,31 @@
         </div>
 
 
-        <nav class="nav-menu d-none d-lg-block">
+
           <ul>
-            <li class="active"><h:commandLink action="index3?faces-redirect = true" >Inicio</h:commandLink></li>
-            <li class="Registrarse text-center"><a href="#Registrarse">Registrarse</a></li>
+            <h:commandLink action="index3?faces-redirect = true" style="position: absolute;top: 10px;right: 780px;"> Inicio</h:commandLink>
+            <h:commandLink action="index31?faces-redirect = true" style="position: absolute;top: 10px;right: 650px;">Mis Iniciativas</h:commandLink>
+            <h:commandLink action="index6?faces-redirect = true" style="position: absolute;top: 10px;right: 500px;">Nueva Iniciativa</h:commandLink>>
+            <h:commandLink action="index?faces-redirect = true" style="position: absolute;top: 10px;right: 420px;">Log out</h:commandLink>
           </ul>
-        </nav><!-- .nav-menu1 -->
+
       </h:form>
 
     </div>
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" style="margin-top: 30em;" >
+  <section id="hero" style="margin-top: 50em;" >
     <div class="hero-container">
       <div class="container">
         <div class="iniciaTable">
           <br/><br/><br/>
           <ul>
-            <li><p:outputLabel>Nombre iniciativa:</p:outputLabel></li>
-            <li><p:outputLabel>Creacion:</p:outputLabel></li>
-            <li><p:outputLabel>Estado:</p:outputLabel></li>
-            <li><p:outputLabel>Area:</p:outputLabel></li>
-            <li><p:outputLabel>Descripcion:</p:outputLabel></li>
+            <li><p:outputLabel>Nombre iniciativa: #{idea.consultarIniciativaUnica().nombreIniciativa}</p:outputLabel></li>
+            <li><p:outputLabel>Creacion: #{idea.consultarIniciativaUnica().fecha}</p:outputLabel></li>
+            <li><p:outputLabel>Estado: #{idea.consultarIniciativaUnica().estado}</p:outputLabel></li>
+            <li><p:outputLabel>Area: #{idea.consultarIniciativaUnica().area}</p:outputLabel></li>
+            <li><p:outputLabel>Descripcion: #{idea.consultarIniciativaUnica().descripcion}</p:outputLabel></li>
             <li><p:outputLabel>Votos:</p:outputLabel></li>
           </ul>
         </div>
@@ -94,6 +96,34 @@
         <div class="section-title444">
           <h1>Iniciativa<span></span></h1>
         </div>
+        <div class="userTable">
+          <br/><br/><br/><br/>
+          <br/><br/><br/><br/>
+          <p:outputLabel value="#{user.consultarUsuarioUnico(idea.consultarIniciativaUnica().proponente).getUserName()}"/>
+          <br/>
+          <p:outputLabel value="#{user.consultarUsuarioUnico(idea.consultarIniciativaUnica().proponente).getDocumento()}"/>
+          <br/>
+          <p:outputLabel value="#{user.consultarUsuarioUnico(idea.consultarIniciativaUnica().proponente).getDocumento()} #{user.consultarUsuarioUnico(idea.consultarIniciativaUnica().proponente).getDocumento()}"/>
+          <br/>
+          <p:outputLabel value="#{user.consultarUsuarioUnico(idea.consultarIniciativaUnica().proponente).getEmail()}"/>
+        </div>
+
+        <div class="imagen_3">
+          <img src="assets/img/logoECI.png" style="width:180px;height:180px;"/>
+        </div>
+          <div style="position: absolute;top: 500px;right: 950px;color: #fffcf9;">
+                <h1>Iniciativas<span> de interes:</span></h1>
+          </div>
+
+          <p:dataTable value="#{idea.consultarInteres()}" var="p" paginator="true" rows="3"
+                       paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {NextPageLink} {LastPageLink} " style="text-align:center;padding:4px 10px;border-bottom:0px none;position: absolute;top: 550px;right: 120px;">
+              <p:column headerText="Iniciativa">
+                  <p:commandLink value="#{p.nombreIniciativa}" action="#{idea.setNombreIninciativa(p.nombreIniciativa)}"/>
+              </p:column>
+              <p:column headerText="Proponente">
+                  <p:commandLink value="#{p.proponente}" action="#{user.setUserName(p.proponente)}"/>
+              </p:column>
+          </p:dataTable>
       </div>
       <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
 
@@ -106,42 +136,41 @@
 
 
 
-            <h:form id="Registrolo4"> <!--Registrolo2-->
-<!--              <h1 style="position: absolute; top: 300px;color: white">Comentarios<span></span></h1>-->
+            <h:form id ="comentarios"> <!--Registrolo2-->
+              <!--              <h1 style="position: absolute; top: 300px;color: white">Comentarios<span></span></h1>-->
 
 
               <div class="imagen_user">
                 <h1 style="color: white">Comentarios<span></span></h1>
                 <br/>
                 <img src="assets/img/iconUser.png" style="width:35px;height:35px;" />
-                <label >User:</label><br/>
-                <label >comment: </label>
-                <textarea id="textBox1" name="textBox1" rows="4" cols="28" style="background-color:#232323; position: absolute; top: 70px;right: -350px;width: 372px; height: 66px;"/>
+                <p:outputLabel value="#{controller.getUser().getUserName()}" />
+                <br/>
+                <p:outputLabel>comment: </p:outputLabel>
+                <p:inputText id="textBox1" name="textBox1" style="background-color:#232323; position: absolute; top: 70px;right: -350px;width: 372px; height: 66px;" binding="#{cont}"/>
               </div>
-<!--              <textarea id="textBox1" name="textBox1" rows="4" cols="28" style="background-color:#232323;position: absolute; top: 370px;right: 750px; width: 372px; height: 66px;"/>-->
+              <!--              <textarea id="textBox1" name="textBox1" rows="4" cols="28" style="background-color:#232323;position: absolute; top: 370px;right: 750px; width: 372px; height: 66px;"/>-->
 
               <div class="botones">
                 <div class="col-lg-4 col-md-6 col-sm-12 text-center">
                   <br/><br/>
-                  <p:inputText type="submit" id="submit1" name="submit1" value="Comentar" styleClass="botonComentar1"/>
-                  <p:inputText type="button" id="button1" name="button1" value="Cancelar" styleClass="botonComentar"/>
+                  <p:commandButton id="submit1" update="comentarios" action="#{idea.comentarIniciativa(controller.getUser().getUserName(),cont.value)}" value="Comentar" styleClass="botonComentar1"/>
+                  <p:commandButton id="button1" name="button1" value="Cancelar" styleClass="botonComentar"/>
                 </div>
               </div>
 
-            </h:form>
 
-            <h:form >
-              <div class="imagen_user2">
-                <img src="assets/img/iconUser.png" style="width:35px;height:35px;" ></img>
-                <label >Alan Yesid Mendez</label>
-                <label >Hola, me parece una buena iniciativa</label>
-              </div>
 
-              <div class="imagen_user3">
-                <img src="assets/img/iconUser.png" style="width:35px;height:35px;" ></img>
-                <label >Pepito perez</label>
-                <label >Apoyo la iniciativa</label>
-              </div>
+
+              <p:dataTable value="#{idea.consultarComentarios()}" var="p" paginator="true" rows="4"
+                           paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {NextPageLink} {LastPageLink} " style="text-align:center;padding:4px 10px;border-bottom:0px none;position: absolute;top: 350px;right: 120px;">
+                <p:column headerText="Usuario">
+                  <h:outputText value="#{p.autor}"/>
+                </p:column>
+                <p:column headerText="comentario">
+                  <h:outputText value="#{p.contenido}"/>
+                </p:column>
+              </p:dataTable>
 
 
 
@@ -172,10 +201,10 @@
             </h:form>
 
 
-                <!--<label >Agregar comentario</label>-->
-                <!--<textarea rows="3" cols="5" class="form-control" id="Escribe un comentario" name="Escribe un comentario" placeholder="Escribe un comentario" aria-describedby="messageHelp"></textarea>-->
-                <!--<span id="messageHelp" class="form-text text-muted" style="display: none;">Please enter a message.</span>-->
-                <!--<p></p>-->
+            <!--<label >Agregar comentario</label>-->
+            <!--<textarea rows="3" cols="5" class="form-control" id="Escribe un comentario" name="Escribe un comentario" placeholder="Escribe un comentario" aria-describedby="messageHelp"></textarea>-->
+            <!--<span id="messageHelp" class="form-text text-muted" style="display: none;">Please enter a message.</span>-->
+            <!--<p></p>-->
             <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
             <!--&lt;!&ndash;<textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>&ndash;&gt;-->
             <!--&lt;!&ndash;<div class="validate"></div>&ndash;&gt;-->

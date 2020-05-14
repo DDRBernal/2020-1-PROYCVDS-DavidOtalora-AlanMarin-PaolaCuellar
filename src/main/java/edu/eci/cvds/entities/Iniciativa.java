@@ -1,31 +1,18 @@
 package edu.eci.cvds.entities;
 
-import java.util.Date;
+import java.io.Serializable;
+import java.sql.Date;
 import java.util.List;
 
-public class Iniciativa {
+public class Iniciativa implements Serializable {
     private String nombreIniciativa;
     private Date fecha;
     private String estado;
-    private Usuario proponente;
+    private String proponente;
     private String area;
     private String dependencia;
     private String descripcion;
-    private List<PalabraClave> palabras_clave;
-    private List<Comentario> comentarios;
 
-
-    public Iniciativa(String nombreIniciativa, Date fecha, String estado, Usuario proponente, String area, String dependencia, String descripcion, List<PalabraClave> palabras_clave, List<Comentario> comentarios) {
-        this.nombreIniciativa = nombreIniciativa;
-        this.fecha = fecha;
-        this.estado = estado;
-        this.proponente = proponente;
-        this.area = area;
-        this.dependencia = dependencia;
-        this.descripcion = descripcion;
-        this.palabras_clave = palabras_clave;
-        this.comentarios = comentarios;
-    }
 
     public void setNombreIniciativa(String nombreIniciativa) {
         this.nombreIniciativa = nombreIniciativa;
@@ -39,7 +26,7 @@ public class Iniciativa {
         this.estado = estado;
     }
 
-    public void setProponente(Usuario proponente) {
+    public void setProponente(String proponente) {
         this.proponente = proponente;
     }
 
@@ -55,13 +42,6 @@ public class Iniciativa {
         this.descripcion = descripcion;
     }
 
-    public void setPalabras_clave(List<PalabraClave> palabras_clave) {
-        this.palabras_clave = palabras_clave;
-    }
-
-    public void setComentarios(List<Comentario> comentarios) {
-        this.comentarios = comentarios;
-    }
 
 
     public String getNombreIniciativa() {
@@ -76,8 +56,8 @@ public class Iniciativa {
         return this.estado;
     }
 
-    public Usuario getProponente() {
-        return this.proponente;
+    public String getProponente() {
+        return proponente;
     }
 
     public String getArea() {
@@ -92,13 +72,6 @@ public class Iniciativa {
         return this.descripcion;
     }
 
-    public List<PalabraClave> getPalabras_clave() {
-        return this.palabras_clave;
-    }
-
-    public List<Comentario> getComentarios() {
-        return this.comentarios;
-    }
 
     public int getVotos() {
         return 0;

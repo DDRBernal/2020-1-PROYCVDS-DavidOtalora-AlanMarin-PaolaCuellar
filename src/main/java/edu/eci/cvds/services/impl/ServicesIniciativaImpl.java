@@ -8,9 +8,11 @@ import edu.eci.cvds.entities.Usuario;
 import edu.eci.cvds.persistence.ComentarioDAO;
 import edu.eci.cvds.persistence.IniciativaDAO;
 import edu.eci.cvds.persistence.PalabraClaveDAO;
+import edu.eci.cvds.services.ServicesBancoProyectoFactory;
 import edu.eci.cvds.services.ServicesIniciativa;
 import edu.eci.cvds.services.ServicesUsuario;
 
+import java.sql.Date;
 import java.util.List;
 
 public class ServicesIniciativaImpl implements ServicesIniciativa {
@@ -24,12 +26,10 @@ public class ServicesIniciativaImpl implements ServicesIniciativa {
     @Inject
     private ComentarioDAO comentarioDAO;
 
-    public ServicesIniciativaImpl() {
-    }
 
-    public void crearIniciativa(Iniciativa iniciativa) {
+    public void crearIniciativa(String nombreIniciativa, Date fecha, String estado, String proponente, String area, String dependencia, String descripcion) {
         try {
-            iniciativaDAO.crearIniciativa(iniciativa);
+            iniciativaDAO.crearIniciativa(nombreIniciativa,fecha,estado,proponente,area,dependencia,descripcion);
         } catch (Exception var3) {
         }
 
@@ -43,13 +43,24 @@ public class ServicesIniciativaImpl implements ServicesIniciativa {
         }
     }
 
-    public List<Iniciativa> consultarPorPalabra(PalabraClave palabraClave) {
+    @Override
+    public List<Iniciativa> consultarIniciativaPublico(String nombreIniciativa) {
         try {
-            return iniciativaDAO.consultarPorPalabra(palabraClave);
+            return iniciativaDAO.consultarIniciativaPublico(nombreIniciativa);
         } catch (Exception var3) {
             return null;
         }
     }
+
+    @Override
+    public List<Iniciativa> consultarIniciativasRelacionadas(String userName , String filtro) {
+        try {
+            return iniciativaDAO.consultarIniciativasRelacionadas(userName, filtro);
+        } catch (Exception var3) {
+            return null;
+        }
+    }
+
 
     public List<Iniciativa> consultarPorArea(String area) {
         try {
@@ -67,6 +78,15 @@ public class ServicesIniciativaImpl implements ServicesIniciativa {
         }
     }
 
+    @Override
+    public List<PalabraClave> consultarPlabras(String iniciativa) {
+        try {
+            return palabraClaveDAO.consultarPalabras(iniciativa);
+        } catch (Exception var3) {
+            return null;
+        }
+    }
+
     public void modificarIniciativaPropietario(Iniciativa iniciativa, String area, String dependencia, String descripcion) {
         try {
              iniciativaDAO.modificarIniciativaPropietario(iniciativa, area, dependencia, descripcion);
@@ -77,7 +97,7 @@ public class ServicesIniciativaImpl implements ServicesIniciativa {
 
     public void agregarPalabrasclave(String palabraClave, Iniciativa iniciativa) {
         try {
-             palabraClaveDAO.agregarPalabrasclave(palabraClave, iniciativa.getNombreIniciativa(), iniciativa.getProponente().getUserName());
+             palabraClaveDAO.agregarPalabrasclave(palabraClave, iniciativa.getNombreIniciativa(), iniciativa.getProponente());
         } catch (Exception var4) {
         }
 
@@ -85,7 +105,7 @@ public class ServicesIniciativaImpl implements ServicesIniciativa {
 
     public void eliminarPalabrasclave(String palabraClave, Iniciativa iniciativa) {
         try {
-             palabraClaveDAO.eliminarPalabrasclave(palabraClave, iniciativa.getNombreIniciativa(), iniciativa.getProponente().getUserName());
+             palabraClaveDAO.eliminarPalabrasclave(palabraClave, iniciativa.getNombreIniciativa(), iniciativa.getProponente());
         } catch (Exception var4) {
         }
 
@@ -99,23 +119,18 @@ public class ServicesIniciativaImpl implements ServicesIniciativa {
 
     }
 
-    public void votarPorIniciativa(Usuario usuario, Iniciativa iniciativa) {
-        try {
-             iniciativaDAO.votarPorIniciativa(usuario, iniciativa);
-        } catch (Exception var4) {
-        }
 
-    }
 
-    public void comentarUnaIniciativa(Comentario comentario) {
+    public void comentarUnaIniciativa(Date fecha, String autor, String contenido, String nombreIniciativa, String proponente) {
         try {
-             comentarioDAO.comentarUnaIniciativa(comentario);
+
+            comentarioDAO.comentarUnaIniciativa(fecha,autor,contenido,nombreIniciativa,proponente);
         } catch (Exception var3) {
         }
 
     }
 
-    public void eliminarComentario(Usuario autor, Iniciativa iniciativa) {
+    public void eliminarComentario(String autor, Iniciativa iniciativa) {
         try {
              comentarioDAO.eliminarComentario(autor, iniciativa);
         } catch (Exception var4) {
@@ -123,7 +138,7 @@ public class ServicesIniciativaImpl implements ServicesIniciativa {
 
     }
 
-    public List<Comentario> consultarComentarios(Iniciativa iniciativa) {
+    public List<Comentario> consultarComentarios(String iniciativa) {
         try {
             return  comentarioDAO.consultarComentarios(iniciativa);
         } catch (Exception var3) {

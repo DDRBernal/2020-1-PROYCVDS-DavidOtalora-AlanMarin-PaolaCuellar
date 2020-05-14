@@ -26,6 +26,14 @@ and open the template in the editor.
         palabraclave =#{palabra} and nombreIniciativa=#{nombreIniciativa} and proponente=#{proponente}
     </delete>
 
+    <select id="consultarPlabras" resultMap='PalabraClaveResult'>
+        select *
+        from
+        palabraclave
+        where nombreIniciativa = #{nombreIniciativa}
+
+    </select>
+
     <resultMap type='PalabraClave' id='PalabraClaveResult'>
         <result property='palabra_clave' column='palabraclave'/>
         <result property='nombreIniciativa' column='nombreIniciativa'/>

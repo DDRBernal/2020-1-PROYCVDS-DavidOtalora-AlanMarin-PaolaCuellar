@@ -14,7 +14,6 @@ public interface ServicesUsuario {
 
     void insertarUsuario(Usuario usuario);
 
-    List<Iniciativa> consultarIniciativasRelacionadas(String userName);
 
     //Posible adicion de los las iniciativas votadas(ejm:lista de videos de me gusta)
 }

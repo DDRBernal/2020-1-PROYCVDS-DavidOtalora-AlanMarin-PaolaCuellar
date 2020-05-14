@@ -20,16 +20,18 @@ import java.util.List;
 public class SeleccionBusqueda {
     private String selec;
     private String buscador;
-    private ServicesUsuario servicesUsuario = ServicesBancoProyectoFactory.getInstance().getServicesUsuario();
+
     private ServicesIniciativa servicesIniciativa = ServicesBancoProyectoFactory.getInstance().getServicesIniciativa();
+
+
 
     public List<Iniciativa> consultaIniciativa(){
         List<Iniciativa> iniciativa;
 
-//        if (selec.equals("1")){
-//            iniciativa=servicesIniciativa.consultarIniciativa(buscador);
-//        }
-        if (selec.equals("2")){
+        if (selec.equals("1")){
+            iniciativa= servicesIniciativa.consultarIniciativaPublico(buscador);
+        }
+        else if (selec.equals("2")){
             iniciativa=servicesIniciativa.consultarPorEstado(buscador);
         }else{
             iniciativa=servicesIniciativa.consultarPorArea(buscador);
@@ -37,12 +39,6 @@ public class SeleccionBusqueda {
 
         return iniciativa;
     }
-
-
-    public List<Usuario> consultaUsuario(){
-        return servicesUsuario.consultarUsuariosPublico(buscador);
-    }
-
 
     public void Busqueda(String buscador){
         ExternalContext context2 = FacesContext.getCurrentInstance().getExternalContext();
@@ -58,6 +54,10 @@ public class SeleccionBusqueda {
         }
     }
 
+    public String getBuscador() {
+        return buscador;
+    }
+
     public void setSelec(String selec) {
         this.selec = selec;
     }
@@ -66,3 +66,4 @@ public class SeleccionBusqueda {
         return selec;
     }
 }
+

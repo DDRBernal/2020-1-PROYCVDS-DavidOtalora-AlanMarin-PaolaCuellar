@@ -8,6 +8,7 @@ import edu.eci.cvds.persistence.ComentarioDAO;
 import edu.eci.cvds.persistence.PersistenceException;
 import edu.eci.cvds.persistence.mybatisimpl.mappers.ComentarioMapper;
 
+import java.sql.Date;
 import java.util.List;
 
 public class MyBatisComentarioDAO implements ComentarioDAO {
@@ -15,15 +16,16 @@ public class MyBatisComentarioDAO implements ComentarioDAO {
     @Inject
     private ComentarioMapper comentarioMapper;
 
-    public void comentarUnaIniciativa(Comentario comentario) throws PersistenceException {
+    public void comentarUnaIniciativa(Date fecha, String autor, String contenido, String nombreIniciativa, String proponente) throws PersistenceException {
         try {
-            this.comentarioMapper.comentarUnaIniciativa(comentario);
+            int id = comentarioMapper.consultarALL().size() + 1;
+            this.comentarioMapper.comentarUnaIniciativa(id,fecha,autor,contenido,nombreIniciativa,proponente);
         } catch (Exception var3) {
             throw new PersistenceException("No existe usuario o iniciativa");
         }
     }
 
-    public void eliminarComentario(Usuario autor, Iniciativa iniciativa) throws PersistenceException {
+    public void eliminarComentario(String autor, Iniciativa iniciativa) throws PersistenceException {
         try {
             this.comentarioMapper.eliminarComentario(autor, iniciativa);
         } catch (Exception var4) {
@@ -31,7 +33,7 @@ public class MyBatisComentarioDAO implements ComentarioDAO {
         }
     }
 
-    public List<Comentario> consultarComentarios(Iniciativa iniciativa) throws PersistenceException {
+    public List<Comentario> consultarComentarios(String iniciativa) throws PersistenceException {
         try {
             return this.comentarioMapper.consultarComentarios(iniciativa);
         } catch (Exception var3) {

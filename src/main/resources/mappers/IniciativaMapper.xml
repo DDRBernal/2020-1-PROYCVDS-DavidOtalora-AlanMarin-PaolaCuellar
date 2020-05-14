@@ -12,132 +12,35 @@ and open the template in the editor.
 <mapper namespace="edu.eci.cvds.persistence.mybatisimpl.mappers.IniciativaMapper">
 
     <select id="consultarIniciativa" resultMap="IniciativaResult">
-        select
-        ini.nombreiniciativa,
-        ini.fecha,
-        ini.estado,
-        ini.area,
-        ini.dependencia,
-        ini.descripcion,
-        us.apellido as usu_apellido,
-        us.clave as usu_clave,
-        us.documento as usu_documento,
-        us.email as usu_email,
-        us.nombre as usu_nombre,
-        us.ocupacion as usu_ocupacion,
-        us.tipousuario as usu_tipousuario,
-        us.username as usu_username,
-        pal.nombreiniciativa as pala_nombreiniciativa,
-        pal.palabra_clave as pala_palabra_clave,
-        pal.proponente as pala_proponente,
-        com.autor as c_autor,
-        com.contenido as c_contenido,
-        com.fecha as c_fecha,
-        com.nombreiniciativa as c_nombreiniciativa,
-        com.proponente as c_proponente,
-        com_us.apellido as c_autor_apellido,
-        com_us.clave as c_autor_clave,
-        com_us.documento as c_autor_documento,
-        com_us.email as c_autor_email,
-        com_us.nombre as c_autor_nombre,
-        com_us.ocupacion as c_autor_ocupacion,
-        com_us.tipousuario as c_autor_tipousuario,
-        com_us.username as c_autor_username
+        select *
         from
-        Iniciativa as ini
-        join usuario as us on (ini.proponente =us.username )
-        join palabraclave as pal on (ini.nombreiniciativa=pal.nombreiniciativa)
-        join comentario as com on (ini.nombreiniciativa = com.nombreiniciativa )
-        join usuario as com_us on (com.autor=com_us.username)
-        where ini.proponente = com.proponente
-        and ini.proponente = pal.proponente
-        and ini.nombreIniciativa = #{nombreIniciativa}
+        iniciativa
+        where nombreIniciativa = #{nombreIniciativa}
+    </select>
+
+    <select id="consultarIniciativaPublico" resultMap="IniciativaResult">
+        select *
+        from
+        iniciativa
+        where nombreIniciativa like #{nombreIniciativa}
+    </select>
+
+    <select id="consultarIniciativasRelacionadas" resultMap="IniciativaResult">
+        select *from (select *from iniciativa where proponente = #{userName}) as T where T.nombreiniciativa like #{filtro}
     </select>
 
     <select id="consultarPorArea" resultMap="IniciativaResult">
-        select
-        ini.nombreiniciativa,
-        ini.fecha,
-        ini.estado,
-        ini.area,
-        ini.dependencia,
-        ini.descripcion,
-        us.apellido as usu_apellido,
-        us.clave as usu_clave,
-        us.documento as usu_documento,
-        us.email as usu_email,
-        us.nombre as usu_nombre,
-        us.ocupacion as usu_ocupacion,
-        us.tipousuario as usu_tipousuario,
-        us.username as usu_username,
-        pal.nombreiniciativa as pala_nombreiniciativa,
-        pal.palabra_clave as pala_palabra_clave,
-        pal.proponente as pala_proponente,
-        com.autor as c_autor,
-        com.contenido as c_contenido,
-        com.fecha as c_fecha,
-        com.nombreiniciativa as c_nombreiniciativa,
-        com.proponente as c_proponente,
-        com_us.apellido as c_autor_apellido,
-        com_us.clave as c_autor_clave,
-        com_us.documento as c_autor_documento,
-        com_us.email as c_autor_email,
-        com_us.nombre as c_autor_nombre,
-        com_us.ocupacion as c_autor_ocupacion,
-        com_us.tipousuario as c_autor_tipousuario,
-        com_us.username as c_autor_username
+        select *
         from
-        Iniciativa as ini
-        join usuario as us on (ini.proponente =us.username )
-        join palabraclave as pal on (ini.nombreiniciativa=pal.nombreiniciativa)
-        join comentario as com on (ini.nombreiniciativa = com.nombreiniciativa )
-        join usuario as com_us on (com.autor=com_us.username)
-        where ini.proponente = com.proponente
-        and ini.proponente = pal.proponente
-        and ini.area = #{area}
+        iniciativa
+        where area = #{area}
     </select>
 
     <select id="consultarPorEstado" resultMap="IniciativaResult">
-        select
-        ini.nombreiniciativa,
-        ini.fecha,
-        ini.estado,
-        ini.area,
-        ini.dependencia,
-        ini.descripcion,
-        us.apellido as usu_apellido,
-        us.clave as usu_clave,
-        us.documento as usu_documento,
-        us.email as usu_email,
-        us.nombre as usu_nombre,
-        us.ocupacion as usu_ocupacion,
-        us.tipousuario as usu_tipousuario,
-        us.username as usu_username,
-        pal.nombreiniciativa as pala_nombreiniciativa,
-        pal.palabra_clave as pala_palabra_clave,
-        pal.proponente as pala_proponente,
-        com.autor as c_autor,
-        com.contenido as c_contenido,
-        com.fecha as c_fecha,
-        com.nombreiniciativa as c_nombreiniciativa,
-        com.proponente as c_proponente,
-        com_us.apellido as c_autor_apellido,
-        com_us.clave as c_autor_clave,
-        com_us.documento as c_autor_documento,
-        com_us.email as c_autor_email,
-        com_us.nombre as c_autor_nombre,
-        com_us.ocupacion as c_autor_ocupacion,
-        com_us.tipousuario as c_autor_tipousuario,
-        com_us.username as c_autor_username
+        select *
         from
-        Iniciativa as ini
-        join usuario as us on (ini.proponente =us.username )
-        join palabraclave as pal on (ini.nombreiniciativa=pal.nombreiniciativa)
-        join comentario as com on (ini.nombreiniciativa = com.nombreiniciativa )
-        join usuario as com_us on (com.autor=com_us.username)
-        where ini.proponente = com.proponente
-        and ini.proponente = pal.proponente
-        and ini.estado = #{estado}
+        iniciativa
+        where estado = #{estado}
     </select>
 
     <update id="modificarIniciativaEstado" parameterType="map">
@@ -150,26 +53,19 @@ and open the template in the editor.
     <insert id="crearIniciativa" parameterType="map">
         insert into
         iniciativa
+        (nombreiniciativa, fecha, estado, proponente, area, dependencia, descripcion)
         values
-        (#{iniciativa.nombreIniciativa},#{iniciativa.fecha},#{iniciativa.estado},#{iniciativa.proponente.userName},#{iniciativa.area},#{iniciativa.dependencia},#{iniciativa.descripcion})
+        (#{nombreIniciativa},#{fecha},#{estado},#{proponente},#{area},#{dependencia},#{descripcion})
     </insert>
 
     <resultMap type='Iniciativa' id='IniciativaResult'>
         <result property='nombreIniciativa' column='nombreIniciativa'/>
         <result property='fecha' column='fecha'/>
+        <result property="proponente" column="proponente"/>
         <result property='estado' column='estado'/>
         <result property="area" column="area"/>
         <result property="dependencia" column="dependencia"/>
         <result property="descripcion" column="descripcion"/>
-        <association
-                resultMap="edu.eci.cvds.persistence.mybatisimpl.mappers.UsuarioMapper.UsuarioResult"
-                property='proponente' columnPrefix='usu_' javaType="Usuario"/>
-        <collection
-                resultMap="edu.eci.cvds.persistence.mybatisimpl.mappers.PalabraClaveMapper.PalabraClaveResult"
-                property="palabras_clave" columnPrefix="pala_" ofType="PalabraClave"/>
-        <collection
-                resultMap="edu.eci.cvds.persistence.mybatisimpl.mappers.ComentarioMapper.ComentarioResult"
-                property="comentarios" columnPrefix="c_" ofType="Comentario"/>
     </resultMap>
     
 </mapper>

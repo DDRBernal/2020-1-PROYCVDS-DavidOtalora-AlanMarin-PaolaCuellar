@@ -14,5 +14,4 @@ public interface UsuarioDAO {
 
     void insertarUsuario(Usuario usuario) throws PersistenceException;
 
-    List<Iniciativa> consultarIniciativasRelacionadas(String userName) throws PersistenceException;
 }

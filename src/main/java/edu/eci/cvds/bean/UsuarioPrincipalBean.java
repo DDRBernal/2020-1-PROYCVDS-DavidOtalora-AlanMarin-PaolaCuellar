@@ -15,25 +15,24 @@ import java.util.List;
 @SessionScoped
 @ApplicationScoped
 
-public class AccountController {
+public class UsuarioPrincipalBean {
 
     private ServicesUsuario servicesUsuario = ServicesBancoProyectoFactory.getInstance().getServicesUsuario();
     private String user;
+
 
     public void regitro(String userName, int documento, String nombre, String apellido, String ocupacion, String clave, String clave2, String tipoUsuario, String email){
         ExternalContext context2 = FacesContext.getCurrentInstance().getExternalContext();
         try {
             if(clave.equals(clave2)) {
-                    Usuario usuario = new Usuario(userName, documento, nombre, apellido, ocupacion, clave, tipoUsuario, email);
-                    servicesUsuario.insertarUsuario(usuario);
-                    context2.redirect(context2.getRequestContextPath() + "/faces/index2.xhtml");
+                Usuario usuario = new Usuario(userName, documento, nombre, apellido, ocupacion, clave, tipoUsuario, email);
+                servicesUsuario.insertarUsuario(usuario);
+                context2.redirect(context2.getRequestContextPath() + "/faces/index2.xhtml");
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-
-
 
     public void logIn(String userName,String clave){
         ExternalContext context2 = FacesContext.getCurrentInstance().getExternalContext();

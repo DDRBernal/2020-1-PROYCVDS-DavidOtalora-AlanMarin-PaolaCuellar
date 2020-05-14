@@ -59,10 +59,10 @@
         </div>
 
         <ul>
-          <li><h:commandLink action="index3?faces-redirect = true" style="position: absolute;top: 10px;right: 780px;"> Inicio</h:commandLink></li>
-          <li><h:commandLink action="index31?faces-redirect = true" style="position: absolute;top: 10px;right: 650px;">Mis Iniciativas</h:commandLink>></li>
-          <li><h:commandLink action="index6?faces-redirect = true" style="position: absolute;top: 10px;right: 500px;">Nueva Iniciativa</h:commandLink>></li>
-          <li><h:commandLink action="index?faces-redirect = true" style="position: absolute;top: 10px;right: 420px;">Log out</h:commandLink>></li>
+          <h:commandLink action="index3?faces-redirect = true" style="position: absolute;top: 10px;right: 780px;"> Inicio</h:commandLink>
+          <h:commandLink action="index31?faces-redirect = true" style="position: absolute;top: 10px;right: 650px;">Mis Iniciativas</h:commandLink>
+          <h:commandLink action="index6?faces-redirect = true" style="position: absolute;top: 10px;right: 500px;">Nueva Iniciativa</h:commandLink>>
+          <h:commandLink action="index?faces-redirect = true" style="position: absolute;top: 10px;right: 420px;">Log out</h:commandLink>
         </ul>
       </h:form>
 
@@ -81,28 +81,25 @@
 
 
         <section id="Registrarse" class="Registrarse">
-          <div class="container3"> <!--container2-->
+          <div class="container3"><!--container2-->
 
-            <div class="section-title222"> <!--section-title111-->
-
-              <h1>Bienvenido a <span style="color: #ffcc00">Banco Proyecto</span></h1>
-            </div>
+             <!--section-title111-->
             <h:form> <!--Registrolo2-->
 
               <div class="userTable">
                 <br/><br/><br/><br/>
                 <br/><br/><br/><br/>
-                <p:outputLabel value="#{controller.getUser().getUserName()}"></p:outputLabel>
+                <p:outputLabel value="#{user.consultarUsuarioUnico().getUserName()}"></p:outputLabel>
                 <br/>
-                <p:outputLabel value="#{controller.getUser().getDocumento()}"></p:outputLabel>
+                <p:outputLabel value="#{user.consultarUsuarioUnico().getDocumento()}"></p:outputLabel>
                 <br/>
-                <p:outputLabel value="#{controller.getUser().getNombre()} #{controller.getUser().getApellido()}"></p:outputLabel>
+                <p:outputLabel value="#{user.consultarUsuarioUnico().getNombre()} #{user.consultarUsuarioUnico().getApellido()}"></p:outputLabel>
                 <br/>
-                <p:outputLabel value="#{controller.getUser().getTipoUsuario()}"></p:outputLabel>
+                <p:outputLabel value="#{user.consultarUsuarioUnico().getTipoUsuario()}"></p:outputLabel>
               </div>
 
               <div class="imagen_3">
-                <img src="assets/img/logoECI.png" style="width:181px;height:180px;"></img>
+                <img src="assets/img/logoECI.png" style="width:180px;height:180px;"></img>
               </div>
               <!--                &lt;!&ndash; aqui va el username&ndash;&gt;-->
 
@@ -149,60 +146,24 @@
               <!--text-center11-->
               <!--              <div class="text-center11"><p:commandButton type="submit" update="Registrolo3" value="Aceptar"></p:commandButton></div>-->
             </h:form>
-            <h:form>
-              <div class="buscador_3"> <!--form-row000-->
-                <div class="col-lg-4 col-md-6 form-group2"> <!-- group2-->
-                  <p:inputText  name="Buscador" class="form-control" id="Buscador" placeholder="Buscador" data-rule="minlen:20" data-msg="Please enter at least 20 chars" binding="#{Buscador}"/>
-                  <br/>
-                  <br/>
-                  <p:outputLabel value="Buscar por:" style="color: #ffb03b;font-family: URW Chancery L, cursive;"/>
+            <h:form id="usuarioIniciativas">
 
-                  <h:selectOneMenu value="#{busqueda.selec}" style="height:30px"  >
-                    <f:selectItem itemLabel="Nombre Iniciativa" itemValue="1"/>
-                    <f:selectItem itemLabel="Usuario" itemValue="2"/>
-                    <f:selectItem itemLabel="Palabra" itemValue="3"/>
-                    <f:selectItem itemLabel="Area" itemValue="4"/>
-                    <f:selectItem itemLabel="Estado" itemValue="5"/>
-                  </h:selectOneMenu>
-                  <br/>
-                  <div class="validate1"></div>
-                </div>
-              </div>
-              <p:commandButton value=" " styleClass="buscar-icon" action="#{busqueda.Busqueda(Buscador.value)}"></p:commandButton>
-              <!---->
+              <p:inputText id="buscador" placeholder="buscador" data-rule="minlen:20" data-msg="Please enter at least 20 chars" style="width: 20%;position: absolute;top: 170px;right: 800px;" binding="#{buscador}"/>
+              <p:commandButton value="" styleClass="buscar-icon2" update="usuarioIniciativas"/>
 
-              <!--              <div class="palabra_clave_3">&lt;!&ndash;form-row111&ndash;&gt;-->
-              <!--                <div class="col-lg-4 col-md-6 form-group2">   &lt;!&ndash;esto lo saque de la clase PalabraClave!!! &ndash;&gt;-->
-              <!--                  <p:commandButton  update="Registrolo3" value="Nombre Iniciativa" styleClass="black-button"/>-->
-              <!--                  <div class="validate1"></div>-->
-              <!--                </div>-->
-              <!--              </div>-->
+              <p:dataTable id="le" value="#{idea.consultarIniciativasRelacionadas(user.consultarUsuarioUnico().getUserName(),buscador)}" var="p" paginator="true" rows="3"
+                           paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {NextPageLink} {LastPageLink} " style="text-align:center;padding:4px 10px;border-bottom: 100px ;position: absolute;top: 250px; right:300px;">
+                <p:column headerText="Iniciativa">
+                  <p:commandLink value="#{p.nombreIniciativa}" action="#{idea.setNombreIninciativa(p.nombreIniciativa)}"/>
+                </p:column>
+                <p:column headerText="Estado">
+                  <h:outputText value="#{p.estado}"/>
+                </p:column>
+                <p:column headerText="Area">
+                  <h:outputText value="#{p.area}"/>
+                </p:column>
+              </p:dataTable>
 
-              <!--              <div class="iniciativa_3">-->
-              <!--                <div class="col-lg-4 col-md-6 form-group2">   &lt;!&ndash;esto lo saque de la clase PalabraClave!!! &ndash;&gt;-->
-              <!--                  <p:commandButton  update="Registrolo3" value="Palabra" styleClass="blue-button"/>-->
-              <!--                  <div class="validate1"></div>-->
-              <!--                </div>-->
-              <!--              </div>-->
-
-              <!--              <div class="area_3">-->
-              <!--                <div class="col-lg-4 col-md-6 form-group2">   &lt;!&ndash;esto lo saque de la clase iniciativa!!!;-->
-              <!--                  <p:commandButton  update="Registrolo3" value="Area" styleClass="blue-button"/>-->
-              <!--                  <div class="validate1"></div>-->
-              <!--                </div>-->
-              <!--              </div>-->
-
-              <!--              <div class="estado_3">-->
-              <!--                <div class="col-lg-4 col-md-6 form-group2">   &lt;!&ndash;esto lo saque de la clase iniciativa!!! &ndash;&gt;-->
-              <!--                  <p:commandButton  update="Registrolo3" value="Estado" styleClass="blue-button"/>-->
-              <!--                  <div class="validate1"></div>-->
-              <!--                </div>-->
-              <!--              </div>-->
-            </h:form>
-
-            <h:form>
-              <p:commandButton value="" styleClass="area-button"/>
-              <p:commandButton value="" styleClass="estado-button"/>
             </h:form>
 
             <!--              <br/>-->

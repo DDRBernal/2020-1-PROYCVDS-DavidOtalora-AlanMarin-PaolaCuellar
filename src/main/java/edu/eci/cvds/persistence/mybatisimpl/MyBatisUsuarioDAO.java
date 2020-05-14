@@ -49,11 +49,4 @@ public class MyBatisUsuarioDAO implements UsuarioDAO {
         }
     }
 
-    public List<Iniciativa> consultarIniciativasRelacionadas(String userName) throws PersistenceException {
-        try {
-            return  usuarioMapper.consultarIniciativasRelacionadas(userName);
-        } catch (Exception var3) {
-            throw new PersistenceException("Usuario inexistente");
-        }
-    }
 }
