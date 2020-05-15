@@ -14,3 +14,9 @@
 | Paola Cuellar |
 
 **Profesor Oscar Ospina**: Dueño del producto
+
+# Descripción
+
+Se ofrece el servicio en el que se conocerán las iniciativas   con su respectiva información de quién es el proponente, su   área, la descripción de esta y que tan apoyada ha sido.  
+
+
