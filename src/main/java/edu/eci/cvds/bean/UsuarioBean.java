@@ -42,4 +42,22 @@ public class UsuarioBean {
             e.printStackTrace();
         }
     }
+
+    public void setUserNameUser(String userName) {
+        try {
+            this.userName = userName;
+            FacesContext.getCurrentInstance().getExternalContext().redirect(FacesContext.getCurrentInstance().getExternalContext().getRequestContextPath() + "/faces/index32User.xhtml");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void setUserNamePMO(String userName) {
+        try {
+            this.userName = userName;
+            FacesContext.getCurrentInstance().getExternalContext().redirect(FacesContext.getCurrentInstance().getExternalContext().getRequestContextPath() + "/faces/index32PMO.xhtml");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

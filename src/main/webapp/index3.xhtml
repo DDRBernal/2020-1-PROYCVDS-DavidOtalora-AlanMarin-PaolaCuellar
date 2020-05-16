@@ -104,50 +104,7 @@
               <div class="imagen_3">
                 <img src="assets/img/logoECI.png" style="width:181px;height:180px;"></img>
               </div>
-              <!--                &lt;!&ndash; aqui va el username&ndash;&gt;-->
 
-              <!--                <div class="username_table">&lt;!&ndash;form-row222&ndash;&gt;-->
-              <!--                  <div class="col-lg-4 col-md-6 form-group2">-->
-              <!--                    <h:outputLabel id="outUsername">Username</h:outputLabel>-->
-              <!--                    <div class="validate1"></div>-->
-              <!--                  </div>-->
-              <!--                </div>-->
-
-              <!--                &lt;!&ndash; aqui va el documento&ndash;&gt;-->
-              <!--                <div class="documento_table">&lt;!&ndash;form-row222&ndash;&gt;-->
-              <!--                  <div class="col-lg-4 col-md-6 form-group2">-->
-              <!--                    <h:outputLabel id="outDocumento">documento</h:outputLabel>-->
-              <!--                    <div class="validate1"></div>-->
-              <!--                  </div>-->
-              <!--                </div>-->
-
-              <!--                &lt;!&ndash; aqui va el nombreapellido&ndash;&gt;-->
-              <!--                <div class="nombreapellido_table">&lt;!&ndash;form-row222&ndash;&gt;-->
-              <!--                  <div class="col-lg-4 col-md-6 form-group2">-->
-              <!--                    <h:outputLabel id="outNombreApellido">nombreapellido</h:outputLabel>-->
-              <!--                    <div class="validate1"></div>-->
-              <!--                  </div>-->
-              <!--                </div>-->
-
-              <!--                &lt;!&ndash; aqui va el tipousuario&ndash;&gt;-->
-              <!--                <div class="tipousuario_table">&lt;!&ndash;form-row222&ndash;&gt;-->
-              <!--                  <div class="col-lg-4 col-md-6 form-group2">-->
-              <!--                    <h:outputLabel id="outTipoUser">tipousuario</h:outputLabel>-->
-              <!--                    <div class="validate1"></div>-->
-              <!--                  </div>-->
-              <!--                </div>-->
-
-              <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
-              <!--&lt;!&ndash;<textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>&ndash;&gt;-->
-              <!--&lt;!&ndash;<div class="validate"></div>&ndash;&gt;-->
-              <!--&lt;!&ndash;</div>&ndash;&gt;-->
-              <!--&lt;!&ndash;<div class="mb-3">&ndash;&gt;-->
-              <!--&lt;!&ndash;<div class="loading">Loading</div>&ndash;&gt;-->
-              <!--&lt;!&ndash;<div class="error-message"></div>&ndash;&gt;-->
-              <!--&lt;!&ndash;<div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>&ndash;&gt;-->
-              <!--&lt;!&ndash;</div>&ndash;&gt;-->
-              <!--text-center11-->
-              <!--              <div class="text-center11"><p:commandButton type="submit" update="Registrolo3" value="Aceptar"></p:commandButton></div>-->
             </h:form>
             <h:form>
               <div class="buscador_3"> <!--form-row000-->
@@ -169,80 +126,25 @@
                 </div>
               </div>
               <p:commandButton value=" " styleClass="buscar-icon" action="#{busqueda.Busqueda(Buscador.value)}"></p:commandButton>
-              <!---->
 
-              <!--              <div class="palabra_clave_3">&lt;!&ndash;form-row111&ndash;&gt;-->
-              <!--                <div class="col-lg-4 col-md-6 form-group2">   &lt;!&ndash;esto lo saque de la clase PalabraClave!!! &ndash;&gt;-->
-              <!--                  <p:commandButton  update="Registrolo3" value="Nombre Iniciativa" styleClass="black-button"/>-->
-              <!--                  <div class="validate1"></div>-->
-              <!--                </div>-->
-              <!--              </div>-->
-
-              <!--              <div class="iniciativa_3">-->
-              <!--                <div class="col-lg-4 col-md-6 form-group2">   &lt;!&ndash;esto lo saque de la clase PalabraClave!!! &ndash;&gt;-->
-              <!--                  <p:commandButton  update="Registrolo3" value="Palabra" styleClass="blue-button"/>-->
-              <!--                  <div class="validate1"></div>-->
-              <!--                </div>-->
-              <!--              </div>-->
-
-              <!--              <div class="area_3">-->
-              <!--                <div class="col-lg-4 col-md-6 form-group2">   &lt;!&ndash;esto lo saque de la clase iniciativa!!!;-->
-              <!--                  <p:commandButton  update="Registrolo3" value="Area" styleClass="blue-button"/>-->
-              <!--                  <div class="validate1"></div>-->
-              <!--                </div>-->
-              <!--              </div>-->
-
-              <!--              <div class="estado_3">-->
-              <!--                <div class="col-lg-4 col-md-6 form-group2">   &lt;!&ndash;esto lo saque de la clase iniciativa!!! &ndash;&gt;-->
-              <!--                  <p:commandButton  update="Registrolo3" value="Estado" styleClass="blue-button"/>-->
-              <!--                  <div class="validate1"></div>-->
-              <!--                </div>-->
-              <!--              </div>-->
             </h:form>
 
             <h:form>
-              <p:commandButton value="" styleClass="area-button"/>
-              <p:commandButton value="" styleClass="estado-button"/>
+              <p:commandButton value="" styleClass="area-button" action="index7?faces-redirect = true"/>
+              <p:commandButton value="" styleClass="estado-button" action="index8?faces-redirect = true"/>
             </h:form>
 
-            <!--              <br/>-->
-            <!--              <br/>-->
-            <!--              <br/>-->
-            <!--              <br/>-->
-            <!--              <p:growl id="growl" life="2000" />-->
 
-            <!--              <p:commandButton value="Ajax Submit" id="ajax" update="growl" action="#{buttonView.buttonAction}" style="margin-right:20px;" styleClass="ui-priority-primary" />-->
-
-            <!--              <p:commandButton value="Non-Ajax Submit" id="nonAjax" action="#{buttonView.buttonAction}" style="margin-right:20px;" ajax="false" />-->
-
-            <!--              <p:commandButton value="With Icon" id="withIcon" action="#{buttonView.buttonAction}" update="growl" style="margin-right:20px;" image="background-image: url(assets/img/idea.png)" />-->
-
-            <!--              <p:commandButton action="#{buttonView.buttonAction}" id="iconOnly" update="growl" style="margin-right:20px;" icon="background-image: url(assets/img/kk.ico)" title="Icon Only" />-->
-
-            <!--              <p:commandButton value="Disabled" id="disabled" style="margin-right:20px;" disabled="true" />-->
-            <!--            </h:form>-->
-
-            <!--<h:form id="Registro">-->
-            <!--<br></br>-->
-            <!--<br></br>-->
-            <!--<br></br>-->
-            <!--<br></br>-->
-            <!--<br></br>-->
-            <!--<p:outputLabel value="Consultar Cliente: "/>-->
-            <!--<p:inputText  type= "long" name="name" id="contrasena" class="form-control" placeholder="contrasena" data-rule="minlen:4" data-msg="Por favor ingrese una contrasena" binding="#{clid}">-->
-            <!--</p:inputText>-->
-
-            <!--</h:form>-->
 
           </div>
         </section>
-        <!-- Slide 1 -->
+
 
       </div>
 
     </div>
 
-  </section><!-- End Hero -->
+  </section>
 
 
 

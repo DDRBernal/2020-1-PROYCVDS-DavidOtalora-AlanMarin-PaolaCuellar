@@ -448,7 +448,12 @@
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group">
-              <p:inputText  class="form-control" name="tipoUsuario" id="tipoUsuario" placeholder="Tipo Usuario" data-rule="minlen:1" data-msg="Please enter at least 1 chars" binding="#{tipoUsuario}"/>
+              <h:selectOneMenu value="#{controller.tipoUsusario}" style="width: 363px;height:38px;"  >
+                <f:selectItem itemLabel="Tipo Usuario" itemValue="Usuario"/>
+                <f:selectItem itemLabel="Usuario" itemValue="Usuario"/>
+                <f:selectItem itemLabel="PMO" itemValue="PMO"/>
+                <f:selectItem itemLabel="Proponente" itemValue="Proponente"/>
+              </h:selectOneMenu>
               <div class="validate"></div>
             </div>
 
@@ -462,7 +467,7 @@
               <div class="validate"></div>
             </div>
           </div>
-          <div class="text-center"><p:commandButton type="submit" value="Registrarse!" action="#{controller.regitro(userName.value, documento.value, nombre.value, apellido.value, ocupacion.value, clave.value,clave2.value, tipoUsuario.value, email.value)}" style="background-color: white"></p:commandButton></div>
+          <div class="text-center"><p:commandButton type="submit" value="Registrarse!" action="#{controller.regitro(userName.value, documento.value, nombre.value, apellido.value, ocupacion.value, clave.value,clave2.value, email.value)}" style="background-color: white"></p:commandButton></div>
         </h:form>
 
       </div>

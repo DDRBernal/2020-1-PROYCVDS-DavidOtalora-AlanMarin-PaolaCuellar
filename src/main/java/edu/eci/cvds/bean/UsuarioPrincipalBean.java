@@ -1,5 +1,6 @@
 package edu.eci.cvds.bean;
 
+import edu.eci.cvds.entities.TipoUsuario;
 import edu.eci.cvds.entities.Usuario;
 import edu.eci.cvds.services.ServicesBancoProyectoFactory;
 import edu.eci.cvds.services.ServicesUsuario;
@@ -9,6 +10,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
+import javax.sql.rowset.spi.SyncResolver;
 import java.util.List;
 
 @ManagedBean(name = "controller")
@@ -19,13 +21,26 @@ public class UsuarioPrincipalBean {
 
     private ServicesUsuario servicesUsuario = ServicesBancoProyectoFactory.getInstance().getServicesUsuario();
     private String user;
+    private String tipoUsusario;
 
 
-    public void regitro(String userName, int documento, String nombre, String apellido, String ocupacion, String clave, String clave2, String tipoUsuario, String email){
+
+
+    public void regitro(String userName, int documento, String nombre, String apellido, String ocupacion, String clave, String clave2, String email){
         ExternalContext context2 = FacesContext.getCurrentInstance().getExternalContext();
         try {
             if(clave.equals(clave2)) {
-                Usuario usuario = new Usuario(userName, documento, nombre, apellido, ocupacion, clave, tipoUsuario, email);
+                String str;
+                if (tipoUsusario.equals(TipoUsuario.PMO.getRol())){
+                    str=TipoUsuario.PMO.getRol();
+                }else if (tipoUsusario.equals(TipoUsuario.PROPONENTE.getRol())) {
+                    str = TipoUsuario.PROPONENTE.getRol();
+                }else{
+                    str = TipoUsuario.NORMAL.getRol();
+                }
+                System.out.println(str);
+
+                Usuario usuario = new Usuario(userName, documento, nombre, apellido, ocupacion, clave, str, email);
                 servicesUsuario.insertarUsuario(usuario);
                 context2.redirect(context2.getRequestContextPath() + "/faces/index2.xhtml");
             }
@@ -39,7 +54,14 @@ public class UsuarioPrincipalBean {
         try {
             if (servicesUsuario.logIn(userName,clave)==true){
                 this.user=userName;
-                context2.redirect(context2.getRequestContextPath() +"/faces/index3.xhtml");
+                if (TipoUsuario.NORMAL.getRol().equals(servicesUsuario.consultarUsuario(user).getTipoUsuario())){
+                context2.redirect(context2.getRequestContextPath() +"/faces/index3Usuario.xhtml");
+                }else if (TipoUsuario.PMO.getRol().equals(servicesUsuario.consultarUsuario(user).getTipoUsuario())){
+                    context2.redirect(context2.getRequestContextPath() +"/faces/index3PMO.xhtml");
+                }else {
+                    context2.redirect(context2.getRequestContextPath() +"/faces/index3.xhtml");
+                }
+
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -48,5 +70,13 @@ public class UsuarioPrincipalBean {
 
     public Usuario getUser() {
         return servicesUsuario.consultarUsuario(user);
+    }
+
+    public void setTipoUsusario(String tipoUsusario) {
+        this.tipoUsusario = tipoUsusario;
+    }
+
+    public String getTipoUsusario() {
+        return tipoUsusario;
     }
 }

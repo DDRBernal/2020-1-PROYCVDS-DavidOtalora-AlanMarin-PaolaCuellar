@@ -20,7 +20,7 @@ public interface IniciativaDAO {
 
     void modificarIniciativaPropietario(Iniciativa iniciativa, String area, String dependencia, String descripcion) throws PersistenceException;
 
-    void modificarIniciativaEstado(Iniciativa iniciativa, String estado) throws PersistenceException;
+    void modificarIniciativaEstado(String iniciativa, String estado,String proponente) throws PersistenceException;
 
     List<Iniciativa> consultarIniciativasRelacionadas(String userName,String filtro) throws PersistenceException;
 

@@ -54,6 +54,34 @@ public class SeleccionBusqueda {
         }
     }
 
+    public void BusquedaUsuario(String buscador){
+        ExternalContext context2 = FacesContext.getCurrentInstance().getExternalContext();
+        try {
+            this.buscador=buscador;
+            if (selec.equals("2")){
+                context2.redirect(context2.getRequestContextPath() +"/faces/index52User.xhtml");
+            }else {
+                context2.redirect(context2.getRequestContextPath() +"/faces/index5User.xhtml");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void BusquedaPMO(String buscador){
+        ExternalContext context2 = FacesContext.getCurrentInstance().getExternalContext();
+        try {
+            this.buscador=buscador;
+            if (selec.equals("2")){
+                context2.redirect(context2.getRequestContextPath() +"/faces/index52PMO.xhtml");
+            }else {
+                context2.redirect(context2.getRequestContextPath() +"/faces/index5PMO.xhtml");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public String getBuscador() {
         return buscador;
     }

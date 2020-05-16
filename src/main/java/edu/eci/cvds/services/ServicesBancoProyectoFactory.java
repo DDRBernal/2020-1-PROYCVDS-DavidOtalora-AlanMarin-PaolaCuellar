@@ -3,14 +3,8 @@ package edu.eci.cvds.services;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Module;
-import edu.eci.cvds.persistence.ComentarioDAO;
-import edu.eci.cvds.persistence.IniciativaDAO;
-import edu.eci.cvds.persistence.PalabraClaveDAO;
-import edu.eci.cvds.persistence.UsuarioDAO;
-import edu.eci.cvds.persistence.mybatisimpl.MyBatisComentarioDAO;
-import edu.eci.cvds.persistence.mybatisimpl.MyBatisIniciativaDAO;
-import edu.eci.cvds.persistence.mybatisimpl.MyBatisPalabraClaveDAO;
-import edu.eci.cvds.persistence.mybatisimpl.MyBatisUsuarioDAO;
+import edu.eci.cvds.persistence.*;
+import edu.eci.cvds.persistence.mybatisimpl.*;
 import edu.eci.cvds.services.impl.ServicesIniciativaImpl;
 import edu.eci.cvds.services.impl.ServicesUsuarioImpl;
 import org.mybatis.guice.XMLMyBatisModule;
@@ -35,6 +29,7 @@ public class ServicesBancoProyectoFactory {
                 this.bind(ComentarioDAO.class).to(MyBatisComentarioDAO.class);
                 this.bind(PalabraClaveDAO.class).to(MyBatisPalabraClaveDAO.class);
                 this.bind(IniciativaDAO.class).to(MyBatisIniciativaDAO.class);
+                this.bind(VotoDAO.class).to(MyBatisVotoDAO.class);
             }
         });
     }

@@ -1,14 +1,20 @@
 package edu.eci.cvds.entities;
 
 public enum Area {
-    MATEMATICAS,
-    AMBIENTAL,
-    SISTEMAS,
-    MECANICA,
-    INDUSTRIAL,
-    FISICA;
+    MATEMATICAS("matematicas"),
+    AMBIENTAL("ambiental"),
+    SISTEMAS("sistemas"),
+    MECANICA("mecanica"),
+    INDUSTRIAL("industrial"),
+    FISICA("fisica");
 
-    public String toString() {
-        return this.name().toLowerCase();
+    private final String area;
+
+    private Area(String area){
+        this.area= area;
+    }
+
+    public String getArea() {
+        return area;
     }
 }

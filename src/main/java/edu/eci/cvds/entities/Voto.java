@@ -1,27 +1,31 @@
 package edu.eci.cvds.entities;
 
 public class Voto {
-    private Usuario votante;
-    private Iniciativa nombreIniciativa;
+    private String votante;
+    private String nombreIniciativa;
+    private String proponente;
 
-    public Voto(Usuario votante, Iniciativa nombreIniciativa) {
-        this.votante = votante;
+    public void setNombreIniciativa(String nombreIniciativa) {
         this.nombreIniciativa = nombreIniciativa;
     }
 
-    public void setVotante(Usuario votante) {
+    public void setProponente(String proponente) {
+        this.proponente = proponente;
+    }
+
+    public void setVotante(String votante) {
         this.votante = votante;
     }
 
-    public void setNombreIniciativa(Iniciativa nombreIniciativa) {
-        this.nombreIniciativa = nombreIniciativa;
+    public String getNombreIniciativa() {
+        return nombreIniciativa;
     }
 
-    public Usuario getVotante() {
-        return this.votante;
+    public String getProponente() {
+        return proponente;
     }
 
-    public Iniciativa getNombreIniciativa() {
-        return this.nombreIniciativa;
+    public String getVotante() {
+        return votante;
     }
 }

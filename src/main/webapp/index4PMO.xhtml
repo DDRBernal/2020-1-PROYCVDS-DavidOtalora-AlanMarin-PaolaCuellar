@@ -66,9 +66,8 @@
 
 
           <ul>
-            <h:commandLink action="index3?faces-redirect = true" style="position: absolute;top: 10px;right: 780px;"> Inicio</h:commandLink>
-            <h:commandLink action="index31?faces-redirect = true" style="position: absolute;top: 10px;right: 650px;">Mis Iniciativas</h:commandLink>
-            <h:commandLink action="index6?faces-redirect = true" style="position: absolute;top: 10px;right: 500px;">Nueva Iniciativa</h:commandLink>>
+            <h:commandLink action="index3PMO?faces-redirect = true" style="position: absolute;top: 10px;right: 780px;"> Inicio</h:commandLink>
+
             <h:commandLink action="index?faces-redirect = true" style="position: absolute;top: 10px;right: 420px;">Log out</h:commandLink>
           </ul>
 
@@ -81,7 +80,7 @@
   <section id="hero" style="margin-top: 50em;" >
     <div class="hero-container">
       <div class="container">
-        <h:form>
+        <h:form id="modificar">
         <div class="iniciaTable">
           <br/><br/><br/>
 
@@ -95,7 +94,14 @@
             <li><p:outputLabel>Votos: #{idea.consultarVotos()}</p:outputLabel></li>
           </ul>
 
-          <p:commandButton value="Votar" action="#{idea.Votar(controller.getUser().getUserName())}" style="top:20px;right:-370px;"></p:commandButton>
+          <h:selectOneMenu value="#{idea.estado}" style="height:30px;">
+            <f:selectItem itemLabel="Cambiar Estado" itemValue="enesperaderevision"/>
+            <f:selectItem itemLabel="EnEsperaDeRevision" itemValue="enesperaderevision"/>
+            <f:selectItem itemLabel="EnRevision" itemValue="enrevision"/>
+            <f:selectItem itemLabel="Proyecto" itemValue="proyecto"/>
+            <f:selectItem itemLabel="Solucionado" itemValue="solucionado"/>
+          </h:selectOneMenu>
+          <p:commandButton value="Cambiar" action="#{idea.cambiarEstado()}"  update="modificar" style="top:0px;right:0pxbackground-color: white;"></p:commandButton>
         </div>
 
         </h:form>
@@ -125,10 +131,10 @@
           <p:dataTable value="#{idea.consultarInteres()}" var="p" paginator="true" rows="3"
                        paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {NextPageLink} {LastPageLink} " style="text-align:center;padding:4px 10px;border-bottom:0px none;position: absolute;top: 550px;right: 120px;">
               <p:column headerText="Iniciativa">
-                  <p:commandLink value="#{p.nombreIniciativa}" action="#{idea.setNombreIninciativa(p.nombreIniciativa)}"/>
+                  <p:commandLink value="#{p.nombreIniciativa}" action="#{idea.setNombreIninciativaPMO(p.nombreIniciativa)}"/>
               </p:column>
               <p:column headerText="Proponente">
-                  <p:commandLink value="#{p.proponente}" action="#{user.setUserName(p.proponente)}"/>
+                  <p:commandLink value="#{p.proponente}" action="#{user.setUserNamePMO(p.proponente)}"/>
               </p:column>
           </p:dataTable>
       </div>
@@ -153,11 +159,18 @@
                 <img src="assets/img/iconUser.png" style="width:35px;height:35px;" />
                 <p:outputLabel value="#{controller.getUser().getUserName()}" />
                 <br/>
-                <p:outputLabel>Tus comentarios a revisar y explorar </p:outputLabel>
+                <p:outputLabel>comment: </p:outputLabel>
+                <p:inputText id="textBox1" name="textBox1" style="background-color:#232323; position: absolute; top: 70px;right: -350px;width: 372px; height: 66px;" binding="#{cont}"/>
               </div>
               <!--              <textarea id="textBox1" name="textBox1" rows="4" cols="28" style="background-color:#232323;position: absolute; top: 370px;right: 750px; width: 372px; height: 66px;"/>-->
 
-
+              <div class="botones">
+                <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                  <br/><br/>
+                  <p:commandButton id="submit1" update="comentarios" action="#{idea.comentarIniciativa(controller.getUser().getUserName(),cont.value)}" value="Comentar" styleClass="botonComentar1"/>
+                  <p:commandButton id="button1" name="button1" value="Cancelar" styleClass="botonComentar"/>
+                </div>
+              </div>
 
 
 

@@ -1,9 +1,6 @@
 package edu.eci.cvds.services;
 
-import edu.eci.cvds.entities.Comentario;
-import edu.eci.cvds.entities.Iniciativa;
-import edu.eci.cvds.entities.PalabraClave;
-import edu.eci.cvds.entities.Usuario;
+import edu.eci.cvds.entities.*;
 
 import java.sql.Date;
 import java.util.List;
@@ -29,9 +26,11 @@ public interface ServicesIniciativa {
 
     void eliminarPalabrasclave(String palabra, Iniciativa iniciativa);
 
-    void modificarIniciativaEstado(Iniciativa iniciativa, String estado);
+    void modificarIniciativaEstado(String iniciativa, String estado);
 
-//    void votarPorIniciativa(Usuario usuario, Iniciativa iniciativa);
+    void votarPorIniciativa(String votante, String iniciativa, String proponente);
+
+    List<Voto> consultarVotos(String iniciativa);
 
     void comentarUnaIniciativa(Date fecha, String autor, String contenido, String nombreIniciativa, String proponente);
 

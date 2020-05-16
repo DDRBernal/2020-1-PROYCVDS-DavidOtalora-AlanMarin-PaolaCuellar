@@ -1,13 +1,11 @@
 package edu.eci.cvds.services.impl;
 
 import com.google.inject.Inject;
-import edu.eci.cvds.entities.Comentario;
-import edu.eci.cvds.entities.Iniciativa;
-import edu.eci.cvds.entities.PalabraClave;
-import edu.eci.cvds.entities.Usuario;
+import edu.eci.cvds.entities.*;
 import edu.eci.cvds.persistence.ComentarioDAO;
 import edu.eci.cvds.persistence.IniciativaDAO;
 import edu.eci.cvds.persistence.PalabraClaveDAO;
+import edu.eci.cvds.persistence.VotoDAO;
 import edu.eci.cvds.services.ServicesBancoProyectoFactory;
 import edu.eci.cvds.services.ServicesIniciativa;
 import edu.eci.cvds.services.ServicesUsuario;
@@ -25,6 +23,9 @@ public class ServicesIniciativaImpl implements ServicesIniciativa {
 
     @Inject
     private ComentarioDAO comentarioDAO;
+
+    @Inject
+    private VotoDAO votoDAO;
 
 
     public void crearIniciativa(String nombreIniciativa, Date fecha, String estado, String proponente, String area, String dependencia, String descripcion) {
@@ -111,14 +112,32 @@ public class ServicesIniciativaImpl implements ServicesIniciativa {
 
     }
 
-    public void modificarIniciativaEstado(Iniciativa iniciativa, String estado) {
+    public void modificarIniciativaEstado(String iniciativa, String estado) {
         try {
-             iniciativaDAO.modificarIniciativaEstado(iniciativa, estado);
+
+             iniciativaDAO.modificarIniciativaEstado(iniciativa, estado,consultarIniciativa(iniciativa).getProponente());
         } catch (Exception var4) {
         }
 
     }
 
+    @Override
+    public void votarPorIniciativa(String votante, String iniciativa, String proponente) {
+        try{
+            votoDAO.votarPorIniciativa(votante,iniciativa,proponente);
+        }catch (Exception e){
+
+        }
+    }
+
+    @Override
+    public List<Voto> consultarVotos(String iniciativa) {
+        try {
+            return votoDAO.consultarVotos(iniciativa);
+        }catch (Exception e){
+            return null;
+        }
+    }
 
 
     public void comentarUnaIniciativa(Date fecha, String autor, String contenido, String nombreIniciativa, String proponente) {

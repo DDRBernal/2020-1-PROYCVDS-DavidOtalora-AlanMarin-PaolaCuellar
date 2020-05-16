@@ -34,7 +34,9 @@ public class TestServicesIniciativa {
     public void insertarIniciativa(){
         servicesIniciativa.crearIniciativa("Glass JDM", new SimpleDateFormat("dd/mm/yyyy").format(new Date(15/05/2020)), "revision", "proponente2", "industrial","industrial", "Es un mecanismo para todas las propiedades horizontales, que puedan limpiar los vidrios en las alturas instalando una única vez el producto");
     }
-    */
+    */   
+	
+	
 
     
     @Test

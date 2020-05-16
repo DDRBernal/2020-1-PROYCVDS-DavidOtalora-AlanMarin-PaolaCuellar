@@ -47,7 +47,7 @@ and open the template in the editor.
         update
         iniciativa
         set estado = #{estado}
-        WHERE nombreIniciativa = #{iniciativa.nombreIniciativa} AND proponente = #{iniciativa.proponente}
+        WHERE nombreIniciativa = #{iniciativa} AND proponente = #{proponente}
     </update>
 
     <insert id="crearIniciativa" parameterType="map">

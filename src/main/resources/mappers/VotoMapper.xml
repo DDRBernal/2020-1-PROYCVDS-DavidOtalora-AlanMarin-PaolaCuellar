@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="edu.eci.cvds.persistence.mybatisimpl.mappers.VotoMapper">
+
+    <select id="consultarVotos" resultMap="VotoResult">
+        select
+        *
+        from
+        voto
+        where
+        nombreIniciativa = #{iniciativa}
+    </select>
+
+
+    <insert id="votarPorIniciativa" parameterType="map">
+        insert into
+        voto
+        values
+        (#{votante},#{iniciativa},#{proponente})
+    </insert>
+
+
+    <resultMap type='Voto' id='VotoResult'>
+        <result property='votante' column='votante'/>
+        <result property='nombreIniciativa' column='nombreIniciativa'/>
+        <result property='proponente' column='proponente'/>
+    </resultMap>
+    
+</mapper>

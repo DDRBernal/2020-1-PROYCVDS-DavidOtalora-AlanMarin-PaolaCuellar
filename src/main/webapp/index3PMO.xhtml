@@ -59,8 +59,8 @@
         </div>
 
         <ul>
-          <li><h:commandLink action="index3?faces-redirect = true" style="position: absolute;top: 10px;right: 780px;"> Inicio</h:commandLink></li>
-          <li><h:commandLink action="index31?faces-redirect = true" style="position: absolute;top: 10px;right: 650px;">Mis Iniciativas</h:commandLink>></li>
+          <li><h:commandLink action="index3PMO?faces-redirect = true" style="position: absolute;top: 10px;right: 780px;"> Inicio</h:commandLink></li>
+
 
           <li><h:commandLink action="index?faces-redirect = true" style="position: absolute;top: 10px;right: 420px;">Log out</h:commandLink>></li>
         </ul>
@@ -83,9 +83,9 @@
         <section id="Registrarse" class="Registrarse">
           <div class="container3"> <!--container2-->
 
-            <div style="position: absolute;top: 100px;right: 600px;color: #fffcf9;"> <!--section-title111-->
+            <div class="section-title222"> <!--section-title111-->
 
-              <h1>Crea una <span style="color: #ffcc00">Iniciativa</span></h1>
+              <h1>Bienvenido a <span style="color: #ffcc00">Banco Proyecto</span></h1>
             </div>
             <h:form> <!--Registrolo2-->
 
@@ -107,35 +107,31 @@
 
             </h:form>
             <h:form>
+              <div class="buscador_3"> <!--form-row000-->
+                <div class="col-lg-4 col-md-6 form-group2"> <!-- group2-->
+                  <p:inputText  name="Buscador" class="form-control" id="Buscador" placeholder="Buscador" data-rule="minlen:20" data-msg="Please enter at least 20 chars" binding="#{Buscador}"/>
+                  <br/>
+                  <br/>
+                  <p:outputLabel value="Buscar por:" style="color: #ffb03b;font-family: URW Chancery L, cursive;"/>
 
-              <p:outputLabel value="1" style="position: absolute;top: 160px;right: 1220px;color: #fffcf9;font-family: URW Chancery L, cursive;font-size: 40px;"/>
-              <p:inputText   id="nombreiniciativa" placeholder="Nombre Iniciativa" data-rule="minlen:4" data-msg="Por favor ingrese nombre de iniciativa" style="position: absolute;top: 160px;right: 900px;width: 300px; height: 50px;background-color:#f0ffa0" binding="#{nombreiniciativa}"/>
+                  <h:selectOneMenu value="#{busqueda.selec}" style="height:30px"  >
+                    <f:selectItem itemLabel="Nombre Iniciativa" itemValue="1"/>
+                    <f:selectItem itemLabel="Usuario" itemValue="2"/>
+                    <f:selectItem itemLabel="Palabra" itemValue="3"/>
+                    <f:selectItem itemLabel="Area" itemValue="4"/>
+                    <f:selectItem itemLabel="Estado" itemValue="5"/>
+                  </h:selectOneMenu>
+                  <br/>
+                  <div class="validate1"></div>
+                </div>
+              </div>
+              <p:commandButton value=" " styleClass="buscar-icon" action="#{busqueda.BusquedaPMO(Buscador.value)}"></p:commandButton>
 
-              <p:outputLabel value="2" style="position: absolute;top: 280px;right: 1220px;color: #fffcf9;font-family: URW Chancery L, cursive;font-size: 40px;"/>
-              <h:selectOneMenu value="#{idea.area}" style="position: absolute;top: 280px;right: 900px;width: 290px; height: 45px;"  >
-                <f:selectItem itemLabel="Area" itemValue="matematicas"/>
-                <f:selectItem itemLabel="Ambiental" itemValue="ambiental"/>
-                <f:selectItem itemLabel="Sistemas" itemValue="sistemas"/>
-                <f:selectItem itemLabel="Mecanica" itemValue="mecanica"/>
-                <f:selectItem itemLabel="Industrial" itemValue="industrial"/>
-                <f:selectItem itemLabel="Fisica" itemValue="fisica"/>
-                <f:selectItem itemLabel="Matematicas" itemValue="matematicas"/>
-              </h:selectOneMenu>
+            </h:form>
 
-
-
-              <p:outputLabel style="position: absolute;top: 200px;right: 450px;width: 310px; height: 35px;color: #fffcf9;font-family: URW Chancery L, cursive;">Ingresa una por una tus keywords usando el boton  [+]</p:outputLabel>
-              <p:outputLabel value="3" style="position: absolute;top: 280px;right: 770px;color: #fffcf9;font-family: URW Chancery L, cursive;font-size: 40px;"/>
-              <p:inputText   id="palaba" placeholder="Palabra" data-rule="minlen:5" data-msg="Por favor ingrese nombre de iniciativa" style="position: absolute;top: 280px;right: 450px;width: 310px; height: 35px;" binding="#{palabra}"/>
-              <p:commandButton value=" " styleClass="buscar-icon4" action="#{idea.agregarPalabras1(palabra.value)}"></p:commandButton>
-
-              <p:outputLabel value="4" style="position: absolute;top: 400px;right: 1050px;color: #fffcf9;font-family: URW Chancery L, cursive;font-size: 40px;"/>
-              <p:inputTextarea  row = "10" col = "10"  id="descripcion" placeholder="Descripcion" style="position: absolute;top: 400px;right: 535px;width: 500px;" binding="#{descripcion}"/>
-
-
-              <p:outputLabel value="Crear" style="position: absolute;top: 540px;right: 427px;width: 310px; height: 35px;color: #fffcf9;font-family: URW Chancery L, cursive;font-size: 40px;"/>
-              <p:commandButton value=" " styleClass="buscar-icon3" action="#{idea.agregarIniciativa(nombreiniciativa.value,controller.getUser().getUserName(),descripcion.value)}"></p:commandButton>
-
+            <h:form>
+              <p:commandButton value="" styleClass="area-button" action="index7?faces-redirect = true"/>
+              <p:commandButton value="" styleClass="estado-button" action="index8?faces-redirect = true"/>
             </h:form>
 
 
@@ -143,11 +139,19 @@
           </div>
         </section>
 
+
       </div>
 
     </div>
 
   </section>
+
+
+
+
+
+
+
 
 
 

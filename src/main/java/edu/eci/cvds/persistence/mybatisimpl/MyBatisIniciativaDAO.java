@@ -34,7 +34,7 @@ public class MyBatisIniciativaDAO implements IniciativaDAO {
     }
 
     @Override
-    public List<Iniciativa> consultarIniciativaPublico(String nombreIniciativa) throws PersistenceException {
+    public List<Iniciativa> consultarIniciativaPublico(String nombreIniciativa) throws PersistenceException{
         try {
             String string= "%"+nombreIniciativa+"%";
             return this.iniciativaMapper.consultarIniciativaPublico(string);
@@ -69,9 +69,10 @@ public class MyBatisIniciativaDAO implements IniciativaDAO {
         }
     }
 
-    public void modificarIniciativaEstado(Iniciativa iniciativa, String estado) throws PersistenceException {
+    public void modificarIniciativaEstado(String iniciativa, String estado, String proponente) throws PersistenceException {
         try {
-            this.iniciativaMapper.modificarIniciativaEstado(iniciativa, estado);
+
+            this.iniciativaMapper.modificarIniciativaEstado(iniciativa, estado, proponente);
         } catch (Exception e) {
             throw new PersistenceException("Ingreso de datos incorrecto");
         }

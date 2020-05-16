@@ -24,6 +24,6 @@ public interface IniciativaMapper {
 
     void modificarIniciativaPropietario(Iniciativa var1, String var2, String var3, String var4);
 
-    void modificarIniciativaEstado(@Param("iniciativa")Iniciativa var1, @Param("estado")String var2);
+    void modificarIniciativaEstado(@Param("iniciativa")String var1, @Param("estado")String var2,@Param("proponente") String proponente);
 
 }

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <title>Banco de Ideas ECI</title>
+  <meta content="" name="descriptison"/>
+  <meta content="" name="keywords"/>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon"/>
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i" rel="stylesheet"/>
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet"/>
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet"/>
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet"/>
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet"/>
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet"/>
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet"/>
+
+  <!-- =======================================================
+  * Template Name: Delicious - v2.0.0
+  * Template URL: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</h:head>
+
+<h:body
+        class="carousel-item active" style="background-image: url(assets/img/slide/piedras.jpg);">
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+    <div class="container text-right">
+      <i class="icofont-phone"></i> PBX +57(1) 668 3600 Bogota - Colombia
+      <i class="icofont-clock-time icofont-rotate-180"></i> Lun-Sab: 7:00 AM - 19:00 PM
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+      <h:form>
+        <div class="logo mr-auto">
+          <h1 class="text-light"><h:commandLink action="index?faces-redirect = true"><span>Banco ideas ECI</span></h:commandLink></h1>
+        </div>
+
+        <ul>
+          <h:commandLink action="index3User?faces-redirect = true" style="position: absolute;top: 10px;right: 780px;"> Inicio</h:commandLink>
+
+          <h:commandLink action="index?faces-redirect = true" style="position: absolute;top: 10px;right: 420px;">Log out</h:commandLink>
+        </ul>
+      </h:form>
+
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+        <!--<ol class="carousel-indicators" id="hero-carousel-indicators"></ol>-->
+
+        <!--<div class="carousel-inner" role="listbox">-->
+
+
+        <section id="Registrarse" class="Registrarse">
+          <div class="container3"><!--container2-->
+
+             <!--section-title111-->
+            <h:form> <!--Registrolo2-->
+
+              <div class="userTable">
+                <br/><br/><br/><br/>
+                <br/><br/><br/><br/>
+                <p:outputLabel value="#{user.consultarUsuarioUnico().getUserName()}"></p:outputLabel>
+                <br/>
+                <p:outputLabel value="#{user.consultarUsuarioUnico().getDocumento()}"></p:outputLabel>
+                <br/>
+                <p:outputLabel value="#{user.consultarUsuarioUnico().getNombre()} #{user.consultarUsuarioUnico().getApellido()}"></p:outputLabel>
+                <br/>
+                <p:outputLabel value="#{user.consultarUsuarioUnico().getTipoUsuario()}"></p:outputLabel>
+              </div>
+
+              <div class="imagen_3">
+                <img src="assets/img/logoECI.png" style="width:180px;height:180px;"></img>
+              </div>
+              <!--                &lt;!&ndash; aqui va el username&ndash;&gt;-->
+
+              <!--                <div class="username_table">&lt;!&ndash;form-row222&ndash;&gt;-->
+              <!--                  <div class="col-lg-4 col-md-6 form-group2">-->
+              <!--                    <h:outputLabel id="outUsername">Username</h:outputLabel>-->
+              <!--                    <div class="validate1"></div>-->
+              <!--                  </div>-->
+              <!--                </div>-->
+
+              <!--                &lt;!&ndash; aqui va el documento&ndash;&gt;-->
+              <!--                <div class="documento_table">&lt;!&ndash;form-row222&ndash;&gt;-->
+              <!--                  <div class="col-lg-4 col-md-6 form-group2">-->
+              <!--                    <h:outputLabel id="outDocumento">documento</h:outputLabel>-->
+              <!--                    <div class="validate1"></div>-->
+              <!--                  </div>-->
+              <!--                </div>-->
+
+              <!--                &lt;!&ndash; aqui va el nombreapellido&ndash;&gt;-->
+              <!--                <div class="nombreapellido_table">&lt;!&ndash;form-row222&ndash;&gt;-->
+              <!--                  <div class="col-lg-4 col-md-6 form-group2">-->
+              <!--                    <h:outputLabel id="outNombreApellido">nombreapellido</h:outputLabel>-->
+              <!--                    <div class="validate1"></div>-->
+              <!--                  </div>-->
+              <!--                </div>-->
+
+              <!--                &lt;!&ndash; aqui va el tipousuario&ndash;&gt;-->
+              <!--                <div class="tipousuario_table">&lt;!&ndash;form-row222&ndash;&gt;-->
+              <!--                  <div class="col-lg-4 col-md-6 form-group2">-->
+              <!--                    <h:outputLabel id="outTipoUser">tipousuario</h:outputLabel>-->
+              <!--                    <div class="validate1"></div>-->
+              <!--                  </div>-->
+              <!--                </div>-->
+
+              <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
+              <!--&lt;!&ndash;<textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>&ndash;&gt;-->
+              <!--&lt;!&ndash;<div class="validate"></div>&ndash;&gt;-->
+              <!--&lt;!&ndash;</div>&ndash;&gt;-->
+              <!--&lt;!&ndash;<div class="mb-3">&ndash;&gt;-->
+              <!--&lt;!&ndash;<div class="loading">Loading</div>&ndash;&gt;-->
+              <!--&lt;!&ndash;<div class="error-message"></div>&ndash;&gt;-->
+              <!--&lt;!&ndash;<div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>&ndash;&gt;-->
+              <!--&lt;!&ndash;</div>&ndash;&gt;-->
+              <!--text-center11-->
+              <!--              <div class="text-center11"><p:commandButton type="submit" update="Registrolo3" value="Aceptar"></p:commandButton></div>-->
+            </h:form>
+            <h:form id="usuarioIniciativas">
+
+              <p:inputText id="buscador" placeholder="buscador" data-rule="minlen:20" data-msg="Please enter at least 20 chars" style="width: 20%;position: absolute;top: 170px;right: 800px;" binding="#{buscador}"/>
+              <p:commandButton value="" styleClass="buscar-icon2" update="usuarioIniciativas"/>
+
+              <p:dataTable id="le" value="#{idea.consultarIniciativasRelacionadas(user.consultarUsuarioUnico().getUserName(),buscador)}" var="p" paginator="true" rows="3"
+                           paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {NextPageLink} {LastPageLink} " style="text-align:center;padding:4px 10px;border-bottom: 100px ;position: absolute;top: 250px; right:300px;">
+                <p:column headerText="Iniciativa">
+                  <p:commandLink value="#{p.nombreIniciativa}" action="#{idea.setNombreIninciativaUser(p.nombreIniciativa)}"/>
+                </p:column>
+                <p:column headerText="Estado">
+                  <h:outputText value="#{p.estado}"/>
+                </p:column>
+                <p:column headerText="Area">
+                  <h:outputText value="#{p.area}"/>
+                </p:column>
+              </p:dataTable>
+
+            </h:form>
+
+            <!--              <br/>-->
+            <!--              <br/>-->
+            <!--              <br/>-->
+            <!--              <br/>-->
+            <!--              <p:growl id="growl" life="2000" />-->
+
+            <!--              <p:commandButton value="Ajax Submit" id="ajax" update="growl" action="#{buttonView.buttonAction}" style="margin-right:20px;" styleClass="ui-priority-primary" />-->
+
+            <!--              <p:commandButton value="Non-Ajax Submit" id="nonAjax" action="#{buttonView.buttonAction}" style="margin-right:20px;" ajax="false" />-->
+
+            <!--              <p:commandButton value="With Icon" id="withIcon" action="#{buttonView.buttonAction}" update="growl" style="margin-right:20px;" image="background-image: url(assets/img/idea.png)" />-->
+
+            <!--              <p:commandButton action="#{buttonView.buttonAction}" id="iconOnly" update="growl" style="margin-right:20px;" icon="background-image: url(assets/img/kk.ico)" title="Icon Only" />-->
+
+            <!--              <p:commandButton value="Disabled" id="disabled" style="margin-right:20px;" disabled="true" />-->
+            <!--            </h:form>-->
+
+            <!--<h:form id="Registro">-->
+            <!--<br></br>-->
+            <!--<br></br>-->
+            <!--<br></br>-->
+            <!--<br></br>-->
+            <!--<br></br>-->
+            <!--<p:outputLabel value="Consultar Cliente: "/>-->
+            <!--<p:inputText  type= "long" name="name" id="contrasena" class="form-control" placeholder="contrasena" data-rule="minlen:4" data-msg="Por favor ingrese una contrasena" binding="#{clid}">-->
+            <!--</p:inputText>-->
+
+            <!--</h:form>-->
+
+          </div>
+        </section>
+        <!-- Slide 1 -->
+
+      </div>
+
+    </div>
+
+  </section><!-- End Hero -->
+
+
+
+
+
+
+
+
+
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</h:body>
+
+</html>
