@@ -42,7 +42,7 @@ Se permite el registro de nuevos usuarios para acceder a información completa d
 
 Modelo E-R 
 
- ![](img/sqlBancoIniciativas.PNG)
+ ![](img/SqlBancoIniciativas.PNG)
 
 Diagrama de clases
 
